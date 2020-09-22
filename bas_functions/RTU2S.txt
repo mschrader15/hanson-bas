@@ -1,0 +1,8 @@
+Print " <?xml version=|"1.0|"?>"
+Print " <Record> "
+Print "<EFan1Prv> |### </EFan1Prv>", Hanson\CX2\RTU2S
+Print "<FreezeStat> |### </FreezeStat>", Hanson\CX2\RTU2S
+Print "<PhaseProtection> |### </PhaseProtection>", Hanson\CX2\RTU2S
+Print "<SFanPrv> |### </SFanPrv>", Hanson\CX2\RTU2S
+Print "<SFanVFDTrouble> |### </SFanVFDTrouble>", Hanson\CX2\RTU2S
+Print " </Record> "

@@ -1,0 +1,8 @@
+Print " <?xml version=|"1.0|"?>"
+Print " <Record> "
+Print "<RMT_B> |### </RMT_B>", Hanson\CX1\VAV4.9
+Print "<RMT_A> |### </RMT_A>", Hanson\CX1\VAV4.9
+Print "<DAT> |### </DAT>", Hanson\CX1\VAV4.9
+Print "<VP> |### </VP>", Hanson\CX1\VAV4.9
+Print "<AdjStPt> |### </AdjStPt>", Hanson\CX1\VAV4.9
+Print " </Record> "

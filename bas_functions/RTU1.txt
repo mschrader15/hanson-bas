@@ -1,0 +1,8 @@
+Print " <?xml version=|"1.0|"?>"
+Print " <Record> "
+Print "<PressBldg> |### </PressBldg>", Hanson\CX1\RTU1
+Print "<RACO2> |### </RACO2>", Hanson\CX1\RTU1
+Print "<RAH> |### </RAH>", Hanson\CX1\RTU1
+Print "<SFanPrv> |### </SFanPrv>", Hanson\CX1\RTU1
+Print "<EFan2Prv> |### </EFan2Prv>", Hanson\CX1\RTU1
+Print " </Record> "
