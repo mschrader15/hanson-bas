@@ -42,8 +42,12 @@ def get_data(master_dict, xml_as_obj, tag):
 def fetch_data(master_dict):
     http = urllib3.PoolManager()
     for device in master_dict:
-        r = http.request('GET', device.ip_address)
-        master_dict = get_data(master_dict, xml_as_obj=r.content, tag=device.name)
+        try:
+            r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=1.0))
+            master_dict = get_data(master_dict, xml_as_obj=r.content, tag=device.name)
+        except urllib3.exceptions.MaxRetryError:
+            continue
+
     return master_dict
 
 
@@ -72,6 +76,7 @@ class Measurement:
 
 
 if __name__ == "__main__":
+
     args = parser.parse_args()
     try:
 
