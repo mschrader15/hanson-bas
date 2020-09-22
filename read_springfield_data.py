@@ -19,9 +19,7 @@ excel_file_path = os.path.join(definitions.ROOT, 'List_AllInputs.xlsx')
 
 files = pd.read_excel(excel_file_path)
 files['filter_ip'] = None
-
 uniqueip = files['ipaddresses'].unique()
-
 
 for ip in uniqueip:
     index = 0
@@ -29,8 +27,7 @@ for ip in uniqueip:
         if val:
             index = i
             break
-    files.loc[index, 'filter_ip'] = ip
-
+    files.loc[index, 'filter_ip'] = "".join([ip, "_trend.xml"])
 
 files.to_excel(excel_file_path)
 
