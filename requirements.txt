@@ -5,3 +5,4 @@ numpy
 xlrd
 openpyxl
 lxml
+urllib3
