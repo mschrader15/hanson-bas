@@ -45,7 +45,9 @@ def fetch_data(master_dict):
         try:
             r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=1.0))
             master_dict = get_data(master_dict, xml_as_obj=r.content, tag=device.name)
-        except urllib3.exceptions.MaxRetryError:
+        #except urllib3.exceptions.MaxRetryError:
+        except Exception as e:
+            print(device.name, e)
             continue
 
     return master_dict
@@ -58,7 +60,12 @@ def create_save_df(master_dict, tag=None):
         for measurement in local_obj.measurements.values():
             write_df.loc['value', measurement.name] = measurement.value
             write_df.loc['time', measurement.name] = measurement.time
-    return write_df
+    else:
+        for local_obj in master_dict.values():
+            for measurement in local_obj.measurements.values():
+                write_df.loc['value', "_".join([local_obj.name, measurement.name])] = measurement.value
+                write_df.loc['time', "_".join([local_obj.name, measurement.name])] = measurement.time
+    return write_df.transpose()
 
 
 class Device:
@@ -88,6 +95,7 @@ if __name__ == "__main__":
             create_save_df(container, tag='RTU1').to_csv(os.path.join(definitions.ROOT, 'data', 'parsed_data.csv'))
         else:
             master_table = fetch_data(container)
+            create_save_df(container).to_csv(os.path.join(definitions.ROOT, 'data', 'full_parsed_data.csv'))
 
     except Exception as e:
         logger.exception("Exception occurred")
