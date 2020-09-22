@@ -2,3 +2,5 @@ pandas
 pyhaystack
 requests
 numpy
+xlrd
+openpyxl
