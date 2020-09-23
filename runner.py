@@ -4,6 +4,7 @@ import definitions
 import urllib3
 import pandas as pd
 from functions.logging import logger, logging
+from functions.timing import timing
 import argparse
 from xml.etree import cElementTree
 from datetime import datetime, timezone
@@ -12,7 +13,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--offline', dest='offline', action='store_const',
                     const=True, default=False)
 
-
+@timing
 def load_master_dict(file_path):
     df = pd.read_excel(file_path)
     unique_ips = df['filter_ip'].dropna().unique()
@@ -39,11 +40,13 @@ def get_data(master_dict, xml_as_obj, tag):
     return master_dict
 
 
+@timing
 def fetch_data(master_dict):
     http = urllib3.PoolManager()
-    for device in master_dict:
+    for device in master_dict.values():
         try:
-            r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=1.0))
+            print("GET request to ", device.ip_address)
+            r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=2.0))
             master_dict = get_data(master_dict, xml_as_obj=r.content, tag=device.name)
         #except urllib3.exceptions.MaxRetryError:
         except Exception as e:
@@ -87,13 +90,13 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     try:
-        container = load_master_dict(definitions.MASTER_TABLE)
+        container, _ = load_master_dict(definitions.MASTER_TABLE)
         if args.offline:
-            xml_file = load_offline_xml(os.path.join(definitions.ROOT, 'data', 'RTU1_dataexport-example.xml'))
+            xml_file, _ = load_offline_xml(os.path.join(definitions.ROOT, 'data', 'RTU1_dataexport-example.xml'))
             container = get_data(container, xml_file, 'RTU1')
             create_save_df(container, tag='RTU1').to_csv(os.path.join(definitions.ROOT, 'data', 'parsed_data.csv'))
         else:
-            master_table = fetch_data(container)
+            master_table, _ = fetch_data(container)
             create_save_df(container).to_csv(os.path.join(definitions.ROOT, 'data', 'full_parsed_data.csv'))
     except Exception as e:
         logger.exception("Exception occurred")
