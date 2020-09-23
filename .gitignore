@@ -1,7 +1,6 @@
 # Max added:
 .idea
 *error_log*
-errors/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

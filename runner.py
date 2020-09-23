@@ -75,6 +75,7 @@ class Device:
         self.measurements = {measurement_name: Measurement(measurement_name) for measurement_name in measurement_names}
         self.measurement_names = measurement_names
 
+
 class Measurement:
     def __init__(self, name):
         self.name = name
@@ -86,9 +87,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     try:
-
         container = load_master_dict(definitions.MASTER_TABLE)
-
         if args.offline:
             xml_file = load_offline_xml(os.path.join(definitions.ROOT, 'data', 'RTU1_dataexport-example.xml'))
             container = get_data(container, xml_file, 'RTU1')
@@ -96,7 +95,6 @@ if __name__ == "__main__":
         else:
             master_table = fetch_data(container)
             create_save_df(container).to_csv(os.path.join(definitions.ROOT, 'data', 'full_parsed_data.csv'))
-
     except Exception as e:
         logger.exception("Exception occurred")
         logging.exception("Exception occurred")
