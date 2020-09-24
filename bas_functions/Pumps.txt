@@ -1,5 +1,5 @@
 Print " <?xml version=|"1.0|"?>"
 Print " <Record> "
-Print "<Pmp6Prv> |### </Pmp6Prv>", Hanson\CX2\Pumps
-Print "<Pmp7Prv> |### </Pmp7Prv>", Hanson\CX2\Pumps
+Print "<Pmp6Prv> |### </Pmp6Prv>", Hanson\CX2\Pumps\Pmp6Prv
+Print "<Pmp7Prv> |### </Pmp7Prv>", Hanson\CX2\Pumps\Pmp7Prv
 Print " </Record> "

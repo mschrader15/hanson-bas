@@ -1,7 +1,7 @@
 Print " <?xml version=|"1.0|"?>"
 Print " <Record> "
-Print "<FreezeStat> |### </FreezeStat>", Hanson\CX2\RTU1S
-Print "<PhaseProtection> |### </PhaseProtection>", Hanson\CX2\RTU1S
-Print "<SFanPrv> |### </SFanPrv>", Hanson\CX2\RTU1S
-Print "<SFanVFDTrouble> |### </SFanVFDTrouble>", Hanson\CX2\RTU1S
+Print "<FreezeStat> |### </FreezeStat>", Hanson\CX2\RTU1S\FreezeStat
+Print "<PhaseProtection> |### </PhaseProtection>", Hanson\CX2\RTU1S\PhaseProtection
+Print "<SFanPrv> |### </SFanPrv>", Hanson\CX2\RTU1S\SFanPrv
+Print "<SFanVFDTrouble> |### </SFanVFDTrouble>", Hanson\CX2\RTU1S\SFanVFDTrouble
 Print " </Record> "

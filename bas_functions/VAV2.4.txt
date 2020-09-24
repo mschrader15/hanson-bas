@@ -1,6 +1,6 @@
 Print " <?xml version=|"1.0|"?>"
 Print " <Record> "
-Print "<VP> |### </VP>", Hanson\CX1\VAV2.4
-Print "<RMT> |### </RMT>", Hanson\CX1\VAV2.4
-Print "<DAT> |### </DAT>", Hanson\CX1\VAV2.4
+Print "<VP> |### </VP>", Hanson\CX1\VAV2.4\VP
+Print "<RMT> |### </RMT>", Hanson\CX1\VAV2.4\RMT
+Print "<DAT> |### </DAT>", Hanson\CX1\VAV2.4\DAT
 Print " </Record> "

@@ -1,17 +1,17 @@
 Print " <?xml version=|"1.0|"?>"
 Print " <Record> "
-Print "<HWST> |### </HWST>", Hanson\CX1\Boiler
-Print "<HWRT> |### </HWRT>", Hanson\CX1\Boiler
-Print "<ReheatHWRT> |### </ReheatHWRT>", Hanson\CX1\Boiler
-Print "<BoilerAlrm> |### </BoilerAlrm>", Hanson\CX1\Boiler
-Print "<Pmp1Prv> |### </Pmp1Prv>", Hanson\CX1\Boiler
-Print "<Pmp2Prv> |### </Pmp2Prv>", Hanson\CX1\Boiler
-Print "<Pmp3Prv> |### </Pmp3Prv>", Hanson\CX1\Boiler
-Print "<Pmp4Prv> |### </Pmp4Prv>", Hanson\CX1\Boiler
-Print "<Pmp5Prv> |### </Pmp5Prv>", Hanson\CX1\Boiler
-Print "<OAT> |### </OAT>", Hanson\CX1\Boiler
-Print "<EmerShutDn> |### </EmerShutDn>", Hanson\CX1\Boiler
-Print "<OAH> |### </OAH>", Hanson\CX1\Boiler
-Print "<BoilerRmTmp> |### </BoilerRmTmp>", Hanson\CX1\Boiler
-Print "<Pmp8Prv> |### </Pmp8Prv>", Hanson\CX1\Boiler
+Print "<HWST> |### </HWST>", Hanson\CX1\Boiler\HWST
+Print "<HWRT> |### </HWRT>", Hanson\CX1\Boiler\HWRT
+Print "<ReheatHWRT> |### </ReheatHWRT>", Hanson\CX1\Boiler\ReheatHWRT
+Print "<BoilerAlrm> |### </BoilerAlrm>", Hanson\CX1\Boiler\BoilerAlrm
+Print "<Pmp1Prv> |### </Pmp1Prv>", Hanson\CX1\Boiler\Pmp1Prv
+Print "<Pmp2Prv> |### </Pmp2Prv>", Hanson\CX1\Boiler\Pmp2Prv
+Print "<Pmp3Prv> |### </Pmp3Prv>", Hanson\CX1\Boiler\Pmp3Prv
+Print "<Pmp4Prv> |### </Pmp4Prv>", Hanson\CX1\Boiler\Pmp4Prv
+Print "<Pmp5Prv> |### </Pmp5Prv>", Hanson\CX1\Boiler\Pmp5Prv
+Print "<OAT> |### </OAT>", Hanson\CX1\Boiler\OAT
+Print "<EmerShutDn> |### </EmerShutDn>", Hanson\CX1\Boiler\EmerShutDn
+Print "<OAH> |### </OAH>", Hanson\CX1\Boiler\OAH
+Print "<BoilerRmTmp> |### </BoilerRmTmp>", Hanson\CX1\Boiler\BoilerRmTmp
+Print "<Pmp8Prv> |### </Pmp8Prv>", Hanson\CX1\Boiler\Pmp8Prv
 Print " </Record> "

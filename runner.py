@@ -48,7 +48,7 @@ def fetch_data(master_dict):
         try:
             print("GET request to ", device.ip_address)
             r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=2.0))
-            master_dict = get_data(master_dict, xml_as_obj=r.content, tag=device.name)
+            master_dict = get_data(master_dict, xml_as_obj=r.data.decode('utf-8'), tag=device.name)
         # except urllib3.exceptions.MaxRetryError:
         except Exception as e:
             print(device.name, e)

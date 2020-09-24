@@ -16,11 +16,15 @@ import urllib3
 
 #ip_address = http://10.1.13.71/pe/
 
-excel_file_path = os.path.join(definitions.ROOT, 'List_AllInputs.xlsx')
+excel_file_path = os.path.join(definitions.ROOT, 'assets','List_AllInputs.xlsx')
 
 files = pd.read_excel(excel_file_path)
 files['filter_ip'] = None
 uniqueip = files['ipaddresses'].unique()
+
+def func(x):
+    path = x.DeviceId + "\\" + x.Name
+    return f'Print "<{x.Name}> |### </{x.Name}>", {path}'
 
 for ip in uniqueip:
 
@@ -34,17 +38,11 @@ for ip in uniqueip:
     name = files.loc[i, 'Device Tag'] + '.txt'
     header_lines = ['Print " <?xml version=|"1.0|"?>"', 'Print " <Record> "']
     tail_lines = ['Print " </Record> "']
-    lines = files.loc[files['ipaddresses'] == ip, :].apply(lambda x:  f'Print "<{x.Name}> |### </{x.Name}>", {x.DeviceId}', axis=1)
+    lines = files.loc[files['ipaddresses'] == ip, :].apply(func, axis=1)
     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
     with open(os.path.join(definitions.ROOT, 'bas_functions', name), 'w') as f:
         f.write(print_txt)
         f.close()
-
-
-
-
-
-
 
 files.to_excel(excel_file_path)
 

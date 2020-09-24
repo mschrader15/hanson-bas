@@ -1,8 +1,8 @@
 Print " <?xml version=|"1.0|"?>"
 Print " <Record> "
-Print "<RMT_A> |### </RMT_A>", Hanson\CX1\VAV4.2
-Print "<DAT> |### </DAT>", Hanson\CX1\VAV4.2
-Print "<VP> |### </VP>", Hanson\CX1\VAV4.2
-Print "<RMT_B> |### </RMT_B>", Hanson\CX1\VAV4.2
-Print "<AdjStPt> |### </AdjStPt>", Hanson\CX1\VAV4.2
+Print "<RMT_A> |### </RMT_A>", Hanson\CX1\VAV4.2\RMT_A
+Print "<DAT> |### </DAT>", Hanson\CX1\VAV4.2\DAT
+Print "<VP> |### </VP>", Hanson\CX1\VAV4.2\VP
+Print "<RMT_B> |### </RMT_B>", Hanson\CX1\VAV4.2\RMT_B
+Print "<AdjStPt> |### </AdjStPt>", Hanson\CX1\VAV4.2\AdjStPt
 Print " </Record> "
