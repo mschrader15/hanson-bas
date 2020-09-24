@@ -33,14 +33,17 @@ for ip in uniqueip:
             break
     # # This writes the unique ip addresses. Not necessary anymore
     files.loc[i, 'filter_ip'] = "".join([ip, "_trend.xml"])
-
+    if 'CX1' in files.loc[i, 'DeviceId']:
+        folder = 'CX1'
+    else:
+        folder = 'CX2'
     # This is generating the unique xml functions:
     name = files.loc[i, 'Device Tag'] + '.txt'
     header_lines = ['Print " <?xml version=|"1.0|"?>"', 'Print " <Record> "']
     tail_lines = ['Print " </Record> "']
     lines = files.loc[files['ipaddresses'] == ip, :].apply(func, axis=1)
     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
-    with open(os.path.join(definitions.ROOT, 'bas_functions', name), 'w') as f:
+    with open(os.path.join(definitions.ROOT, 'bas_functions', folder, name), 'w') as f:
         f.write(print_txt)
         f.close()
 
