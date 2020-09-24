@@ -1,0 +1,29 @@
+Print " <?xml version=|"1.0|"?>"
+Print " <Record>"
+Print " <temp1> |### </temp1>", CobdenSchools\CX1\RT3\VsdEFan * 100
+Print " <temp2> |$### </temp2>", CobdenSchools\CX1\RT3\SSEFan
+Print " <temp3> |##.# </temp3>", CobdenSchools\CX1\RT3\TmpWheel
+Print " <temp4> |### </temp4>", CobdenSchools\CX1\RT3\HumdReturnAir * 100
+Print " <temp5> |##.# </temp5>", CobdenSchools\CX1\RT3\TmpReturnAir
+Print " <temp6> |### </temp6>", CobdenSchools\CX1\RT3\DmpMixedAir * 100
+Print " <temp7> |# </temp7>", CobdenSchools\CX1\RT3\CoolStage
+Print " <temp8> |$### </temp8>", CobdenSchools\CX1\RT3\SSFan
+Print " <temp9> |# </temp9>", CobdenSchools\CX1\RT3\HeatStage
+Print " <temp10> |##.# </temp10>", CobdenSchools\CX1\RT3\TmpSpace
+Print " <temp11> |##.# </temp11>", CobdenSchools\CX1\RT3\StPtCool
+Print " <temp12> |##.# </temp12>", CobdenSchools\CX1\RT3\StPtHeat
+Print " <temp13> |$### </temp13>", CobdenSchools\CX1\RT3\Occupy
+Print " <temp14> |* </temp14>", Mode  ’string value
+Print " <temp15> |##.# </temp15>", TmpOA
+Print " <temp16> |### </temp16>", HumdOA * 100
+Print " <temp17> |#.## </temp17>", CobdenSchools\CX1\RT3\PressBldg
+Print " <temp18> |#.## </temp18>", CobdenSchools\CX1\RT3\StPtPressBldg
+Print " <temp19> |##.# </temp19>", CobdenSchools\CX1\RT3\TmpSupplyAir
+Print " <temp20> |##.# </temp20>", CobdenSchools\CX1\RT3\CO2
+Print " <temp61> |### </temp61>", CobdenSchools\CX1\RT3\VsdEFan * 100
+Print " <temp62> |### </temp62>", CobdenSchools\CX1\RT3\DmpMixedAir * 100
+Print " <temp63> |### </temp63>", CobdenSchools\CX1\RT3\DmpMixedAir * 100
+Print " <temp65> |$### </temp65>", CobdenSchools\CX1\RT3\StatSAirFlow
+Print " <temp66> |$### </temp66>", CobdenSchools\CX1\RT3\StatEAirFlow
+Print " <temp67> |$### </temp67>", CobdenSchools\CX1\RT3\SSWheel
+Print " </Record>"
