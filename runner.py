@@ -13,6 +13,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--offline', dest='offline', action='store_const',
                     const=True, default=False)
 
+
 @timing
 def load_master_dict(file_path):
     df = pd.read_excel(file_path)
@@ -48,7 +49,7 @@ def fetch_data(master_dict):
             print("GET request to ", device.ip_address)
             r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=2.0))
             master_dict = get_data(master_dict, xml_as_obj=r.content, tag=device.name)
-        #except urllib3.exceptions.MaxRetryError:
+        # except urllib3.exceptions.MaxRetryError:
         except Exception as e:
             print(device.name, e)
             continue
@@ -72,7 +73,7 @@ def create_save_df(master_dict, tag=None):
 
 
 class Device:
-    def __init__(self, name, ip_address, measurement_names):
+    def __init__(self, name, ip_address, measurement_names, units=None):
         self.name = name
         self.ip_address = ip_address
         self.measurements = {measurement_name: Measurement(measurement_name) for measurement_name in measurement_names}
@@ -84,6 +85,7 @@ class Measurement:
         self.name = name
         self.value = None
         self.time = None
+        self.units = None
 
 
 if __name__ == "__main__":
