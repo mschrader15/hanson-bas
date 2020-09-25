@@ -13,3 +13,6 @@ def get_login_info(root, login_info_file):
 LOGIN_DICT = get_login_info(ROOT, 'login.txt')
 MASTER_TABLE = os.path.join(ROOT, 'assets', 'List_AllInputs.xlsx')
 ERROR_LOGS_DIR = os.path.join(ROOT, 'errors')
+
+# This is the multiplier that is applied to the BAS output:
+MULTIPLIER = 1000

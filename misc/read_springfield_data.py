@@ -24,7 +24,8 @@ uniqueip = files['ipaddresses'].unique()
 
 def func(x):
     path = x.DeviceId + "\\" + x.Name
-    return f'Print "<{x.Name}> |### </{x.Name}>", {path}'
+    base_string = f'Print "<{x.Name}> |### </{x.Name}>", {path}'
+    return base_string
 
 for ip in uniqueip:
 
