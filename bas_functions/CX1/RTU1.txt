@@ -1,8 +1,7 @@
-Print " <?xml version=|"1.0|"?>"
 Print " <Record> "
-Print " <PressBldg> |### </PressBldg>", Hanson\CX1\RTU1\PressBldg
-Print " <RACO2> |### </RACO2>", Hanson\CX1\RTU1\RACO2
-Print " <RAH> |### </RAH>", Hanson\CX1\RTU1\RAH
-Print " <SFanPrv> |### </SFanPrv>", Hanson\CX1\RTU1\SFanPrv
-Print " <EFan2Prv> |### </EFan2Prv>", Hanson\CX1\RTU1\EFan2Prv
+Print "<PressBldg> |### </PressBldg>", Hanson\CX1\RTU1\PressBldg
+Print "<RACO2> |### </RACO2>", Hanson\CX1\RTU1\RACO2
+Print "<RAH> |### </RAH>", Hanson\CX1\RTU1\RAH
+Print "<SFanPrv> |### </SFanPrv>", Hanson\CX1\RTU1\SFanPrv
+Print "<EFan2Prv> |### </EFan2Prv>", Hanson\CX1\RTU1\EFan2Prv
 Print " </Record> "

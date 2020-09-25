@@ -39,7 +39,7 @@ for ip in uniqueip:
         folder = 'CX2'
     # This is generating the unique xml functions:
     name = files.loc[i, 'Device Tag'] + '.txt'
-    header_lines = ['Print " <?xml version=|"1.0|"?>"', 'Print " <Record> "']
+    header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
     tail_lines = ['Print " </Record> "']
     lines = files.loc[files['ipaddresses'] == ip, :].apply(func, axis=1)
     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
