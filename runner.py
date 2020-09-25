@@ -21,7 +21,10 @@ def load_master_dict(file_path):
     device_container = {}
     for ip in unique_ips:
         tag = df.loc[df['filter_ip'] == ip, 'Device Tag'].values[0]
-        d = Device(name=tag, ip_address=ip, measurement_names=list(df.loc[df['Device Tag'] == tag, 'Name'].values))
+        filtered_df = df.loc[df['Device Tag'] == tag, :]
+        d = Device(name=tag, ip_address=ip, measurement_names=list(filtered_df['Name']),
+                   units=list(filtered_df['Units']), multipliers=list(filtered_df['Multiplier']),
+                   )
         device_container[d.name] = d
     return device_container
 
@@ -33,7 +36,6 @@ def load_offline_xml(file_path):
 
 def get_data(master_dict, xml_as_obj, tag):
     local_device = master_dict[tag]
-    print(xml_as_obj)
     for event, elem in cElementTree.iterparse(xml_as_obj):
         if elem.tag in local_device.measurement_names:
             local_device.measurements[elem.tag].value = elem.text
@@ -73,20 +75,30 @@ def create_save_df(master_dict, tag=None):
     return write_df.transpose()
 
 
+def handle_multiplier(master_dict):
+    for device in master_dict.values():
+        for measurement in device.measurements.values():
+            if (measurement.multiplier != 1) and measurement.value:
+                measurement.value = float(measurement.value) / measurement.multiplier
+    return master_dict
+
+
 class Device:
-    def __init__(self, name, ip_address, measurement_names, units=None):
+    def __init__(self, name, ip_address, measurement_names, units, multipliers):
         self.name = name
         self.ip_address = ip_address
-        self.measurements = {measurement_name: Measurement(measurement_name) for measurement_name in measurement_names}
+        self.measurements = {vals[0]: Measurement(vals[0], vals[1], vals[2])
+                             for vals in zip(measurement_names, units, multipliers)}
         self.measurement_names = measurement_names
 
 
 class Measurement:
-    def __init__(self, name):
+    def __init__(self, name, units, multipliers):
         self.name = name
         self.value = None
         self.time = None
-        self.units = None
+        self.units = units
+        self.multiplier = multipliers
 
 
 if __name__ == "__main__":
@@ -95,11 +107,13 @@ if __name__ == "__main__":
     try:
         container, _ = load_master_dict(definitions.MASTER_TABLE)
         if args.offline:
-            xml_file, _ = load_offline_xml(os.path.join(definitions.ROOT, 'data', 'RTU1_dataexport-example.xml'))
+            xml_file = load_offline_xml(os.path.join(definitions.ROOT, 'data', 'RTU1_dataexport-example.xml'))
             container = get_data(container, xml_file, 'RTU1')
+            container = handle_multiplier(container)
             create_save_df(container, tag='RTU1').to_csv(os.path.join(definitions.ROOT, 'data', 'parsed_data.csv'))
         else:
-            master_table, _ = fetch_data(container)
+            container, _ = fetch_data(container)
+            container = handle_multiplier(container)
             create_save_df(container).to_csv(os.path.join(definitions.ROOT, 'data', 'full_parsed_data.csv'))
     except Exception as e:
         logger.exception("Exception occurred")
