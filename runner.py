@@ -1,3 +1,4 @@
+from io import StringIO
 import os
 import sys
 import definitions
@@ -36,7 +37,10 @@ def load_offline_xml(file_path):
 
 def get_data(master_dict, xml_as_obj, tag):
     local_device = master_dict[tag]
-    for event, elem in cElementTree.iterparse(xml_as_obj):
+    print(xml_as_obj)
+    output = StringIO()
+    output.write(xml_as_obj.strip())
+    for event, elem in cElementTree.iterparse(output):
         if elem.tag in local_device.measurement_names:
             local_device.measurements[elem.tag].value = elem.text
             local_device.measurements[elem.tag].time = datetime.now(tz=timezone.utc)
@@ -48,14 +52,14 @@ def get_data(master_dict, xml_as_obj, tag):
 def fetch_data(master_dict):
     http = urllib3.PoolManager()
     for device in master_dict.values():
-        try:
+        #try:
             print("GET request to ", device.ip_address)
             r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=2.0))
-            master_dict = get_data(master_dict, xml_as_obj=r.data.decode('utf-8'), tag=device.name)
+            master_dict = get_data(master_dict, xml_as_obj=r.data.decode("utf-8"), tag=device.name)
         # except urllib3.exceptions.MaxRetryError:
-        except Exception as e:
-            print(device.name, e)
-            continue
+        #except Exception as e:
+            #print(device.name, e)
+            #continue
 
     return master_dict
 
