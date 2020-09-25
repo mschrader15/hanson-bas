@@ -33,6 +33,7 @@ def load_offline_xml(file_path):
 
 def get_data(master_dict, xml_as_obj, tag):
     local_device = master_dict[tag]
+    print(xml_as_obj)
     for event, elem in cElementTree.iterparse(xml_as_obj):
         if elem.tag in local_device.measurement_names:
             local_device.measurements[elem.tag].value = elem.text
