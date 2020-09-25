@@ -1,7 +1,7 @@
 Print " <Record> "
 Print "<SFanPrv> |### </SFanPrv>", Hanson\CX1\RTU2\SFanPrv
-Print "<RAH> |### </RAH>", Hanson\CX1\RTU2\RAH
-Print "<RACO2> |### </RACO2>", Hanson\CX1\RTU2\RACO2
-Print "<PressBldg> |### </PressBldg>", Hanson\CX1\RTU2\PressBldg
+Print "<RAH> |### </RAH>", Hanson\CX1\RTU2\RAH * 1000
+Print "<RACO2> |### </RACO2>", Hanson\CX1\RTU2\RACO2 * 1000
+Print "<PressBldg> |### </PressBldg>", Hanson\CX1\RTU2\PressBldg * 1000
 Print "<ExFan1Prv> |### </ExFan1Prv>", Hanson\CX1\RTU2\ExFan1Prv
 Print " </Record> "

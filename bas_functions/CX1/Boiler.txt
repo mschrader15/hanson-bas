@@ -1,16 +1,16 @@
 Print " <Record> "
-Print "<HWST> |### </HWST>", Hanson\CX1\Boiler\HWST
-Print "<HWRT> |### </HWRT>", Hanson\CX1\Boiler\HWRT
-Print "<ReheatHWRT> |### </ReheatHWRT>", Hanson\CX1\Boiler\ReheatHWRT
+Print "<HWST> |### </HWST>", Hanson\CX1\Boiler\HWST * 1000
+Print "<HWRT> |### </HWRT>", Hanson\CX1\Boiler\HWRT * 1000
+Print "<ReheatHWRT> |### </ReheatHWRT>", Hanson\CX1\Boiler\ReheatHWRT * 1000
 Print "<BoilerAlrm> |### </BoilerAlrm>", Hanson\CX1\Boiler\BoilerAlrm
 Print "<Pmp1Prv> |### </Pmp1Prv>", Hanson\CX1\Boiler\Pmp1Prv
 Print "<Pmp2Prv> |### </Pmp2Prv>", Hanson\CX1\Boiler\Pmp2Prv
 Print "<Pmp3Prv> |### </Pmp3Prv>", Hanson\CX1\Boiler\Pmp3Prv
 Print "<Pmp4Prv> |### </Pmp4Prv>", Hanson\CX1\Boiler\Pmp4Prv
 Print "<Pmp5Prv> |### </Pmp5Prv>", Hanson\CX1\Boiler\Pmp5Prv
-Print "<OAT> |### </OAT>", Hanson\CX1\Boiler\OAT
+Print "<OAT> |### </OAT>", Hanson\CX1\Boiler\OAT * 1000
 Print "<EmerShutDn> |### </EmerShutDn>", Hanson\CX1\Boiler\EmerShutDn
-Print "<OAH> |### </OAH>", Hanson\CX1\Boiler\OAH
-Print "<BoilerRmTmp> |### </BoilerRmTmp>", Hanson\CX1\Boiler\BoilerRmTmp
+Print "<OAH> |### </OAH>", Hanson\CX1\Boiler\OAH * 1000
+Print "<BoilerRmTmp> |### </BoilerRmTmp>", Hanson\CX1\Boiler\BoilerRmTmp * 1000
 Print "<Pmp8Prv> |### </Pmp8Prv>", Hanson\CX1\Boiler\Pmp8Prv
 Print " </Record> "

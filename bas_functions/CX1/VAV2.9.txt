@@ -1,7 +1,7 @@
 Print " <Record> "
-Print "<RMT_A> |### </RMT_A>", Hanson\CX1\VAV2.9\RMT_A
-Print "<DAT> |### </DAT>", Hanson\CX1\VAV2.9\DAT
-Print "<VP> |### </VP>", Hanson\CX1\VAV2.9\VP
-Print "<RMT_B> |### </RMT_B>", Hanson\CX1\VAV2.9\RMT_B
-Print "<AdjStPt> |### </AdjStPt>", Hanson\CX1\VAV2.9\AdjStPt
+Print "<RMT_A> |### </RMT_A>", Hanson\CX1\VAV2.9\RMT_A * 1000
+Print "<DAT> |### </DAT>", Hanson\CX1\VAV2.9\DAT * 1000
+Print "<VP> |### </VP>", Hanson\CX1\VAV2.9\VP * 1000
+Print "<RMT_B> |### </RMT_B>", Hanson\CX1\VAV2.9\RMT_B * 1000
+Print "<AdjStPt> |### </AdjStPt>", Hanson\CX1\VAV2.9\AdjStPt * 1000
 Print " </Record> "

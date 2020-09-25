@@ -1,5 +1,5 @@
 Print " <Record> "
-Print "<DAT> |### </DAT>", Hanson\CX1\VAV2.15\DAT
-Print "<RMT> |### </RMT>", Hanson\CX1\VAV2.15\RMT
-Print "<VP> |### </VP>", Hanson\CX1\VAV2.15\VP
+Print "<DAT> |### </DAT>", Hanson\CX1\VAV2.15\DAT * 1000
+Print "<RMT> |### </RMT>", Hanson\CX1\VAV2.15\RMT * 1000
+Print "<VP> |### </VP>", Hanson\CX1\VAV2.15\VP * 1000
 Print " </Record> "

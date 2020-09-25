@@ -25,6 +25,8 @@ uniqueip = files['ipaddresses'].unique()
 def func(x):
     path = x.DeviceId + "\\" + x.Name
     base_string = f'Print "<{x.Name}> |### </{x.Name}>", {path}'
+    if not isinstance(x.Value, str):
+        base_string = base_string + f' * {int(x.Multiplier)}'
     return base_string
 
 for ip in uniqueip:
