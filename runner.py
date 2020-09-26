@@ -79,7 +79,9 @@ def inner_fetch(device, num):
 
 @timing
 def fetch_data_multi_threaded(master_dict):
-    from concurrent.futures import ThreadPoolExecutor, as_completed
+    from concurrent.futures import ThreadPoolExecutor, as_completed	
+    # See:  https://creativedata.stream/multi-threading-api-requests-in-python/		
+    # it is possible that I will need to wrap this in a timeout function due threading hang-up on windows...
     threads = []
     with ThreadPoolExecutor(max_workers=len(master_dict.values())) as executor:
         for num, device in enumerate(master_dict.values()):
