@@ -1,0 +1,224 @@
+/*
+  This function provides a complete example for importing site, equip,
+  and point records from two CSV files included with the demo database.
+  It illustrates several techniques:
+    - importing data from CSV
+    - deriving equip recs from point lists
+    - mapping regular expression naming conventions to tags
+
+  This script is organized into several sub-functions such as "mapSites"
+  and "mapEquips".  The main routine of the script is defined at the
+  bottom of the script.
+
+  Also see the importPoints() function for a simpler example.
+*/
+() => do
+
+  // import files we will use
+  sitesFile: `io/import-sites.csv`
+  pointsFile: `io/import-points.csv`
+
+  // map equip name regex to tags; if a tag value is a
+  // function, it is called with result of reGroups
+  equipNameToTags: {
+    r"ElecMeter":  {ac, elec, meter, siteMeter},
+    r"RTU-(\d+)":  {ahu, rtu},
+  }
+
+  // map point name regex to tags; if a tag value is a
+  // function, it is called with result of reGroups
+  pointNameToTags: {
+    r"Demand":           {power, sensor},
+    r"Consumption":      {energy, sensor},
+    r"SupplyFan":        {discharge, air, fan, cmd},
+    r"DischargeAirTemp": {discharge, air, temp, sensor},
+    r"ReturnAirTemp":    {"return", air, temp, sensor},
+    r"Cool-(\d+)":       {cool, stage:(groups)=>groups[1].parseNumber, cmd},
+    r"Heat-(\d+)":       {heat, stage:(groups)=>groups[1].parseNumber, cmd},
+  }
+
+  ////////////////////////////////////////////////////////////////////
+  // Add Rec
+  ////////////////////////////////////////////////////////////////////
+
+  // function used to add our new records
+  addRec: (msg, tags) => do
+
+    // log an info message
+    logInfo("import", msg)
+
+    // filter out any null or empty string tags
+    tags = tags.findAll x => x != null and x != ""
+
+    // adds temporary "imported" marker to all import so we can
+    // easily test and then nuke to trash to re-run
+    tags = tags.set("imported", marker())
+
+    // add as new record to the database
+    commit(diff(null, tags, {add}))
+  end
+
+  ////////////////////////////////////////////////////////////////////
+  // Sites
+  ////////////////////////////////////////////////////////////////////
+
+  // function to map sites CSV to parsed tags
+  mapSites: () => do
+    ioReadCsv(sitesFile).map row => do
+
+      // get geo tags from CSV
+      street: row->street
+      city:   row->city
+      state:  row->state
+
+      // use geoTz function to map city/state to timezone
+      tz: geoTz({geoCity:city, geoState:state})
+
+      // map string cells to typed tags
+      tags: {
+        dis:           row->dis,
+        storeNum:      row->storeNum.parseNumber,
+        area:          row->area.parseNumber.as(1ft²),
+        geoAddr:       street + "," + city + "," + state,
+        geoCity:       city,
+        geoState:      state,
+        tz:            tz,
+        occupiedStart: row->occStart.parseTime("h:mm"),
+        occupiedEnd:   row->occEnd.parseTime("h:mm"),
+        weatherRef:    read(weather and dis == row->weather)->id,
+        site,
+      }
+    end
+  end
+
+  // function to import the sites
+  importSites: () => do
+    mapSites().each row => addRec("Add site: " + row->dis, row)
+  end
+
+  ////////////////////////////////////////////////////////////////////
+  // Equips
+  ////////////////////////////////////////////////////////////////////
+
+  // function to map point list to equip records
+  mapEquips: () => do
+    // since multiple points might map to one piece of equip,
+    // we create an accumulator map of dis-to-record
+    acc: {}
+
+    ioReadCsv(pointsFile).each row => do
+
+      // parse equip name from path column
+      equipName: pathToEquipName(row->path)
+
+      // associate with site via storeNum
+      site: read(site and storeNum==row->storeNum.parseNumber)
+
+      // map string cells to typed tags
+      tags: {
+        disMacro: r"$siteRef $navName",
+        navName:  equipName,
+        siteRef:  site->id,
+        equip,
+      }
+
+      // check if equip name matches one of our regular expressions
+      tags = applyTagsByRegex(equipNameToTags, equipName, tags)
+
+      acc = acc.set(tags.dis, tags)
+    end
+
+    return acc.vals
+  end
+
+  // function to import the equips
+  importEquips: () => do
+    mapEquips().each row => addRec("Add equip: " + row.dis, row)
+  end
+
+  ////////////////////////////////////////////////////////////////////
+  // Points
+  ////////////////////////////////////////////////////////////////////
+
+  // function to map point list to point records
+  mapPoints: () => do
+    ioReadCsv(pointsFile).map row => do
+
+      // parse point name from path column
+      equipName: pathToEquipName(row->path)
+      pointName: pathToPointName(row->path)
+
+      // associate with site via storeNum
+      site: read(site and storeNum==row->storeNum.parseNumber)
+
+      // associate with equip via dis
+      equip: read(equip and siteRef == site->id and navName == equipName)
+
+      // map string cells to typed tags
+      tags: {
+        disMacro: r"$equipRef $navName",
+        navName:  pointName,
+        siteRef:  site->id,
+        equipRef: equip->id,
+        kind:     row->kind,
+        tz:       site->tz,
+        point,
+        his,
+      }
+
+      // if kind is Number, we must have unit column
+      if (tags->kind == "Number")
+        tags = tags.set("unit", parseUnit(row->unit))
+
+      // check if point name matches one of our regular expressions
+      tags = applyTagsByRegex(pointNameToTags, pointName, tags)
+    end
+  end
+
+  // function to import the points
+  importPoints: () => do
+    mapPoints().each row => addRec("Add point: " + row.dis, row)
+  end
+
+  ////////////////////////////////////////////////////////////////////
+  // Utils
+  ////////////////////////////////////////////////////////////////////
+
+  // parse path as "{equipName}/{pointName}"
+  pathToEquipName: (path) => path.split("/")[0]
+
+  // parse path as "{equipName}/{pointName}"
+  pathToPointName: (path) => path.split("/")[1]
+
+  // given equip/point name, try to find match by prefix
+  // and if found, then apply given tags
+  applyTagsByRegex: (mapping, name, tags) => do
+
+    // check for every match in mapping dict of regex:tags
+    mapping.each((tagsToAdd,regex) => do
+
+      // we had a match, walk thru each tagToAdd and add it
+      // to tags; if the tag value is a function then call
+      // the function with reGroups
+      if (regex.reMatches(name)) do
+        tagsToAdd.each((v, n) => do
+          if (v.isFunc()) v = v(reGroups(regex, name))
+          tags = tags.set(n, v)
+        end)
+      end
+    end)
+
+    // return potentially updated tags
+    return tags
+  end
+
+  ////////////////////////////////////////////////////////////////////
+  // Main
+  ////////////////////////////////////////////////////////////////////
+
+  importSites()        // map sites CSV and add site recs
+  importEquips()       // map points CSV and add equip recs
+  importPoints()       // map points CSV and add points recs
+  readAll(imported)    // return everything we added
+
+end

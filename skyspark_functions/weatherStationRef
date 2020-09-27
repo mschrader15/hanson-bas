@@ -1,0 +1,11 @@
+// Get all historical and forecast data for Richmond weather points this week
+readAll(point and weatherStationRef->geoCity=="Richmond").hisRead(thisWeek, {forecast})
+
+// Get only forecast data for Richmond weather points this week
+readAll(point and weatherStationRef->geoCity=="Richmond").hisRead(thisWeek, {forecastOnly})
+
+//Applied to a weather station to indicate that point histories should be
+//automatically synchronized with built-in weather subscription.
+//
+
+weatherAutoSyncHis(weatherStationRef == "weatherStationRef Name")

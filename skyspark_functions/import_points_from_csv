@@ -1,0 +1,48 @@
+/*
+  This function provides a simple example to create point records
+  from a CSV file.  It takes the parent equip and a filter to use
+  for selecting rows from the CSV to import.
+
+  Also see the importExample() function for a more complete example.
+*/
+(equip, filter: null) => do
+
+  // if filter is not defined, default to store 8 and "RTU-1" points
+  if (filter == null)
+    filter = (row) => row["storeNum"] == "8" and row["path"].startsWith("RTU-1/")
+
+  // read our CSV file and apply filter
+  importFile: `io/import-points.csv`
+  csv: ioReadCsv(importFile).findAll(filter)
+
+  // parse CSV rows into point dicts
+  points: csv.map row => do
+    { disMacro: r"$equipRef $navName",
+      navName:  row->path.split("/").last,
+      siteRef:  equip->siteRef->id,
+      equipRef: equip->id,
+      kind:     row->kind,
+      tz:       equip->siteRef->tz,
+      unit:     row["unit"],
+      point,
+      his
+    }
+  end
+
+  // map point names to additional semantic tags
+  pointNameToTags: {
+    "SupplyFan":        {fan, enable, cmd},
+    "DischargeAirTemp": {discharge, air, temp, sensor},
+    "ReturnAirTemp":    {"return", air, temp, sensor},
+    "Cool-1":           {cool, stage:1, cmd},
+    "Cool-2":           {cool, stage:2, cmd},
+    "Heat-1":           {heat, stage:1, cmd},
+    "Heat-2":           {heat, stage:2, cmd},
+    "Consumption":      {energy, sensor},
+    "Demand":           {power, sensor},
+  }
+  points = points.map pt => merge(pt, pointNameToTags[pt->navName])
+
+  // commit to the database
+  points.map pt => diff(null, pt, {add}).commit
+end
