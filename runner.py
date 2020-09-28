@@ -12,7 +12,8 @@ from datetime import datetime, timezone
 parser = argparse.ArgumentParser()
 parser.add_argument('--offline', dest='offline', action='store_const',
                     const=True, default=False)
-
+parser.add_argument('--multithread', dest='multi_thread', action='store_const',
+                    const=True, default=False)
 
 @timing
 def load_master_dict(file_path):
@@ -34,16 +35,19 @@ def load_offline_xml(file_path):
     return f.read()
 
 
-def get_data(master_dict, xml_as_obj, tag):
-    local_device = master_dict[tag]
+def get_data(device_obj, xml_as_obj, tag=None):
     print(xml_as_obj)
     root = ElementTree.fromstring(xml_as_obj)
+    if tag:
+        local_device = device_obj[tag]
+    else:
+        local_device = device_obj
     for child in root:
         if child.tag in local_device.measurement_names:
             local_device.measurements[child.tag].value = child.text.strip()
             local_device.measurements[child.tag].time = datetime.now(tz=timezone.utc)
         child.clear()
-    return master_dict
+    return device_obj
 
 
 @timing
@@ -58,7 +62,33 @@ def fetch_data(master_dict):
         except Exception as e:
             print(device.name, e)
             continue
+    return master_dict
 
+
+def inner_fetch(device, num):
+    http = urllib3.PoolManager()
+    try:
+        print("GET request to ", device.ip_address)
+        r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=2.0))
+        device = get_data(device, xml_as_obj=r.data.decode("utf-8"))
+        # except urllib3.exceptions.MaxRetryError:
+    except Exception as e:
+        print(device.name, e)
+    return num, device
+
+
+@timing
+def fetch_data_multi_threaded(master_dict):
+    from concurrent.futures import ThreadPoolExecutor, as_completed	
+    # See:  https://creativedata.stream/multi-threading-api-requests-in-python/		
+    # it is possible that I will need to wrap this in a timeout function due threading hang-up on windows...
+    threads = []
+    with ThreadPoolExecutor(max_workers=len(master_dict.values())) as executor:
+        for num, device in enumerate(master_dict.values()):
+            threads.append(executor.submit(inner_fetch, device, num))
+        results =  sorted([res for res in [task.result() for task in as_completed(threads)]], key=lambda x: x[0])
+        for num, device in enumerate(master_dict.values()):
+            device = results[num][1]
     return master_dict
 
 
@@ -115,7 +145,10 @@ if __name__ == "__main__":
             container = handle_multiplier(container)
             create_save_df(container, tag='RTU1').to_csv(os.path.join(definitions.ROOT, 'data', 'parsed_data.csv'))
         else:
-            container, _ = fetch_data(container)
+            if args.multi_thread:
+                container, _ = fetch_data_multi_threaded(container)
+            else:
+                container, _ = fetch_data(container)
             container = handle_multiplier(container)
             create_save_df(container).to_csv(os.path.join(definitions.ROOT, 'data', 'full_parsed_data.csv'))
     except Exception as e:
