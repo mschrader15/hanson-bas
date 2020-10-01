@@ -14,8 +14,8 @@ session = Niagara4HaystackSession(uri='http://10.30.1.27', username='bb', passwo
 
 op = session.nav()
 op.wait()
-nav = op.result
 print(nav)
+nav = op.result
 
 username='admin1'
 

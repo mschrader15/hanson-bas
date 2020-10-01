@@ -5,6 +5,7 @@ import urllib3
 import pandas as pd
 from functions.logging import logger, logging
 from functions.timing import timing
+from functions.skyspark import SkySpark
 import argparse
 from xml.etree import ElementTree
 from datetime import datetime, timezone
@@ -14,10 +15,15 @@ parser.add_argument('--offline', dest='offline', action='store_const',
                     const=True, default=False)
 parser.add_argument('--multithread', dest='multi_thread', action='store_const',
                     const=True, default=False)
+parser.add_argument('--equipment-list', dest='equipment_list', nargs="+")
 
 @timing
-def load_master_dict(file_path):
+def load_master_dict(file_path, filter_list=None):
     df = pd.read_excel(file_path)
+    if filter_list:
+        filter_list = [item.strip() for item in filter_list]
+        df = df.loc[df['Device Tag'].isin(filter_list)]
+
     unique_ips = df['filter_ip'].dropna().unique()
     device_container = {}
     for ip in unique_ips:
@@ -45,7 +51,7 @@ def get_data(device_obj, xml_as_obj, tag=None):
     for child in root:
         if child.tag in local_device.measurement_names:
             local_device.measurements[child.tag].value = child.text.strip()
-            local_device.measurements[child.tag].time = datetime.now(tz=timezone.utc)
+            local_device.measurements[child.tag].time = datetime.now()
         child.clear()
     return device_obj
 
@@ -107,6 +113,16 @@ def create_save_df(master_dict, tag=None):
     return write_df.transpose()
 
 
+def write_to_skyspark(skyspark_obj, master_dict, write_restriction=None):
+    for local_obj in master_dict.values():
+        for measurement in local_obj.measurements.values():
+            if write_restriction:
+                if measurement not in write_restriction:
+                    continue
+            skyspark_obj.write_point_val(equip_name=local_obj.name, point_name=measurement.skyspark_name,
+                                         time=measurement.time, value=measurement.value)
+
+
 def handle_multiplier(master_dict):
     for device in master_dict.values():
         for measurement in device.measurements.values():
@@ -119,25 +135,26 @@ class Device:
     def __init__(self, name, ip_address, measurement_names, units, multipliers):
         self.name = name
         self.ip_address = ip_address
-        self.measurements = {vals[0]: Measurement(vals[0], vals[1], vals[2])
+        self.measurements = {vals[0]: Measurement(name, vals[0], vals[1], vals[2])
                              for vals in zip(measurement_names, units, multipliers)}
         self.measurement_names = measurement_names
 
 
 class Measurement:
-    def __init__(self, name, units, multipliers):
+    def __init__(self, device_name, name, units, multipliers):
         self.name = name
         self.value = None
         self.time = None
         self.units = units
         self.multiplier = multipliers
+        self.skyspark_name = "_".join([device_name, name])
 
 
 if __name__ == "__main__":
 
     args = parser.parse_args()
     try:
-        container, _ = load_master_dict(definitions.MASTER_TABLE)
+        container, _ = load_master_dict(definitions.MASTER_TABLE, filter_list=args.equipment_list)
         if args.offline:
             xml_file = load_offline_xml(os.path.join(definitions.ROOT, 'data',
                                                      'MultipleEquip_dataexport_test20200925_1PM.txt'))
@@ -145,11 +162,13 @@ if __name__ == "__main__":
             container = handle_multiplier(container)
             create_save_df(container, tag='RTU1').to_csv(os.path.join(definitions.ROOT, 'data', 'parsed_data.csv'))
         else:
+            skyspark = SkySpark(definitions.LOGIN_DICT['SkySpark'])
             if args.multi_thread:
                 container, _ = fetch_data_multi_threaded(container)
             else:
                 container, _ = fetch_data(container)
             container = handle_multiplier(container)
+            write_to_skyspark(skyspark_obj=skyspark, master_dict=container)
             create_save_df(container).to_csv(os.path.join(definitions.ROOT, 'data', 'full_parsed_data.csv'))
     except Exception as e:
         logger.exception("Exception occurred")

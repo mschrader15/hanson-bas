@@ -4,3 +4,9 @@ email = hanson.bridge.monitor@gmail.com
 to_email = mschrader2@hanson-inc.com
 mail_server = smtp.googlemail.com
 port = 587
+
+[SkySpark]
+uri = http://skyspark.hanson-inc.com:8080
+username = administrator
+password = IownSkyspark
+project = springfieldHanson

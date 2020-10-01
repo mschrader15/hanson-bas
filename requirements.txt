@@ -6,3 +6,4 @@ xlrd
 openpyxl
 lxml
 urllib3
+pint
