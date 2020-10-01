@@ -86,7 +86,7 @@ def fetch_data_multi_threaded(master_dict):
     with ThreadPoolExecutor(max_workers=len(master_dict.values())) as executor:
         for num, device in enumerate(master_dict.values()):
             threads.append(executor.submit(inner_fetch, device, num))
-        results =  sorted([res for res in [task.result() for task in as_completed(threads)]], key=lambda x: x[0])
+        results = sorted([res for res in [task.result() for task in as_completed(threads)]], key=lambda x: x[0])
         for num, device in enumerate(master_dict.values()):
             device = results[num][1]
     return master_dict

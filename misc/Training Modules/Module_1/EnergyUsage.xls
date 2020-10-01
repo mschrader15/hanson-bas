@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+<Styles>
+  <Style ss:ID="HeaderRow">
+    <Font ss:Bold="1" />
+  </Style>
+  <Style ss:ID="DT">
+     <NumberFormat ss:Format="yyyy-mm-dd hh:mm:ss"/>
+  </Style>
+  <Style ss:ID="DT0">
+     <NumberFormat ss:Format="yyyy-mm-dd hh:mm:ss &quot;EDT&quot;"/>
+  </Style>
+  <Style ss:ID="U0">
+     <NumberFormat ss:Format="0.0&quot;_kW/ft²/°daysF&quot;"/>
+  </Style>
+</Styles>
+ <Worksheet ss:Name="Elec Power • 18-Jun-2020 • Normalize by  Area,  Degree-Day">
+  <Table>
+  <Column ss:Width="140"/>
+  <Column ss:Width="140"/>
+  <Column ss:Width="140"/>
+  <Column ss:Width="140"/>
+  <Column ss:Width="140"/>
+   <Row ss:StyleID="HeaderRow">
+    <Cell><Data ss:Type="String">ts</Data></Cell>
+    <Cell><Data ss:Type="String">Gaithersburg</Data></Cell>
+    <Cell><Data ss:Type="String">Headquarters</Data></Cell>
+    <Cell><Data ss:Type="String">Short Pump</Data></Cell>
+    <Cell><Data ss:Type="String">Carytown</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-17T23:45:00</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T00:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012409740713396806</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">9.75686537168671E-5</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.002719638860277E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035669492639959456</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T00:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012409740713396806</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0273405303128948E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.908328702278007E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003592610769492319</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T00:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001166329014416993</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0043832000265731E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.4835694876577955E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003695256791477814</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T00:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0011943209107630008</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0273405303128948E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.6723513608223335E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035669492639959456</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T01:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017541588376831575</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0043832000265731E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.4363740193666606E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035669492639959456</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T01:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0011943209107630008</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0330798628844751E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.53076495594893E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035156262530031982</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T01:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018008119982598372</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0216011977413143E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.002719638860277E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0034643032420104505</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T01:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019407714799898762</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0101225325981536E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.4835694876577955E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0034899647475068246</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T02:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0011756596465323289</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.2970891611771744E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.4363740193666606E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003541287758499572</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T02:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0011383371180709852</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0273405303128948E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.577960424240064E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035669492639959456</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T02:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012316434392243448</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.056037193170797E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.341983082784391E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0034643032420104505</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T02:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012876272319163602</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0101225325981536E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.577960424240064E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003438641736514077</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T03:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012036515428783367</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0445585280276362E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.625155892531199E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0032076881870467134</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T03:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018847876872978605</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0732551908855382E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.625155892531199E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0030537191540684714</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T03:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012503047034550165</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0216011977413143E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.2947876144932564E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003233349692543087</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T03:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0011943209107630008</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.015861865169734E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.153201209619853E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003079380659564845</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T04:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001166329014416993</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1134305188866011E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.341983082784391E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003233349692543087</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T04:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019314408478745403</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1536058468876639E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.53076495594893E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0031820266815503397</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T04:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012036515428783367</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1363878491729227E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.002719638860277E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.00297673463757935</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T04:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018661264230671886</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1363878491729227E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.049915107151412E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003156365176053966</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T05:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001184990278647665</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1421271817445031E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.23869698031595E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003130703670557592</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T05:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0011383371180709852</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1478665143160836E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.8611332339868726E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035156262530031982</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T05:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012596353355703522</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.084733856028699E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.097110575442546E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035156262530031982</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T05:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012316434392243448</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1076911863150205E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.908328702278007E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003079380659564845</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T06:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019034489515285325</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1191698514581816E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.002719638860277E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.00297673463757935</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T06:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012223128071090087</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1363878491729227E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.333087916898219E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003079380659564845</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T06:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012223128071090087</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0962125211718597E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.8611332339868726E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003233349692543087</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T06:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018754570551825246</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0216011977413143E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.813937765695738E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003156365176053966</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T07:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">8.210956261495631E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.0546810606257896E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">7.551274926581549E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003259011198039461</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T07:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">7.277893049962036E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.0374630629110485E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.6723513608223335E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003233349692543087</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T07:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">8.584181546109069E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.0374630629110485E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.908328702278007E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0032076881870467134</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T07:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">7.837730976882193E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.0661597257689502E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.285892448607085E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0036182722749886925</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T08:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0013529416567237117</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.06042039319737E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.53076495594893E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003079380659564845</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T08:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001324949760377704</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.558386194379859E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.955524170569142E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033103342090322085</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T08:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001306288496147032</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.587082857237761E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.002719638860277E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003335995714528582</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T08:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001296957864031696</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.5296895315219573E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.908328702278007E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003438641736514077</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T09:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001810142630375173</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.587082857237761E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">8.447988824113108E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033616572200249554</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T09:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.00400284117747912</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.5469075292366987E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">8.589575228986513E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003335995714528582</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T09:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0038162285351724013</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.592822189809342E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">8.589575228986513E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003335995714528582</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T09:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0039002042242104245</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.6215188526672436E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">8.25920695094857E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033616572200249554</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T10:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003946857384787104</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.615779520095663E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">8.495184292404244E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003284672703535835</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T10:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003946857384787104</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.2140262400850344E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019161360126200681</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006979929495013649</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T10:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0037042609497883695</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.961495606935496E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0021190765262719476</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006825960462035406</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T10:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0037229222140190417</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.909841613791272E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0021096374326137206</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006928606484020901</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T11:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0034150113542129553</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.927059611506013E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.002104917885784607</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006697652934553538</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T11:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033776888257516114</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.8868842835049505E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0021096374326137206</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006825960462035406</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T11:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0038815429599797524</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.8754056183617895E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0021332351667592876</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006851621967531781</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T11:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033590275615209397</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.927059611506013E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0021190765262719476</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006723314440049911</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T12:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003144423022868213</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.858187620647048E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018311841696960257</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0070312525060063965</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T12:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033870194578669473</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.858187620647048E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018359037165251392</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006107438308136943</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T12:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003331035665174932</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.829490957789146E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018642209974998201</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0061330998136333165</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T12:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003331035665174932</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.829490957789146E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001802866888721345</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0059534692751587</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T13:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0034523338826742992</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.8352302903607263E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018689405443289334</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005696854220194963</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T13:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0030791085980608614</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.1508935817976493E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018972578253036144</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005773838736684084</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T13:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0021180534901812592</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.7663582995017614E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017887082482340045</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0061330998136333165</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T13:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.002696552681332088</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.909841613791272E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001642402296531487</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0060561152971441955</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T14:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0027432058419087674</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.8754056183617895E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0016282436560441467</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006004792286151448</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T14:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0028271815309467907</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.858187620647048E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0016895977648226216</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005773838736684084</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T14:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0028831653236388063</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.9901922697933976E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017273541394555295</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005363254648742105</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T14:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033683581936362755</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.909841613791272E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0016895977648226216</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005286270132252985</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T15:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0040961474986324796</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.978713604650237E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0015621700004365582</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005183624110267489</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T15:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0037042609497883695</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.9442776092207545E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018264646228669122</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005132301099274742</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T15:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003293713136713588</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.869666285790209E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018925382784745007</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005209285615763863</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T15:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003470995146904971</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.9442776092207545E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019066969189618413</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005157962604771115</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T16:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0034150113542129553</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.8811449509333695E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001783988701404891</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006748975945546285</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T16:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035549708359429943</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.8754056183617895E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017462323267719835</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006543683901575295</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T16:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003545640203827659</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.938538276649174E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.002175711088221309</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0061330998136333165</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T16:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0034150113542129553</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.898362948648111E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019963683087149972</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0061330998136333165</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T17:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.00326572124036758</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">3.202547574941873E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018075864355504585</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006415376374093427</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T17:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003470995146904971</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.9213202789344327E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001925575106278295</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0062870688466115585</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T17:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003405680722097619</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.961495606935496E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018595014506707066</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006415376374093427</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T17:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0034523338826742992</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.967234939507076E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018500623570124797</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0063640533631006795</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T18:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033870194578669473</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.8868842835049505E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018642209974998201</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0062870688466115585</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T18:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.00395618801690244</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.909841613791272E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017273541394555295</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0063640533631006795</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T18:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033870194578669473</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.06042039319737E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017367932331137563</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006312730352107932</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T18:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003405680722097619</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.0833777234836916E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001750951873601097</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0063640533631006795</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T19:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0038535510636337447</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.61139632006909E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017179150457973026</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.006184422824626064</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T19:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003797567270941729</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.548263661781705E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017037564053099623</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005799500242180458</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T19:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003844220431518409</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0617765257423773E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017037564053099623</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.00615876131912969</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T19:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003844220431518409</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0502978605992164E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001713195498968189</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0059534692751587</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T20:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.00390953485632576</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0388191954560556E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.002128515619930174</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005414577659734853</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T20:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0038162285351724013</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0675158583139577E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019397337467656356</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.005234947121260237</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T20:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0035363095717123225</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0675158583139577E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001840623263354253</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.003259011198039461</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T20:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0032470599761369083</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.056037193170797E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001694317311651735</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033103342090322085</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T21:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033123744009442603</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0388191954560556E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0016990368584808488</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0033873187255213295</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T21:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0037789060067110573</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.056037193170797E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0016848782179935081</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017963053847461594</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T21:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018008119982598372</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0445585280276362E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.191501512024815E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0020785819452062704</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T21:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0018381345267211807</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0388191954560556E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.955524170569142E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0021555664616953914</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T22:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0017821507340291653</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.056037193170797E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.14430604373368E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001924612912228028</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T22:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001819473262490509</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0904731886002794E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.14430604373368E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019502744177244018</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T22:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012223128071090087</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1306485166013423E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.7667422974046034E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.002027258934213523</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T22:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0020247471690278997</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.1019518537434402E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.955524170569142E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019759359232207757</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T23:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0011943209107630008</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0732551908855382E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.333087916898219E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0020015974287171494</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T23:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0012129821749936728</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0732551908855382E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.002719638860277E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0019759359232207757</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T23:30:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001184990278647665</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0675158583139577E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.097110575442546E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001770643879249786</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-18T23:45:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001129006485955649</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">1.0388191954560556E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">5.285892448607085E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.001847628395738907</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-19T00:00:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">8.18813313258042E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">7.102424057330767E-5</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">4.672351360822334E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.0015878056525881232</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DT0"><Data ss:Type="DateTime">2020-06-19T00:15:00</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">7.972655944880935E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">7.102424057330767E-5</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">2.23310910627538E-4</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">0.00160648571908916</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
