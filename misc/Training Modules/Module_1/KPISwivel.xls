@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+<Styles>
+  <Style ss:ID="HeaderRow">
+    <Font ss:Bold="1" />
+  </Style>
+  <Style ss:ID="DT">
+     <NumberFormat ss:Format="yyyy-mm-dd hh:mm:ss"/>
+  </Style>
+  <Style ss:ID="U0">
+     <NumberFormat ss:Format="0.0&quot;h&quot;"/>
+  </Style>
+  <Style ss:ID="U1">
+     <NumberFormat ss:Format="0.0&quot;kW&quot;"/>
+  </Style>
+  <Style ss:ID="U2">
+     <NumberFormat ss:Format="0.0&quot;kWh&quot;"/>
+  </Style>
+  <Style ss:ID="U3">
+     <NumberFormat ss:Format="0.0&quot;°F&quot;"/>
+  </Style>
+  <Style ss:ID="U4">
+     <NumberFormat ss:Format="0.0&quot;Δ°F&quot;"/>
+  </Style>
+</Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table>
+  <Column ss:Width="72"/>
+  <Column ss:Width="114"/>
+  <Column ss:Width="40"/>
+  <Column ss:Width="40"/>
+  <Column ss:Width="126"/>
+  <Column ss:Width="140"/>
+  <Column ss:Width="140"/>
+  <Column ss:Width="138"/>
+  <Column ss:Width="138"/>
+  <Column ss:Width="114"/>
+  <Column ss:Width="132"/>
+   <Row ss:StyleID="HeaderRow">
+    <Cell><Data ss:Type="String">Site</Data></Cell>
+    <Cell><Data ss:Type="String">AHU Fan Runtime</Data></Cell>
+    <Cell><Data ss:Type="String">kW</Data></Cell>
+    <Cell><Data ss:Type="String">kW</Data></Cell>
+    <Cell><Data ss:Type="String">kWh</Data></Cell>
+    <Cell><Data ss:Type="String">kWh Norm (kWh/ft²/°daysF)</Data></Cell>
+    <Cell><Data ss:Type="String">kWh Δ Prev Year (kWh/°daysF)</Data></Cell>
+    <Cell><Data ss:Type="String">kW Norm (kW/ft²/°daysF)</Data></Cell>
+    <Cell><Data ss:Type="String">kW Norm (kW/ft²/°daysF)</Data></Cell>
+    <Cell><Data ss:Type="String">ZoneTemp Occ Avg</Data></Cell>
+    <Cell><Data ss:Type="String">ZoneTemp Δ Sp</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Gaithersburg</Data></Cell>
+    <Cell ss:StyleID="U0"><Data ss:Type="Number">440.70914916666663</Data></Cell>
+    <Cell ss:StyleID="U1"><Data ss:Type="Number">60.0</Data></Cell>
+    <Cell ss:StyleID="U1"><Data ss:Type="Number">514.0</Data></Cell>
+    <Cell ss:StyleID="U2"><Data ss:Type="Number">111557.33333333333</Data></Cell>
+    <Cell><Data ss:Type="Number">2.2904976908643593</Data></Cell>
+    <Cell><Data ss:Type="Number">-18.147574142276703</Data></Cell>
+    <Cell><Data ss:Type="Number">5.027801046321311E-4</Data></Cell>
+    <Cell><Data ss:Type="Number">0.0526644203169849</Data></Cell>
+    <Cell ss:StyleID="U3"><Data ss:Type="Number">73.61602424763305</Data></Cell>
+    <Cell ss:StyleID="U4"><Data ss:Type="Number">-1.7751700196919573</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
