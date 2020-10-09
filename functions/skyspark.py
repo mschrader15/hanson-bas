@@ -1,3 +1,4 @@
+import hszinc
 import pyhaystack
 from pyhaystack.util import filterbuilder as fb
 
@@ -21,6 +22,7 @@ class SkySpark:
                                               password=login_info['password'],
                                               project=login_info['project'],
                                               pint=True)
+
         except pyhaystack.util.state.NotReadyError as e:
             # could do error handling here
             raise e
@@ -91,3 +93,42 @@ class SkySpark:
             print('Point wasnt written: ', equip_name, point_name)
             return 0.
         self._write_point(point, time, value)
+
+    def check_equipment_exists(self, name):
+        self._set_equip(name)
+        return True if self._equip else False
+
+
+class SkySparkCreator(SkySpark):
+
+    def __init__(self, login_info):
+        super().__init__(login_info)
+
+    def _create_equipment_grid(self, equip_name, equip_type, proj_name):
+
+        grid = hszinc.Grid()
+        grid.metadata['commit'] = 'add'
+        # grid.metadata['projName'] = 'Springfield'
+        grid.column['dis'] = {}
+        grid.column["equip"] = {}
+        grid.column["siteRef"] = {}
+
+        grid.append({'dis': equip_name, 'equip': hszinc.MARKER, "siteRef": self._site.id})
+        return grid
+
+    def _create_point_grid(self):
+        return None
+
+    def _post_grid(self, g):
+        r = self.session._post_grid(grid=g, callback=None, uri='commit')
+        return r
+
+    def add_equipment(self, name, type):
+        if not self.check_equipment_exists(name):
+            g = self._create_equipment_grid(equip_name=name, equip_type=type, proj_name=self.session.name)
+            r = self._post_grid(g)
+            print('r')
+            return r
+        else:
+            return None
+
