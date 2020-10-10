@@ -7,6 +7,7 @@ from functions.logging import logger, logging  # import the logging class (we wr
 from functions.timing import timing  # import the function timing class (we wrote)
 from functions.skyspark import SkySpark  # import the SkySpark class (we wrote)
 from functions.multithread import fetch_data_multi_threaded  # import the multi_thread class
+from functions.entities.haystack_objects import Device
 import argparse
 from xml.etree import ElementTree
 from datetime import datetime
@@ -159,50 +160,6 @@ def handle_multiplier(master_dict):
             if (measurement.multiplier != 1) and measurement.value:
                 measurement.value = float(measurement.value) / measurement.multiplier
     return master_dict
-
-
-class Device:
-    """
-    This class emulates an equipment item in SkySpark
-    """
-
-    def __init__(self, name, ip_address, measurement_names, units, multipliers):
-        """
-        Create a device instance
-
-        :param name: device name
-        :param ip_address: the ip address of BAS to poll for xml data
-        :param measurement_names: a list of names of the measurements assigned to the devices
-        :param units: a list of the units of the devices
-        :param multipliers: a list of the multipliers of the devices
-        """
-        self.name = name
-        self.ip_address = ip_address
-        # this call instantiates a dictionary of measurements
-        self.measurements = {vals[0]: Measurement(name, vals[0], vals[1], vals[2])
-                             for vals in zip(measurement_names, units, multipliers)}
-        self.measurement_names = measurement_names
-
-
-class Measurement:
-    """
-    Emulates a measurement point in SkySpark. Stores the measurement time and value
-    """
-    def __init__(self, device_name, name, units, multipliers):
-        """
-        Creates a Measurement instance
-
-        :param device_name: the name of the device that it is nested under
-        :param name: the name of the measurement
-        :param units: the units of the measurement
-        :param multipliers: the multiplier of the measurement
-        """
-        self.name = name
-        self.value = None
-        self.time = None
-        self.units = units
-        self.multiplier = multipliers
-        self.skyspark_name = "_".join([device_name, name])
 
 
 """ The entry point of the script """

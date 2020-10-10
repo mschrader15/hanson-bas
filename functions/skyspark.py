@@ -98,37 +98,77 @@ class SkySpark:
         self._set_equip(name)
         return True if self._equip else False
 
+    def check_measurement_exists(self, name):
+        point_list = list(self._site.find_entity(fb.Field('navName') == fb.Scalar(name)).result.values())
+        return True if len(point_list) > 0 else False
+
 
 class SkySparkCreator(SkySpark):
 
     def __init__(self, login_info):
         super().__init__(login_info)
 
-    def _create_equipment_grid(self, equip_name, equip_type, proj_name):
+    def add_equipment(self, name, markers):
+        if not self.check_equipment_exists(name):
+            g = self._create_equipment_grid(equip_name=name, markers=markers)
+            r = self._post_grid(g)
+            print(f"{name} did not fail {r.is_failed}")
+            # have to refresh the equipment list now
+            self._site.refresh()
+            return r
+        else:
+            return None
 
+    def add_measurement(self, equip_name, measurement_name, markers, unit):
+        name = "_".join([equip_name, measurement_name])
+        if not self.check_measurement_exists(name):
+            self._set_equip(equip_name)
+            g = self._create_measurement_grid(name=name, markers=markers, unit=unit)
+            r = self._post_grid(g)
+            print(f"{name} failed? {r.is_failed}")
+            return r
+        else:
+            return None
+
+    def _create_equipment_grid(self, equip_name, markers):
         grid = hszinc.Grid()
         grid.metadata['commit'] = 'add'
         # grid.metadata['projName'] = 'Springfield'
         grid.column['dis'] = {}
         grid.column["equip"] = {}
         grid.column["siteRef"] = {}
-
-        grid.append({'dis': equip_name, 'equip': hszinc.MARKER, "siteRef": self._site.id})
+        grid.column["navName"] = {}
+        #grid.column['disMacro'] = {}
+        g = {'dis': equip_name, 'navName': equip_name, 'equip': hszinc.MARKER, "siteRef": self._site.id}
+        for marker in markers:
+            grid.column[marker] = {}
+            g[marker] = hszinc.MARKER
+        grid.append(g)
         return grid
 
-    def _create_point_grid(self):
-        return None
+    def _create_measurement_grid(self, name, markers, unit):
+        grid = hszinc.Grid()
+        grid.metadata['commit'] = 'add'
+        # grid.column['dis'] = {}
+        grid.column['navName'] = {}
+        grid.column['disMacro'] = {}
+        grid.column["siteRef"] = {}
+        grid.column["equipRef"] = {}
+        grid.column["tz"] = {}
+        g = {'navName': name, 'disMacro': '$equipRef $navName', "siteRef": self._site.id, "equipRef": self._equip.id,
+             'unit': unit, 'tz': str(self._site.hs_tz)}
+        for marker in markers:
+            grid.column[marker] = {}
+            g[marker] = hszinc.MARKER
+        if unit != None:
+            grid.column['unit'] = {}
+            g['unit'] = unit
+        grid.append(g)
+        return grid
 
     def _post_grid(self, g):
         r = self.session._post_grid(grid=g, callback=None, uri='commit')
         return r
 
-    def add_equipment(self, name, type):
-        if not self.check_equipment_exists(name):
-            g = self._create_equipment_grid(equip_name=name, equip_type=type, proj_name=self.session.name)
-            r = self._post_grid(g)
-            print('r')
-            return r
-        else:
-            return None
+
 

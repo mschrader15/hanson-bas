@@ -7,3 +7,4 @@ openpyxl
 lxml
 urllib3
 pint
+fuzzywuzzy
