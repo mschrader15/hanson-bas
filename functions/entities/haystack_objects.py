@@ -6,7 +6,7 @@ class Device:
     """
 
     def __init__(self, name, ip_address, measurement_names, units, multipliers, equip_markers=None,
-                 measurement_markers=None,):
+                 measurement_markers=None, measurement_dataTypes=None):
         """
         Create a device instance
 
@@ -20,8 +20,10 @@ class Device:
         self.ip_address = ip_address
         # this call instantiates a dictionary of measurements
         measurement_markers = measurement_markers if measurement_markers else [None] * len(measurement_names)
-        self.measurements = {vals[0]: _Measurement(name, vals[0], vals[1], vals[2], vals[3])
-                             for vals in zip(measurement_names, units, multipliers, measurement_markers)}
+        measurement_dataTypes = measurement_dataTypes if measurement_dataTypes else [None] * len(measurement_names)
+        self.measurements = {vals[0]: _Measurement(name, vals[0], vals[1], vals[2], vals[3], vals[4])
+                             for vals in zip(measurement_names, units, multipliers, measurement_markers,
+                                             measurement_dataTypes)}
         self.measurement_names = measurement_names
         self.tags = equip_markers
 
@@ -35,7 +37,7 @@ class _Measurement:
     """
     Emulates a measurement point in SkySpark. Stores the measurement time and value
     """
-    def __init__(self, device_name, name, units, multipliers, markers):
+    def __init__(self, device_name, name, units, multipliers, markers=None, dataType=None):
         """
         Creates a Measurement instance
 
@@ -51,6 +53,7 @@ class _Measurement:
         self.multiplier = multipliers
         self.skyspark_name = "_".join([device_name, name])
         self.markers = markers
+        self.dataType = dataType
 
     def get_markers(self):
         markers = self.markers.split(',')
