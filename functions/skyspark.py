@@ -81,6 +81,12 @@ class SkySpark:
             on_off = value.lower() in ['on', 'off']
             if on_off:
                 value = True if value.lower() == 'on' else False
+        elif self._point.tags['kind'] == 'Number':
+            try:
+                value = float(value)
+            except ValueError:
+                value = 0
+                print(f"{self._point.id} has a data type mismatch")
         return value
 
     def _check_equip(self, equip_name):
@@ -156,9 +162,16 @@ class SkySpark:
         for point_dict in pointlist:
             print("writing ", point_dict['id'])
             res = self.session.his_write(point_dict['id'], {point_dict['ts']: point_dict['val']})
-            print("completed ", point_dict['id'])
+            if res.is_failed:
+                try:
+                    print(point_dict['id'], 'failed ', res.result)
+                except pyhaystack.exception.HaystackError as e:
+                    print(e)
+            else:
+                print("completed ", point_dict['id'])
             results.append(res)
         return num, results
+
 
 class SkySparkCreator(SkySpark):
 

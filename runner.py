@@ -157,7 +157,6 @@ def write_to_skyspark_frame(skyspark_obj, master_dict):
     :return: None
     """
     for equipment in master_dict.values():
-        print(f"Writing values for {equipment.name}")
         for measurement in equipment.measurements.values():
             skyspark_obj.append_his_frame(equip_name=equipment.name, point_name=measurement.skyspark_name,
                                           time=measurement.time, value=measurement.value)
