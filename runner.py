@@ -6,8 +6,8 @@ import pandas as pd
 from functions.logging import logger, logging  # import the logging class (we wrote)
 from functions.timing import timing  # import the function timing class (we wrote)
 from functions.skyspark import SkySpark  # import the SkySpark class (we wrote)
-from functions.multithread import fetch_data_multi_threaded, \
-    execute_function_multi_threads  # import the multi_thread class
+# from functions.multithread import fetch_data_multi_threaded, \
+#     execute_function_multi_threads  # import the multi_thread class
 from functions.entities.haystack_objects import Device
 import argparse
 from xml.etree import ElementTree
@@ -104,7 +104,7 @@ def fetch_data(master_dict):
             master_dict = process_xml(master_dict, xml_as_obj=r.data.decode("utf-8"), tag=device.name)
         except Exception as e:
             # catching all exceptions. Should not be the case
-            print(device.name, e)
+            logging.warning(e)
             continue
     return master_dict
 

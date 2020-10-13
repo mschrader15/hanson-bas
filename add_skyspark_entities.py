@@ -49,8 +49,6 @@ def add_equipment(sky_spark, device_container):
 #     list_of_types = []
 
 
-
-
 if __name__ == "__main__":
 
     devices = load_master_dict(definitions.MASTER_TABLE)

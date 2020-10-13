@@ -1,7 +1,8 @@
 import hszinc
 import pyhaystack
 from pyhaystack.util import filterbuilder as fb
-import pandas as pd
+from functions.logging import logging
+
 
 class SkySpark:
     """
@@ -34,65 +35,6 @@ class SkySpark:
         self._point = None
         self._his_frame = None
 
-    def _set_equip(self, equip_name):
-        """
-        This function fetches the equipment object from SkySpark
-
-        :param equip_name: the name of the equipment under the site (2nd level in SkySpark)
-        :return: None
-        """
-        self._equip = self._site[equip_name]
-        self._equip_name = equip_name
-
-    def _set_point(self, point_name):
-        """
-        Fetching the point (measurement) object.
-
-        :param point_name: the name of the measurement point. Needs to be exact
-        :return: a measurement object
-        """
-        point_list = list(self._equip.find_entity(fb.Field('navName') == fb.Scalar(point_name)).result.values())
-        # if more than 1 point is returned with the given name, there is an issue. point names must be unique
-        if len(point_list) > 1:
-            print("More than one value was returned for a point name of ", point_name)
-
-        # catches if the point doesn't exist on the point
-        elif len(point_list) < 1:
-            print("the point name doesn't exist on the equipment ", point_name)
-            raise AttributeError
-        self._point = point_list[0]
-
-    def _write_point(self, time, value):
-        """
-        Writing the point as a historical to SkySpark
-
-        :param point: The name of the point
-        :param time: The time to write (will be localized by the SkySpark Sites location)
-        :param value: the measurement value to write
-        :return: None
-        """
-        value = self._data_type_handler(value)
-        res = self.session.his_write(self._point.id, {self._site.tz.localize(time): value})
-        return res
-        # do something with res write
-
-    def _data_type_handler(self, value):
-        if self._point.tags['kind'] == 'Bool':
-            on_off = value.lower() in ['on', 'off']
-            if on_off:
-                value = True if value.lower() == 'on' else False
-        elif self._point.tags['kind'] == 'Number':
-            try:
-                value = float(value)
-            except ValueError:
-                value = 0
-                print(f"{self._point.id} has a data type mismatch")
-        return value
-
-    def _check_equip(self, equip_name):
-        if equip_name != self._equip_name:
-            self._set_equip(equip_name)
-
     def write_point_val(self, equip_name, point_name, time, value):
         """
         The master function in the SkySpark class. It writes the value to the specified measurement point
@@ -109,10 +51,10 @@ class SkySpark:
             self._set_point(point_name)
             res = self._write_point(time, value)
             if res.is_failed:
-                print('Error writing point: ', equip_name, point_name)
+                logging.warning('Error writing point: ', equip_name, point_name)
             return res
         except AttributeError:
-            print('Point wasnt written: ', equip_name, point_name)
+            logging.warning('Point wasnt written: ', equip_name, point_name)
             return 0.
 
     def check_equipment_exists(self, name):
@@ -133,17 +75,94 @@ class SkySpark:
         self._create_his_frame()
         self._add_his_value(time, self._data_type_handler(value))
 
+    def _data_type_handler(self, value):
+        new_value = None
+        if self._point.tags['kind'] == 'Bool':
+            on_off = value.lower() in ['on', 'off']
+            if on_off:
+                new_value = True if value.lower() == 'on' else False
+        elif self._point.tags['kind'] == 'Number':
+            try:
+                new_value = float(value)
+            except (TypeError, ValueError):
+                new_value = 0
+                logging.warning(f"{self._point.id} has a data type mismatch. "
+                               f"Kind is {self._point.tags['kind']}, value is {value}")
+        return new_value if new_value is not None else value
+
+    def _check_equip(self, equip_name):
+        if equip_name != self._equip_name:
+            self._set_equip(equip_name)
+
     def _create_his_frame(self):
         if self._his_frame is None:
             self._his_frame = []
+
+    def submit_his_frame(self):
+        _, r = self._simple_point_write(self._his_frame, 1)
+        return r
+
+    def _simple_point_write(self, pointlist, num):
+        results = []
+        for point_dict in pointlist:
+            print("writing ", point_dict['id'])
+            res = self.session.his_write(point_dict['id'], {point_dict['ts']: point_dict['val']})
+            if res.is_failed:
+                try:
+                    logging.warning(point_dict['id'], 'failed ', res.result)
+                except pyhaystack.exception.HaystackError as e:
+                    logging.warning(e)
+            else:
+                print("completed ", point_dict['id'])
+            results.append(res)
+        return num, results
 
     def _add_his_value(self, time, value):
         self._his_frame.append({'id': self._point.id, 'mod': self._point.tags['mod'],
                                 'ts': self._site.tz.localize(time), 'val': value})
 
-    def submit_his_frame(self):
-        _, r = self._simple_point_write(self._his_frame, 1)
-        return r
+    def _set_equip(self, equip_name):
+        """
+        This function fetches the equipment object from SkySpark
+
+        :param equip_name: the name of the equipment under the site (2nd level in SkySpark)
+        :return: None
+        """
+        self._equip = self._site[equip_name]
+        self._equip_name = equip_name
+
+    def _set_point(self, point_name):
+        """
+        Fetching the point (measurement) object.
+
+        :param point_name: the name of the measurement point. Needs to be exact
+        :return: a measurement object
+        """
+        point_list = list(self._equip.find_entity(fb.Field('navName') == fb.Scalar(point_name)).result.values())
+        # if more than 1 point is returned with the given name, there is an issue. point names must be unique
+        if len(point_list) > 1:
+            logging.warning("More than one value was returned for a point name of ", point_name)
+
+        # catches if the point doesn't exist on the point
+        elif len(point_list) < 1:
+            logging.warning("the point name doesn't exist on the equipment ", point_name)
+            raise AttributeError
+        self._point = point_list[0]
+
+    def _write_point(self, time, value):
+        """
+        Writing the point as a historical to SkySpark
+
+        :param point: The name of the point
+        :param time: The time to write (will be localized by the SkySpark Sites location)
+        :param value: the measurement value to write
+        :return: None
+        """
+        value = self._data_type_handler(value)
+        res = self.session.his_write(self._point.id, {self._site.tz.localize(time): value})
+        return res
+        # do something with res write
+
 
     # def _threaded_submit(self):
     #     import numpy as np
@@ -155,22 +174,8 @@ class SkySpark:
     #         for num, args in enumerate(split_args):
     #             threads.append(executor.submit(self._simple_point_write, args, num))
     #         results = sorted([res for res in [task.result() for task in as_completed(threads)]], key=lambda x: x[0])
-    #     return results
+#     return results
 
-    def _simple_point_write(self, pointlist, num):
-        results = []
-        for point_dict in pointlist:
-            print("writing ", point_dict['id'])
-            res = self.session.his_write(point_dict['id'], {point_dict['ts']: point_dict['val']})
-            if res.is_failed:
-                try:
-                    print(point_dict['id'], 'failed ', res.result)
-                except pyhaystack.exception.HaystackError as e:
-                    print(e)
-            else:
-                print("completed ", point_dict['id'])
-            results.append(res)
-        return num, results
 
 
 class SkySparkCreator(SkySpark):
