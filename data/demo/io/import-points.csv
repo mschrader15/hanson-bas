@@ -1,0 +1,17 @@
+storeNum,path,kind,unit
+8,ElecMeter/Demand,Number,kW
+8,ElecMeter/Consumption,Number,kWh
+8,RTU-1/SupplyFan,Bool,
+8,RTU-1/DischargeAirTemp,Number,°F
+8,RTU-1/ReturnAirTemp,Number,°F
+8,RTU-2/SupplyFan,Bool,
+8,RTU-2/DischargeAirTemp,Number,°F
+8,RTU-2/ReturnAirTemp,Number,°F
+8,RTU-2/Cool-1,Bool,
+8,RTU-2/Cool-2,Bool,
+8,RTU-2/Heat-1,Bool,
+8,RTU-2/Heat-2,Bool,
+9,ElecMeter/Demand,Number,kW
+9,ElecMeter/Consumption,Number,kWh
+9,RTU-1/SupplyFan,Bool,
+9,RTU-1/DischargeAirTemp,Number,°F
