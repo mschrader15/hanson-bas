@@ -38,3 +38,24 @@ def fetch_data_multi_threaded(master_dict, process_func):
             device = results[num][1]
     return master_dict
 
+
+def func_wrapper(func, args, static_args, num):
+    result = func(args, static_args)
+    return num, result
+
+
+def execute_function_multi_threads(func, split_args, static_args, threadnum):
+    import numpy as np
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    for i, arg in enumerate(split_args):
+        # for j, arg_in in enumerate(arg):
+        split_args[i] = np.array_split(arg, threadnum)
+    threads = []
+    with ThreadPoolExecutor(max_workers=threadnum) as executor:
+        for num, args in enumerate(list(zip(*split_args))):
+            threads.append(executor.submit(func_wrapper, func, args, static_args, num))
+        results = sorted([res for res in [task.result() for task in as_completed(threads)]], key=lambda x: x[0])
+        # for num, device in enumerate(master_dict.values()):
+        #     device = results[num][1]
+    return results

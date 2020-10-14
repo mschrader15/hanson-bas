@@ -29,8 +29,9 @@ def load_master_dict(file_path, filter_list=None):
         filtered_df = filtered_df.fillna(np.nan).replace([np.nan], [None])
         markers = filtered_df['Equip_Markers'].values[0]
         d = Device(name=name, ip_address=ip, measurement_names=list(filtered_df['Name']),
-                   units=list(filtered_df['Units']), multipliers=list(filtered_df['Multiplier']),
-                   equip_markers=markers, measurement_markers=list(filtered_df['Measurement_Marker'])
+                   units=list(filtered_df['Measurement_Unit_HayStack']), multipliers=list(filtered_df['Multiplier']),
+                   equip_markers=markers, measurement_markers=list(filtered_df['Measurement_Marker']),
+                   measurement_dataTypes=list(filtered_df['Measurement_Kind'])
                    )
         device_container[d.name] = d
     return device_container
@@ -41,12 +42,11 @@ def add_equipment(sky_spark, device_container):
         sky_spark.add_equipment(device.name, markers=device.get_markers())
         for measurement in device.measurements.values():
             sky_spark.add_measurement(equip_name=device.name, measurement_name=measurement.name,
-                                      markers=measurement.get_markers(), unit=measurement.units)
+                                      markers=measurement.get_markers(), unit=measurement.units,
+                                      dataType=measurement.dataType, overwrite=True)
 #
 # def infer_type(device_name):
 #     list_of_types = []
-
-
 
 
 if __name__ == "__main__":

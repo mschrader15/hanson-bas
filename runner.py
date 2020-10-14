@@ -6,7 +6,8 @@ import pandas as pd
 from functions.logging import logger, logging  # import the logging class (we wrote)
 from functions.timing import timing  # import the function timing class (we wrote)
 from functions.skyspark import SkySpark  # import the SkySpark class (we wrote)
-from functions.multithread import fetch_data_multi_threaded  # import the multi_thread class
+# from functions.multithread import fetch_data_multi_threaded, \
+#     execute_function_multi_threads  # import the multi_thread class
 from functions.entities.haystack_objects import Device
 import argparse
 from xml.etree import ElementTree
@@ -18,10 +19,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--offline', dest='offline', action='store_const',
                     const=True, default=False)
 
-# multithread the xml pull from the BAS system. May crash the computer. Needs more testing
-parser.add_argument('--multithread', dest='multi_thread', action='store_const',
-                    # const=True, default=False)
-                    const=False, default=False)  # overriding the ability to use mulitthreading
+# multithread write to SkySpark
+parser.add_argument('--multithread', dest='multi_thread', action='store_const', const=True, default=False)
 
 # adding the ability to specify specific equipment to pull & write
 parser.add_argument('--equipment-list', dest='equipment_list', nargs="+")
@@ -105,7 +104,7 @@ def fetch_data(master_dict):
             master_dict = process_xml(master_dict, xml_as_obj=r.data.decode("utf-8"), tag=device.name)
         except Exception as e:
             # catching all exceptions. Should not be the case
-            print(device.name, e)
+            logging.warning(e)
             continue
     return master_dict
 
@@ -132,6 +131,7 @@ def create_save_df(master_dict, tag=None):
     return write_df.transpose()
 
 
+@timing
 def write_to_skyspark(skyspark_obj, master_dict):
     """
     writes the data to SkySpark using the SkySpark object.
@@ -140,11 +140,28 @@ def write_to_skyspark(skyspark_obj, master_dict):
     :param master_dict: the master dict
     :return: None
     """
-
-    for local_obj in master_dict.values():
-        for measurement in local_obj.measurements.values():
-            skyspark_obj.write_point_val(equip_name=local_obj.name, point_name=measurement.skyspark_name,
+    for equipment in master_dict.values():
+        print(f"Writing values for {equipment.name}")
+        for measurement in equipment.measurements.values():
+            skyspark_obj.write_point_val(equip_name=equipment.name, point_name=measurement.skyspark_name,
                                          time=measurement.time, value=measurement.value)
+
+
+@timing
+def write_to_skyspark_frame(skyspark_obj, master_dict):
+    """
+    Create then write
+
+    :param skyspark_obj: instance of the SkySpark class
+    :param master_dict: the master dict
+    :return: None
+    """
+    for equipment in master_dict.values():
+        for measurement in equipment.measurements.values():
+            skyspark_obj.append_his_frame(equip_name=equipment.name, point_name=measurement.skyspark_name,
+                                          time=measurement.time, value=measurement.value)
+    result = skyspark_obj.submit_his_frame()
+    return result
 
 
 def handle_multiplier(master_dict):
@@ -154,7 +171,6 @@ def handle_multiplier(master_dict):
     :param master_dict: the master dict
     :return: updated master dict
     """
-
     for device in master_dict.values():
         for measurement in device.measurements.values():
             if (measurement.multiplier != 1) and measurement.value:
@@ -162,38 +178,47 @@ def handle_multiplier(master_dict):
     return master_dict
 
 
+@timing
+def main(args):
+    # creating the master dict (called containter here of Devices{Measurements: []}
+    container, _ = load_master_dict(definitions.MASTER_TABLE, filter_list=args.equipment_list)
+
+    # if debugging in offline
+    if args.offline:
+        xml_file = load_offline_xml(os.path.join(definitions.ROOT, 'data',
+                                                 'MultipleEquip_dataexport_test20200925_1PM.txt'))
+        container = process_xml(container, xml_file, 'RTU1')
+        container = handle_multiplier(container)
+        create_save_df(container, tag='RTU1').to_csv(os.path.join(definitions.ROOT, 'data', 'parsed_data.csv'))
+    else:
+        # create the skyspark object
+        container, _ = fetch_data(container)
+        container = handle_multiplier(container)
+        if args.multi_thread:
+            # if multithread desired:
+            # write_to_skyspark_threaded(master_dict=container, login=definitions.LOGIN_DICT['SkySpark'], threadnum=4)
+            print("Threading not supported")
+            raise Exception("Threading not supported")
+        else:
+            skyspark = SkySpark(definitions.LOGIN_DICT['SkySpark'])
+            write_to_skyspark_frame(skyspark_obj=skyspark, master_dict=container)
+
+        # create_save_df(container).to_csv(os.path.join(definitions.ROOT, 'data', 'full_parsed_data.csv'))
+
+
 """ The entry point of the script """
 if __name__ == "__main__":
 
     # parse the command line arguments
-    args = parser.parse_args()
+    arguments = parser.parse_args()
 
     # try except clause to catch and log errors
     try:
-        # creating the master dict (called containter here of Devices{Measurements: []}
-        container, _ = load_master_dict(definitions.MASTER_TABLE, filter_list=args.equipment_list)
+        main(arguments)
 
-        # if debugging in offline
-        if args.offline:
-            xml_file = load_offline_xml(os.path.join(definitions.ROOT, 'data',
-                                                     'MultipleEquip_dataexport_test20200925_1PM.txt'))
-            container = process_xml(container, xml_file, 'RTU1')
-            container = handle_multiplier(container)
-            create_save_df(container, tag='RTU1').to_csv(os.path.join(definitions.ROOT, 'data', 'parsed_data.csv'))
-        else:
-            # create the skyspark object
-            skyspark = SkySpark(definitions.LOGIN_DICT['SkySpark'])
-            if args.multi_thread:
-                # if multithread desired:
-                container, _ = fetch_data_multi_threaded(container, process_xml)
-            else:
-                container, _ = fetch_data(container)
-            container = handle_multiplier(container)
-            write_to_skyspark(skyspark_obj=skyspark, master_dict=container)
-            create_save_df(container).to_csv(os.path.join(definitions.ROOT, 'data', 'full_parsed_data.csv'))
     except Exception as e:
         # log to error log file
-        logger.exception("Exception occurred")
+        logger.exception("Error occurred")
         # log to the email file when possible
-        logging.exception("Exception occurred")
+        logging.exception("Error occurred")
         sys.exit(1)
