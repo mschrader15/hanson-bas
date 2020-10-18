@@ -57,6 +57,12 @@ class SkySpark:
             logging.warning('Point wasnt written: ', equip_name, point_name)
             return 0.
 
+    def submit_his_series(self, equip_name, point_name, series):
+        self._check_equip(equip_name)
+        self._set_point(point_name)
+        res = self.session.his_write_series(self._point.id, series)
+        return res
+
     def check_equipment_exists(self, name):
         self._check_equip(name)
         return True if self._equip else False
@@ -74,6 +80,10 @@ class SkySpark:
         self._set_point(point_name)
         self._create_his_frame()
         self._add_his_value(time, self._data_type_handler(value))
+
+    def submit_his_frame(self):
+        _, r = self._simple_point_write(self._his_frame, 1)
+        return r
 
     def _data_type_handler(self, value):
         new_value = None
@@ -97,10 +107,6 @@ class SkySpark:
     def _create_his_frame(self):
         if self._his_frame is None:
             self._his_frame = []
-
-    def submit_his_frame(self):
-        _, r = self._simple_point_write(self._his_frame, 1)
-        return r
 
     def _simple_point_write(self, pointlist, num):
         results = []
