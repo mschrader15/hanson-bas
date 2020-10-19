@@ -21,7 +21,7 @@ def load_master_dict(file_path, filter_list=None):
         filter_list = [item.strip() for item in filter_list]
         df = df.loc[df['Device Tag'].isin(filter_list)]
 
-    unique_ips = df['filter_ip'].dropna().unique()
+    unique_ips = df['ipaddresses'].dropna().unique()
     device_container = {}
     for ip in unique_ips:
         name = df.loc[df['filter_ip'] == ip, 'Device Tag'].values[0]
@@ -51,7 +51,7 @@ def add_equipment(sky_spark, device_container):
 
 if __name__ == "__main__":
 
-    devices = load_master_dict(definitions.MASTER_TABLE)
+    devices = load_master_dict(definitions.MASTER_TABLE, filter_list=['rtu2s'])
 
     skyspark_creator = SkySparkCreator(definitions.LOGIN_DICT['SkySpark'])
 

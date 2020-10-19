@@ -42,7 +42,7 @@ def load_master_dict(file_path, filter_list=None):
         filter_list = [item.strip() for item in filter_list]
         df = df.loc[df['Device Tag'].isin(filter_list)]
 
-    unique_ips = df['filter_ip'].dropna().unique()
+    unique_ips = df['ipaddresses'].dropna().unique()
     device_container = {}
     for ip in unique_ips:
         tag = df.loc[df['filter_ip'] == ip, 'Device Tag'].values[0]

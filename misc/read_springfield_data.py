@@ -16,7 +16,7 @@ import urllib3
 
 #ip_address = http://10.1.13.71/pe/
 
-excel_file_path = os.path.join(definitions.ROOT, 'assets', 'List_AllInputs.xlsx')
+excel_file_path = os.path.join(definitions.ROOT, 'assets', 'List_AllInputs_new1.xlsx')
 
 files = pd.read_excel(excel_file_path)
 files['filter_ip'] = None
