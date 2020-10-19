@@ -8,7 +8,7 @@ from functions.timing import timing  # import the function timing class (we wrot
 from functions.skyspark import SkySpark  # import the SkySpark class (we wrote)
 # from functions.multithread import fetch_data_multi_threaded, \
 #     execute_function_multi_threads  # import the multi_thread class
-from functions.entities.haystack_objects import Device
+from functions.entities import Device
 import argparse
 from xml.etree import ElementTree
 from datetime import datetime
