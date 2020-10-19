@@ -3,4 +3,12 @@ Print "<FreezeStat> |### </FreezeStat>", Hanson\CX2\RTU1S\FreezeStat
 Print "<PhaseProtection> |### </PhaseProtection>", Hanson\CX2\RTU1S\PhaseProtection
 Print "<SFanPrv> |### </SFanPrv>", Hanson\CX2\RTU1S\SFanPrv
 Print "<SFanVFDTrouble> |### </SFanVFDTrouble>", Hanson\CX2\RTU1S\SFanVFDTrouble
+Print "<Supply_Air_Temperature_Setpoint> |### </Supply_Air_Temperature_Setpoint>", Hanson\CX2\RTU1S\Supply_Air_Temperature_Setpoint * 1000
+Print "<Today's_Start_Time> |### </Today's_Start_Time>", Hanson\CX2\RTU1S\Today's_Start_Time * 1
+Print "<Scheduled_Start_Time> |### </Scheduled_Start_Time>", Hanson\CX2\RTU1S\Scheduled_Start_Time * 1
+Print "<Scheduled_Stop_Time> |### </Scheduled_Stop_Time>", Hanson\CX2\RTU1S\Scheduled_Stop_Time * 1
+Print "<Supply_Air_Temperature_Setpoint> |### </Supply_Air_Temperature_Setpoint>", Hanson\CX2\RTU1S\Supply_Air_Temperature_Setpoint * 1000
+Print "<Today's_Start_Time> |### </Today's_Start_Time>", Hanson\CX2\RTU1S\Today's_Start_Time * 1
+Print "<Scheduled_Start_Time> |### </Scheduled_Start_Time>", Hanson\CX2\RTU1S\Scheduled_Start_Time * 1
+Print "<Scheduled_Stop_Time> |### </Scheduled_Stop_Time>", Hanson\CX2\RTU1S\Scheduled_Stop_Time * 1
 Print " </Record> "

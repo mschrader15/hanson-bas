@@ -4,4 +4,19 @@ Print "<RMT_UH4> |### </RMT_UH4>", Hanson\CX1\VAV1.1\RMT_UH4 * 1000
 Print "<DAT> |### </DAT>", Hanson\CX1\VAV1.1\DAT * 1000
 Print "<VP> |### </VP>", Hanson\CX1\VAV1.1\VP * 1000
 Print "<AdjStPt> |### </AdjStPt>", Hanson\CX1\VAV1.1\AdjStPt * 1000
+Print "<Cool_StPt> |### </Cool_StPt>", Hanson\CX1\VAV1.1\Cool_StPt * 1000
+Print "<Heat_StPt> |### </Heat_StPt>", Hanson\CX1\VAV1.1\Heat_StPt * 1000
+Print "<AdjCool> |### </AdjCool>", Hanson\CX1\VAV1.1\AdjCool * 1000
+Print "<AdjHeat> |### </AdjHeat>", Hanson\CX1\VAV1.1\AdjHeat * 1000
+Print "<DAT> |### </DAT>", Hanson\CX1\VAV1.1\DAT * 1000
+Print "<CFM_StPt> |### </CFM_StPt>", Hanson\CX1\VAV1.1\CFM_StPt * 1000
+Print "<Max_CFMSp> |### </Max_CFMSp>", Hanson\CX1\VAV1.1\Max_CFMSp * 1000
+Print "<MinCFMSp> |### </MinCFMSp>", Hanson\CX1\VAV1.1\MinCFMSp * 1000
+Print "<Damper> |### </Damper>", Hanson\CX1\VAV1.1\Damper * 1
+Print "<RHt_Vlv> |### </RHt_Vlv>", Hanson\CX1\VAV1.1\RHt_Vlv * 1
+Print "<Area_Served> |### </Area_Served>", Hanson\CX1\VAV1.1\Area_Served * 1000
+Print "<Fintube> |### </Fintube>", Hanson\CX1\VAV1.1\Fintube * 1000
+Print "<RmT_B> |### </RmT_B>", Hanson\CX1\VAV1.1\RmT_B * 1000
+Print "<RmT_C> |### </RmT_C>", Hanson\CX1\VAV1.1\RmT_C * 1000
+Print "<RmT_D> |### </RmT_D>", Hanson\CX1\VAV1.1\RmT_D * 1000
 Print " </Record> "
