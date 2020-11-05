@@ -1,0 +1,4719 @@
+' Date : 11/05/20 14:57:56 PM
+' User : Root\JoeD
+' Version : 1.94.20130805 (SP1)
+
+Continuum
+Network
+
+Path : Hanson
+
+Dictionary : 
+
+'TYPE                   : NAME                   : TEMPLATE : PORT  : SERIALNUM    : INFINETID  : MODEL      : ALIAS
+ InfinityController     : BCX3                   : False    :       : 5079142      : 3          : bCX4040    : BCX3
+EndDictionary
+
+Dictionary : BCX3
+
+ 'TYPE                   : DEVICE                       : NAME                   : TEMPLATE : ALIAS
+  ControllerUser         : Hanson\BCX3                  : ACC                    : False    : ACC
+  EventEnrollment        : Hanson\BCX3                  : Alm.Crac1Abnorm        : False    : Alm.Crac1Abnorm
+  EventEnrollment        : Hanson\BCX3                  : Alm.Crac1Alarm         : False    : Alm.Crac1Alarm
+  EventEnrollment        : Hanson\BCX3                  : Alm.Crac1Warn          : False    : Alm.Crac1Warn
+  EventEnrollment        : Hanson\BCX3                  : Alm.Crac2Abnorm        : False    : Alm.Crac2Abnorm
+  EventEnrollment        : Hanson\BCX3                  : Alm.Crac2Alarm         : False    : Alm.Crac2Alarm
+  EventEnrollment        : Hanson\BCX3                  : Alm.Crac2Warn          : False    : Alm.Crac2Warn
+  EventNotification      : Hanson\BCX3                  : Critical               : False    : Critical
+  InfinityNumeric        : Hanson\BCX3                  : Crac1.Abnormal         : False    : Crac1.Abnormal
+  InfinityNumeric        : Hanson\BCX3                  : Crac1.Alarm            : False    : Crac1.Alarm
+  InfinityNumeric        : Hanson\BCX3                  : Crac1.SysSts           : False    : Crac1.SysSts
+  InfinityNumeric        : Hanson\BCX3                  : Crac1.Warning          : False    : Crac1.Warning
+  InfinityNumeric        : Hanson\BCX3                  : Crac2.Abnormal         : False    : Crac2.Abnormal
+  InfinityNumeric        : Hanson\BCX3                  : Crac2.Alarm            : False    : Crac2.Alarm
+  InfinityNumeric        : Hanson\BCX3                  : Crac2.SysSts           : False    : Crac2.SysSts
+  InfinityNumeric        : Hanson\BCX3                  : Crac2.Warning          : False    : Crac2.Warning
+  Group                  : Hanson\BCX3                  : FiringOrder            : False    : FiringOrder
+  Group                  : Hanson\BCX3                  : GrpLiebert1            : False    : GrpLiebert1
+  InfinityProgram        : Hanson\BCX3                  : Importer.Crac1         : False    : Importer.Crac1
+  InfinityProgram        : Hanson\BCX3                  : Importer.Crac2         : False    : Importer.Crac2
+  InfinityProgram        : Hanson\BCX3                  : Calculations           : False    : Calculations
+
+ 'TYPE                   : DEVICE                       : NAME                   : TEMPLATE : DEFAULTMODE   : BAUD       : ALIAS
+  CommPort               : Hanson\BCX3                  : comm1                  : False    : AutoSet       : Baud19200  : comm1
+  CommPort               : Hanson\BCX3                  : comm2                  : False    : AutoSet       : Baud19200  : comm2
+
+ 'TYPE                   : DEVICE                       : NAME                   : TEMPLATE : ALIAS
+  InfinitySystemVariable : Hanson\BCX3                  : ACCFlashWRCount        : False    : ACCFlashWRCount
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLastBackup          : False    : ACCLastBackup
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDAnswerStr        : False    : ACCLCDAnswerStr
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDBacklight        : False    : ACCLCDBacklight
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDDispLine1        : False    : ACCLCDDispLine1
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDDispLine2        : False    : ACCLCDDispLine2
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDDispLine3        : False    : ACCLCDDispLine3
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDDispLine4        : False    : ACCLCDDispLine4
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDDispMode         : False    : ACCLCDDispMode
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDKeyStroke        : False    : ACCLCDKeyStroke
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDTimeFormat       : False    : ACCLCDTimeFormat
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDUserPresnt       : False    : ACCLCDUserPresnt
+  InfinitySystemVariable : Hanson\BCX3                  : ACCLCDViewPasswd       : False    : ACCLCDViewPasswd
+  InfinitySystemVariable : Hanson\BCX3                  : ACCRestartMode         : False    : ACCRestartMode
+  InfinitySystemVariable : Hanson\BCX3                  : ACCStatusBackup        : False    : ACCStatusBackup
+  InfinitySystemVariable : Hanson\BCX3                  : ACCStatusFlash         : False    : ACCStatusFlash
+  InfinitySystemVariable : Hanson\BCX3                  : Alarms                 : False    : Alarms
+  InfinitySystemVariable : Hanson\BCX3                  : Comm2Count             : False    : Comm2Count
+  InfinitySystemVariable : Hanson\BCX3                  : Date                   : False    : Date
+  InfinitySystemVariable : Hanson\BCX3                  : Dayofmonth             : False    : Dayofmonth
+  InfinitySystemVariable : Hanson\BCX3                  : Dayofyear              : False    : Dayofyear
+  InfinitySystemVariable : Hanson\BCX3                  : Errors                 : False    : Errors
+  InfinitySystemVariable : Hanson\BCX3                  : Freemem                : False    : Freemem
+  InfinitySystemVariable : Hanson\BCX3                  : Hour                   : False    : Hour
+  InfinitySystemVariable : Hanson\BCX3                  : Hourofday              : False    : Hourofday
+  InfinitySystemVariable : Hanson\BCX3                  : LCDPassword            : False    : LCDPassword
+  InfinitySystemVariable : Hanson\BCX3                  : Minute                 : False    : Minute
+  InfinitySystemVariable : Hanson\BCX3                  : Month                  : False    : Month
+  InfinitySystemVariable : Hanson\BCX3                  : PowerFail              : False    : PowerFail
+  InfinitySystemVariable : Hanson\BCX3                  : PowerUpTime            : False    : PowerUpTime
+  InfinitySystemVariable : Hanson\BCX3                  : Scan                   : False    : Scan
+  InfinitySystemVariable : Hanson\BCX3                  : Second                 : False    : Second
+  InfinitySystemVariable : Hanson\BCX3                  : Timeofday              : False    : Timeofday
+  InfinitySystemVariable : Hanson\BCX3                  : Version                : False    : Version
+  InfinitySystemVariable : Hanson\BCX3                  : Weekday                : False    : Weekday
+  InfinitySystemVariable : Hanson\BCX3                  : Year                   : False    : Year
+EndDictionary
+
+Object : BCX3
+ Type : InfinityController
+ LastChange : 5/8/2015 10:08:15 AM
+ DeviceId : Hanson
+ Alias : BCX3
+ CreateTime : 5/8/2015 10:08:15 AM
+ CreatedBy : Root\paulh
+ TimeLocked : 11/16/2017 8:42:43 AM
+ InstanceId : 7001/7003
+ CntrlType : bCX4040
+ DefaultRouter : 10.1.11.1
+ Description : Server room
+ EthernetId : 0:0:0:0:0:0
+ IPAddress : 10.1.13.73
+ NetworkId : 3
+ SerialNum : 5079142
+ SubnetMask : 255.255.240.0
+ PPPSubnetMask : 0.0.0.0
+ VersionNum : 4.500065
+ BACnetDeviceId : 2981990
+EndObject
+
+BeginController : BCX3
+ Object : ACC
+  Type : ControllerUser
+  LastChange : 5/8/2015 10:08:38 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACC
+  CreateTime : 5/8/2015 10:08:38 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/750
+  FullName : ACC
+  Password : |y#ðºf3
+  SecurityLevel : Admin
+ EndObject
+
+ Object : Alm.Crac1Abnorm
+  Type : EventEnrollment
+  LastChange : 6/2/2015 8:53:56 AM
+  DeviceId : Hanson\BCX3
+  Alias : Alm.Crac1Abnorm
+  CreateTime : 6/2/2015 8:53:56 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:53:56 AM
+  InstanceId : 7003/7017
+  EventType : ChangeOfState
+  EventParameters : 
+  {
+   Type : 289
+   Value : 
+   {
+    timeDelay : 15
+    listOfValues : 
+    {
+     {
+      choice : 1
+      value : 1
+     }
+    }
+   }
+  }
+  EndOfCDT
+  ObjPropRef : 
+  {
+   objectIdentifier : ..\CRAC1.ABNORMAL
+   propertyIdentifier : 85
+   propertyArrayIndex : 0
+   deviceIdentifier : 
+  }
+  EndOfCDT
+  EventEnable : ToOffnormal,ToNormal
+  EventNotificationId : Hanson\BCX3\Critical
+  Recipient : 
+  {
+   Type : 65535
+   Value : 080000001100FFFF
+  }
+  EndOfCDT
+  MsgTextNormal : %D Has Returned To Normal !!
+  MsgTextOffNormal : %D Has Been Detected !!
+ EndObject
+
+ Object : Alm.Crac1Alarm
+  Type : EventEnrollment
+  LastChange : 6/2/2015 8:51:33 AM
+  DeviceId : Hanson\BCX3
+  Alias : Alm.Crac1Alarm
+  CreateTime : 6/2/2015 8:50:14 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:51:33 AM
+  InstanceId : 7003/7014
+  EventType : ChangeOfState
+  EventParameters : 
+  {
+   Type : 289
+   Value : 
+   {
+    timeDelay : 15
+    listOfValues : 
+    {
+     {
+      choice : 1
+      value : 1
+     }
+    }
+   }
+  }
+  EndOfCDT
+  ObjPropRef : 
+  {
+   objectIdentifier : ..\CRAC1.ALARM
+   propertyIdentifier : 85
+   propertyArrayIndex : 0
+   deviceIdentifier : 
+  }
+  EndOfCDT
+  EventEnable : ToOffnormal,ToNormal
+  EventNotificationId : Hanson\BCX3\Critical
+  Recipient : 
+  {
+   Type : 65535
+   Value : 080000001100FFFF
+  }
+  EndOfCDT
+  MsgTextNormal : %D Has Returned To Normal !!
+  MsgTextOffNormal : %D Has Been Detected !!
+ EndObject
+
+ Object : Alm.Crac1Warn
+  Type : EventEnrollment
+  LastChange : 6/2/2015 8:51:54 AM
+  DeviceId : Hanson\BCX3
+  Alias : Alm.Crac1Warn
+  CreateTime : 6/2/2015 8:31:42 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:51:54 AM
+  InstanceId : 7003/7009
+  EventType : ChangeOfState
+  EventParameters : 
+  {
+   Type : 289
+   Value : 
+   {
+    timeDelay : 15
+    listOfValues : 
+    {
+     {
+      choice : 1
+      value : 1
+     }
+    }
+   }
+  }
+  EndOfCDT
+  ObjPropRef : 
+  {
+   objectIdentifier : ..\CRAC1.WARNING
+   propertyIdentifier : 85
+   propertyArrayIndex : 0
+   deviceIdentifier : 
+  }
+  EndOfCDT
+  EventEnable : ToOffnormal,ToNormal
+  EventNotificationId : Hanson\BCX3\Critical
+  Recipient : 
+  {
+   Type : 65535
+   Value : 080000001100FFFF
+  }
+  EndOfCDT
+  MsgTextNormal : %D Has Returned To Normal !!
+  MsgTextOffNormal : %D Has Been Detected !!
+ EndObject
+
+ Object : Alm.Crac2Abnorm
+  Type : EventEnrollment
+  LastChange : 6/2/2015 8:53:31 AM
+  DeviceId : Hanson\BCX3
+  Alias : Alm.Crac2Abnorm
+  CreateTime : 6/2/2015 8:53:31 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:53:31 AM
+  InstanceId : 7003/7016
+  EventType : ChangeOfState
+  EventParameters : 
+  {
+   Type : 289
+   Value : 
+   {
+    timeDelay : 15
+    listOfValues : 
+    {
+     {
+      choice : 1
+      value : 1
+     }
+    }
+   }
+  }
+  EndOfCDT
+  ObjPropRef : 
+  {
+   objectIdentifier : ..\CRAC2.ABNORMAL
+   propertyIdentifier : 85
+   propertyArrayIndex : 0
+   deviceIdentifier : 
+  }
+  EndOfCDT
+  EventEnable : ToOffnormal,ToNormal
+  EventNotificationId : Hanson\BCX3\Critical
+  Recipient : 
+  {
+   Type : 65535
+   Value : 080000001100FFFF
+  }
+  EndOfCDT
+  MsgTextNormal : %D Has Returned To Normal !!
+  MsgTextOffNormal : %D Has Been Detected !!
+ EndObject
+
+ Object : Alm.Crac2Alarm
+  Type : EventEnrollment
+  LastChange : 6/9/2015 8:41:56 AM
+  DeviceId : Hanson\BCX3
+  Alias : Alm.Crac2Alarm
+  CreateTime : 6/2/2015 8:51:10 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/9/2015 8:41:56 AM
+  InstanceId : 7003/7015
+  EventType : ChangeOfState
+  EventParameters : 
+  {
+   Type : 289
+   Value : 
+   {
+    timeDelay : 15
+    listOfValues : 
+    {
+     {
+      choice : 1
+      value : 1
+     }
+    }
+   }
+  }
+  EndOfCDT
+  ObjPropRef : 
+  {
+   objectIdentifier : ..\CRAC2.ALARM
+   propertyIdentifier : 85
+   propertyArrayIndex : 0
+   deviceIdentifier : 
+  }
+  EndOfCDT
+  EventEnable : ToOffnormal,ToNormal
+  EventNotificationId : Hanson\BCX3\Critical
+  Recipient : 
+  {
+   Type : 65535
+   Value : 080000001100FFFF
+  }
+  EndOfCDT
+  MsgTextNormal : %D Has Returned To Normal !!
+  MsgTextOffNormal : %D Has Been Detected !!
+ EndObject
+
+ Object : Alm.Crac2Warn
+  Type : EventEnrollment
+  LastChange : 11/30/2016 7:59:48 AM
+  DeviceId : Hanson\BCX3
+  Alias : Alm.Crac2Warn
+  CreateTime : 6/2/2015 8:49:21 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 11/30/2016 7:59:48 AM
+  InstanceId : 7003/7013
+  EventType : ChangeOfState
+  EventParameters : 
+  {
+   Type : 289
+   Value : 
+   {
+    timeDelay : 15
+    listOfValues : 
+    {
+     {
+      choice : 1
+      value : 1
+     }
+    }
+   }
+  }
+  EndOfCDT
+  ObjPropRef : 
+  {
+   objectIdentifier : ..\CRAC2.WARNING
+   propertyIdentifier : 85
+   propertyArrayIndex : 0
+   deviceIdentifier : 
+  }
+  EndOfCDT
+  EventEnable : ToOffnormal,ToNormal
+  EventNotificationId : Hanson\BCX3\Critical
+  Recipient : 
+  {
+   Type : 65535
+   Value : 080000001100FFFF
+  }
+  EndOfCDT
+  MsgTextNormal : %D Has Returned To Normal !!
+  MsgTextOffNormal : %D Has Been Detected !!
+ EndObject
+
+ Object : Critical
+  Type : EventNotification
+  LastChange : 6/9/2015 8:44:21 AM
+  DeviceId : Hanson\BCX3
+  Alias : Critical
+  CreateTime : 6/2/2015 8:23:18 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/9/2015 8:44:21 AM
+  InstanceId : 7003/7005
+  EventNotificationId : 7005
+  NCLSPriority : 
+  {
+   1
+   0
+   1
+  }
+  EndOfCDT
+  AckRequired : ToOffnormal,ToNormal
+  RecipientList : 
+  {
+   {
+    validDays : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+    fromTime : 12:00:00 AM
+    toTime : 11:59:59.99 PM
+    recipient : 
+    {
+     Type : 18
+     Value : ..\..\S
+    }
+    processIdentifier : 16777216
+    issueConfirmedNotifications : True
+    transitions : ToOffnormal,ToFault,ToNormal
+   }
+  }
+  EndOfCDT
+  DeactivateCriteria : AckAndRTN
+  AlarmOptions : BeepOnToOffNormal,DisplayAlarmView,EmailOnOffNormal,EmailToNormal,PageToOffNormal,PageToNormal
+  BackgroundColor : 8421631
+  EMailRecipients : 
+  {
+  }
+  EndOfCDT
+  PagingRecipients : 
+  {
+  }
+  EndOfCDT
+  AlarmFont : F5FFFFFF0000000000000000000000009001000000000000000000004D53205368656C6C20446C6700E14E38ED8CEE720376E722FEFFFFFF584CEE7200000000
+  ToRTNFont : F5FFFFFF0000000000000000000000009001000000000000000000004D53205368656C6C20446C67001F300000000000AF002C00FCE04E380000000000000000
+  ToRTNBGColor : 8454016
+  ToFaultFont : F5FFFFFF0000000000000000000000009001000000000000000000004D53205368656C6C20446C6700E14E38394CEE720000C60100000000584CEE7200000000
+  LocalRecipientList : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Crac1.Abnormal
+  Type : InfinityNumeric
+  LastChange : 6/2/2015 8:46:15 AM
+  DeviceId : Hanson\BCX3
+  Alias : Crac1.Abnormal
+  CreateTime : 6/2/2015 8:27:51 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:46:15 AM
+  InstanceId : 7003/7008
+  Description : CRAC#1 Abnormal Operation
+  Format : $###
+  LogIntervalSecs : 900
+  Size : 288
+  LogType : LogMaximum
+  Port : 
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : Off
+  ElecType : Digital
+ EndObject
+
+ Object : Crac1.Alarm
+  Type : InfinityNumeric
+  LastChange : 6/2/2015 8:47:04 AM
+  DeviceId : Hanson\BCX3
+  Alias : Crac1.Alarm
+  CreateTime : 6/2/2015 8:27:28 AM
+  CreatedBy : Root\Ernie
+  AlarmInfo : True
+  TimeLocked : 6/2/2015 8:47:04 AM
+  InstanceId : 7003/7007
+  Description : CRAC#1 Normal with Alarm
+  Format : $###
+  LogIntervalSecs : 900
+  Size : 288
+  LogType : LogMaximum
+  Port : 
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : Off
+  ElecType : Digital
+ EndObject
+
+ Object : Crac1.SysSts
+  Type : InfinityNumeric
+  LastChange : 6/2/2015 8:12:04 AM
+  DeviceId : Hanson\BCX3
+  Alias : Crac1.SysSts
+  CreateTime : 6/2/2015 8:12:04 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:14:09 AM
+  InstanceId : 7003/7001
+  Port : 
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value :   0.000
+ EndObject
+
+ Object : Crac1.Warning
+  Type : InfinityNumeric
+  LastChange : 6/2/2015 8:47:27 AM
+  DeviceId : Hanson\BCX3
+  Alias : Crac1.Warning
+  CreateTime : 6/2/2015 8:26:28 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:47:27 AM
+  InstanceId : 7003/7006
+  Description : CRAC#1 Normal with Warning
+  Format : $###
+  LogIntervalSecs : 900
+  Size : 288
+  LogType : LogMaximum
+  Port : 
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : Off
+  ElecType : Digital
+ EndObject
+
+ Object : Crac2.Abnormal
+  Type : InfinityNumeric
+  LastChange : 6/2/2015 8:46:32 AM
+  DeviceId : Hanson\BCX3
+  Alias : Crac2.Abnormal
+  CreateTime : 6/2/2015 8:46:25 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:52:34 AM
+  InstanceId : 7003/7010
+  Description : CRAC#2 Abnormal Operation
+  Format : $###
+  LogIntervalSecs : 900
+  Size : 288
+  LogType : LogMaximum
+  Port : 
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : Off
+  ElecType : Digital
+ EndObject
+
+ Object : Crac2.Alarm
+  Type : InfinityNumeric
+  LastChange : 6/2/2015 8:47:20 AM
+  DeviceId : Hanson\BCX3
+  Alias : Crac2.Alarm
+  CreateTime : 6/2/2015 8:47:14 AM
+  CreatedBy : Root\Ernie
+  AlarmInfo : True
+  TimeLocked : 6/9/2015 8:41:43 AM
+  InstanceId : 7003/7011
+  Description : CRAC#2 Normal with Alarm
+  Format : $###
+  LogIntervalSecs : 900
+  Size : 288
+  LogType : LogMaximum
+  Port : 
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : Off
+  ElecType : Digital
+ EndObject
+
+ Object : Crac2.SysSts
+  Type : InfinityNumeric
+  LastChange : 6/2/2015 8:14:19 AM
+  DeviceId : Hanson\BCX3
+  Alias : Crac2.SysSts
+  CreateTime : 6/2/2015 8:14:19 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:15:11 AM
+  InstanceId : 7003/7003
+  Port : 
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value :   1.000
+ EndObject
+
+ Object : Crac2.Warning
+  Type : InfinityNumeric
+  LastChange : 6/2/2015 8:47:42 AM
+  DeviceId : Hanson\BCX3
+  Alias : Crac2.Warning
+  CreateTime : 6/2/2015 8:47:41 AM
+  CreatedBy : Root\Ernie
+  AlarmInfo : True
+  TimeLocked : 6/2/2015 8:47:42 AM
+  InstanceId : 7003/7012
+  Description : CRAC#2 Normal with Warning
+  Format : $###
+  LogIntervalSecs : 900
+  Size : 288
+  LogType : LogMaximum
+  Port : 
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : Off
+  ElecType : Digital
+ EndObject
+
+ Object : FiringOrder
+  Type : Group
+  LastChange : 6/2/2015 8:57:47 AM
+  DeviceId : Hanson\BCX3
+  Alias : FiringOrder
+  CreateTime : 5/8/2015 10:08:38 AM
+  CreatedBy : Root\paulh
+  TimeLocked : 6/2/2015 8:57:47 AM
+  Properties : 1
+  InstanceId : 7003/1
+  ListOfGroupMembers : 
+  {
+   {
+    objectIdentifier : ..\CALCULATIONS
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : ..\IMPORTER.CRAC2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : ..\IMPORTER.CRAC1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+  }
+  EndOfCDT
+ EndObject
+
+ Object : GrpLiebert1
+  Type : Group
+  LastChange : 6/1/2015 11:03:19 AM
+  DeviceId : Hanson\BCX3
+  Alias : GrpLiebert1
+  CreateTime : 6/1/2015 11:01:45 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/1/2015 11:05:16 AM
+  InstanceId : 7003/7001
+  ListOfGroupMembers : 
+  {
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z096_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z096_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z096_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z096_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z096_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z096_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z097_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z097_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z097_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z097_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z097_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z097_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z098_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z098_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z098_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z098_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z098_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z098_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z099_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z099_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z099_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z099_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z099_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z099_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z100_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z100_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z100_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z100_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z100_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z100_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z101_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z101_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z101_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z101_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z101_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z101_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z113_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z113_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z113_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z113_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z113_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z113_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z114_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z114_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z114_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z114_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z114_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z114_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z115_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z115_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z115_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z115_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z115_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z115_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z270_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z271_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z272_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z273_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z291_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z291_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z293_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z594_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z594_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z595_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z596_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z596_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z601_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z608_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z614_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z614_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z615_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z618_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z626_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z703_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z703_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z710_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z714_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z720_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z723_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z726_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z729_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z868_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z869_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z870_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z980_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z002_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z002_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z004_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z004_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z006_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z006_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z007_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z007_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z008_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z008_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z011_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z011_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z014_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z014_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z015_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z018_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z018_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z019_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z022_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z022_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z023_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z026_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z028_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z029_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z032_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z033_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z034_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z035_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z036_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z037_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z038_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z039_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z040_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z041_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z042_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z043_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z044_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z045_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z050_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z051_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z053_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z054_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_10
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_10_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_2_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_3_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_4_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_5_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_6_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_7
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_7_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_8
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_8_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_9
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z059_1_9_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_10
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_7
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_8
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z060_1_9
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z067_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z068_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z070_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z073_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z073_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z075_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z077_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z079_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z080_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z081_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z104_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z105_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z106_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z107_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z108_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z109_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z110_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z111_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z112_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z113_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z114_7
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z115_7
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z116_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z117_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z118_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z119_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z120_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z121_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z146_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z146_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z147_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z148_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z148_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z267_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z267_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z268_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z268_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z269_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z269_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z270_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z270_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z271_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z271_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z272_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z272_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z276_1_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z276_1_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z276_1_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z276_1_1_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z276_1_2_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z276_1_2_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z276_1_2_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z276_1_2_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z277_1_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z277_1_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z277_1_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z277_1_1_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z277_1_2_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z277_1_2_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z277_1_2_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z277_1_2_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z304_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z305_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z306_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z314_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z325_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z325_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z326_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z327_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z327_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z328_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z329_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z329_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z330_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z334_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z334_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z335_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z336_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z336_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z337_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z337_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z338_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z338_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z341_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z342_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z343_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z344_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z345_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z346_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z347_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z348_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z349_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z350_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z351_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z352_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z352_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z353_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z353_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z353_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z353_1_2_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z354_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z354_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z355_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z355_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z356_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z356_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z358_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z358_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z360_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z360_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z361_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z362_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z363_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z364_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z365_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z366_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z366_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z366_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z367_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z367_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z367_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z368_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z368_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z368_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z369_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z370_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z371_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z372_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z374_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z375_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z376_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z377_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z377_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z378_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z378_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z378_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z378_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z379_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z380_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z415_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z416_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z417_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z417_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z417_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z418_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z419_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z445_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z490_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z513_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z514_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z514_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z531_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z531_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z534_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z534_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z534_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z534_1_2_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z535_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z535_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z536_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z536_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z537_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z537_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z538_1_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z538_1_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z538_1_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z538_1_1_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z538_1_2_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z538_1_2_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z538_1_2_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z538_1_2_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z539_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z539_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z540_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z540_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z541_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z541_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z542_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z542_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z543_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z543_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z544_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z544_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z545_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z545_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z548_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z549_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z550_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z551_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z552_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z553_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z568_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z568_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z568_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z568_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z568_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z568_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z573_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z574_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z574_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z575_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z575_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z576_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z576_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z577_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z578_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z579_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z585_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z585_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z588_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z589_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z589_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z590_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z590_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z591_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z591_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z592_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z592_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z593_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z594_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z595_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z596_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_11
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_7
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_8
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_9
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z597_1_10
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_11
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_7
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_8
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_9
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z598_1_10
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z600_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z601_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z604_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z604_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z606_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z607_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z607_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z608_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z614_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z615_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z615_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z616_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z616_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z617_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z619_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z619_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z626_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z627_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z628_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z629_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z630_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z631_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z637_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z638_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z897_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z897_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z897_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z897_2_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z898_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z898_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z898_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z898_2_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z899_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z899_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z900_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z900_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z900_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z900_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z900_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z900_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z901_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z901_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z901_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z901_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z901_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z901_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z902_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z904_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z905_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z905_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z906_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z907_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z908_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z909_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z910_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z911_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z911_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z912_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z912_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z964_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z964_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z965_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z965_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z966_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z967_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z967_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z967_3
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z967_4
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z967_5
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z967_6
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z100_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z100_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z101_7
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z102_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z102_1_1_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z102_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z102_1_2_DEG_F
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z103_1_1
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z103_1_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z105_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+   {
+    objectIdentifier : BACNETDEVICES\LIEBERT1\Z106_2
+    listOfPropertyReferences : 
+    {
+    }
+   }
+  }
+  EndOfCDT
+  RefreshRate : 5
+  Members : 
+   BACnetDevices\Liebert1\z008_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z325_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z011_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z326_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z327_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z328_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z329_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z330_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z002_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z014_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z018_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z291_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z022_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z334_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z594_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z336_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z337_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z338_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z574_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z028_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z029_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z341_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z032_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z342_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z033_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z035_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z343_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z344_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z345_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z346_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z595_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z347_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z348_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z350_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z596_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z614_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z576_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z267_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z268_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z353_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z619_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z267_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z268_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z353_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z619_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z356_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z358_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z360_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z304_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z305_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z614_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z363_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z364_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z366_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z367_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z366_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z367_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z366_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z367_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z369_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z370_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z445_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z371_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z372_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z050_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z374_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z375_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z051_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z585_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z378_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z378_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z378_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z378_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z075_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z710_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z314_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z077_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z379_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z870_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z868_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z869_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z380_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z080_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z081_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z079_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z490_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z606_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z004_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z607_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z608_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z575_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z615_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z616_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z904_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z293_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z589_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z590_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z007_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z006_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z591_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z592_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_7 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_8 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_9 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_10 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z626_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z627_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z628_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z548_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z549_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z552_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z553_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z550_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z551_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z096_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z098_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z100_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z113_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z114_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z115_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z901_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z900_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z096_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z098_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z100_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z113_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z114_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z115_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z901_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z900_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z096_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z098_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z100_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z113_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z114_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z115_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z901_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z900_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z096_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z098_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z100_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z113_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z114_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z115_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z901_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z900_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z096_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z098_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z100_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z113_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z114_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z115_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z901_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z900_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z096_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z098_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z100_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z113_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z114_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z115_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z901_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z900_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z897_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z898_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z899_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z899_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z905_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z905_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z897_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z898_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z097_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z099_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z101_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z097_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z099_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z101_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z097_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z099_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z101_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z097_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z099_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z101_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z097_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z099_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z101_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z097_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z099_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z101_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z964_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z965_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z101_7 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z534_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z534_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z103_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z103_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z102_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z102_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z276_1_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z276_1_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z276_1_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z276_1_1_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z276_1_2_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z276_1_2_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z276_1_2_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z276_1_2_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z538_1_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z538_1_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z538_1_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z538_1_1_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z538_1_2_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z538_1_2_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z538_1_2_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z538_1_2_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z008_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z325_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z011_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z327_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z329_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z002_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z014_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z018_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z291_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z022_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z334_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z594_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z336_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z337_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z338_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z574_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z596_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z614_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z576_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z353_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z353_1_2_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z356_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z358_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z360_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z585_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z004_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z607_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z575_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z615_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z616_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z589_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z590_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z007_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z006_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z591_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z592_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_2_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_3_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_4_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_5_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_6_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_7_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_8_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_9_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z059_1_10_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z897_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z898_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z897_2_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z898_2_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z964_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z965_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z534_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z534_1_2_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z102_1_1_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z102_1_2_deg_F : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z015_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z019_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z026_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z023_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z335_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z147_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z601_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z608_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z618_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z573_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z034_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z036_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z578_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z579_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z902_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z349_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z351_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z615_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z577_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z067_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z513_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z269_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z270_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z271_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z352_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z146_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z272_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z354_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z355_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z514_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z148_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z604_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z269_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z270_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z271_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z352_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z146_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z272_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z354_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z355_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z514_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z148_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z604_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z306_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z361_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z362_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z365_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z068_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z070_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z368_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z368_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z368_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z037_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z044_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z045_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z042_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z043_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z041_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z040_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z039_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z038_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z054_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z376_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z729_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z073_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z106_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z377_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z377_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z270_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z271_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z272_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z273_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z415_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z105_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z107_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z115_7 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z416_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z118_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z053_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z726_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z120_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z119_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z714_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z121_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z720_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z980_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z626_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z418_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z419_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z114_7 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z723_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z104_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z108_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z588_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z617_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z906_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z907_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z908_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z909_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z703_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z703_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z110_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z109_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z112_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z113_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z111_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z116_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z117_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z417_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z417_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z417_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z593_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z594_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z595_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z596_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_7 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_7 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_8 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_8 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_7 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_9 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_9 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_8 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_10 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_10 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_9 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z597_1_11 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z598_1_11 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z060_1_10 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z600_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z601_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z629_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z630_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z631_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z910_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z637_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z638_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z568_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z568_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z568_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z568_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z568_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z568_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z911_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z912_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z911_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z912_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z967_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z967_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z967_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z967_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z967_5 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z967_6 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z966_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z105_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z106_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z536_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z536_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z537_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z537_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z535_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z535_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z531_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z531_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z100_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z100_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z073_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z541_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z541_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z540_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z540_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z539_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z539_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z544_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z544_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z543_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z543_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z542_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z542_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z545_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z545_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z277_1_1_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z277_1_1_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z277_1_1_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z277_1_1_4 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z277_1_2_1 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z277_1_2_2 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z277_1_2_3 : 100.000000 : 0.000000 : 11
+   BACnetDevices\Liebert1\z277_1_2_4 : 100.000000 : 0.000000 : 11
+  EndMembers
+ EndObject
+
+ Object : Importer.Crac1
+  Type : InfinityProgram
+  LastChange : 6/2/2015 8:55:42 AM
+  DeviceId : Hanson\BCX3
+  Alias : Importer.Crac1
+  CreateTime : 6/2/2015 8:13:50 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:55:42 AM
+  InstanceId : 7003/7002
+  ByteCode : 
+'DCI -- EWT 06/2/2015
+
+Working:
+  Crac1.SysSts = BACnetDevices\Liebert1\z123_1
+  Goto Resting
+
+Resting:
+  If (TS > 9) then Goto Working
+
+
+E:
+  If (TS > 29) then Goto Working
+  EndByteCode
+  DefaultPort : comm1
+  Status : Active
+ EndObject
+
+ Object : Importer.Crac2
+  Type : InfinityProgram
+  LastChange : 6/2/2015 8:55:33 AM
+  DeviceId : Hanson\BCX3
+  Alias : Importer.Crac2
+  CreateTime : 6/2/2015 8:14:59 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:55:33 AM
+  InstanceId : 7003/7004
+  ByteCode : 
+'DCI -- EWT 06/2/2015
+
+Working:
+  Crac2.SysSts = BACnetDevices\Liebert2\z123_1
+  Goto Resting
+
+Resting:
+  If (TS > 9) then Goto Working
+
+E:
+  If (TS > 29) then Goto Working
+  EndByteCode
+  DefaultPort : comm1
+  Status : Active
+ EndObject
+
+ Object : Calculations
+  Type : InfinityProgram
+  LastChange : 6/2/2015 8:58:35 AM
+  DeviceId : Hanson\BCX3
+  Alias : Calculations
+  CreateTime : 6/2/2015 8:54:21 AM
+  CreatedBy : Root\Ernie
+  TimeLocked : 6/2/2015 8:58:35 AM
+  InstanceId : 7003/7018
+  ByteCode : 
+'DCI -- EWT 06/2/2015
+
+Working:
+  If Crac1.SysSts = 3 then Turn On Crac1.Warning Else Turn Off Crac1.Warning
+  If Crac1.SysSts = 4 then Turn On Crac1.Alarm Else Turn Off Crac1.Alarm
+  If Crac1.SysSts = 5 then Turn On Crac1.Abnormal Else Turn Off Crac1.Abnormal
+  If Crac2.SysSts = 3 then Turn On Crac2.Warning Else Turn Off Crac2.Warning
+  If Crac2.SysSts = 4 then Turn On Crac2.Alarm Else Turn Off Crac2.Alarm
+  If Crac2.SysSts = 5 then Turn On Crac2.Abnormal Else Turn Off Crac2.Abnormal
+  Goto Resting
+
+Resting:
+  If (TS > 9) then Goto Working
+
+  EndByteCode
+  DefaultPort : comm1
+  Status : Active
+ EndObject
+
+ Object : comm1
+  Type : CommPort
+  LastChange : 5/8/2015 10:08:38 AM
+  DeviceId : Hanson\BCX3
+  Alias : comm1
+  CreateTime : 5/8/2015 10:08:38 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/6780
+  DefaultMode : AutoSet
+  Baud : Baud19200
+ EndObject
+
+ Object : comm2
+  Type : CommPort
+  LastChange : 5/8/2015 10:08:38 AM
+  DeviceId : Hanson\BCX3
+  Alias : comm2
+  CreateTime : 5/8/2015 10:08:38 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/6781
+  DefaultMode : AutoSet
+  Baud : Baud19200
+ EndObject
+
+ Object : ACCFlashWRCount
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCFlashWRCount
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/229
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLastBackup
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLastBackup
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/242
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 1/1/1989
+ EndObject
+
+ Object : ACCLCDAnswerStr
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDAnswerStr
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/241
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDBacklight
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDBacklight
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/240
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDDispLine1
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDDispLine1
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/238
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDDispLine2
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDDispLine2
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/237
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDDispLine3
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDDispLine3
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/236
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDDispLine4
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDDispLine4
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/235
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDDispMode
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDDispMode
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/239
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 8
+ EndObject
+
+ Object : ACCLCDKeyStroke
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDKeyStroke
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/234
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDTimeFormat
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDTimeFormat
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/233
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDUserPresnt
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDUserPresnt
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/231
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCLCDViewPasswd
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCLCDViewPasswd
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/232
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCRestartMode
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCRestartMode
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/228
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : ACCStatusBackup
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCStatusBackup
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/243
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : ACCBackupNow
+ EndObject
+
+ Object : ACCStatusFlash
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : ACCStatusFlash
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/230
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Alarms
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:15 AM
+  DeviceId : Hanson\BCX3
+  Alias : Alarms
+  CreateTime : 5/8/2015 10:08:15 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/214
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 4294967295
+ EndObject
+
+ Object : Comm2Count
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:38 AM
+  DeviceId : Hanson\BCX3
+  Alias : Comm2Count
+  CreateTime : 5/8/2015 10:08:38 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/292
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Date
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Date
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/211
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 1/1/1989
+ EndObject
+
+ Object : Dayofmonth
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Dayofmonth
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/205
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Dayofyear
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Dayofyear
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/210
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Errors
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Errors
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/213
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Freemem
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Freemem
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/215
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Hour
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Hour
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/203
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Hourofday
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Hourofday
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/208
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : LCDPassword
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : LCDPassword
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/255
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Minute
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Minute
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/202
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Month
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Month
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/206
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 
+ EndObject
+
+ Object : PowerFail
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : PowerFail
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/217
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : PowerUpTime
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : PowerUpTime
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/218
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 1/1/1989
+ EndObject
+
+ Object : Scan
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Scan
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/212
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Second
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Second
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/201
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+ Object : Timeofday
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Timeofday
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/209
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 12:00:00 AM
+ EndObject
+
+ Object : Version
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Version
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/216
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 0.000000
+ EndObject
+
+ Object : Weekday
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Weekday
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/204
+  Triggers : 
+  {
+  }
+  EndOfCDT
+  Value : 
+ EndObject
+
+ Object : Year
+  Type : InfinitySystemVariable
+  LastChange : 5/8/2015 10:08:37 AM
+  DeviceId : Hanson\BCX3
+  Alias : Year
+  CreateTime : 5/8/2015 10:08:37 AM
+  CreatedBy : Root\paulh
+  Properties : 1
+  InstanceId : 7003/207
+  Triggers : 
+  {
+  }
+  EndOfCDT
+ EndObject
+
+EndController
