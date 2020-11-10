@@ -77,12 +77,12 @@ def func(x):
 
 for device in unique_devices:
     local_df = iterate_df.loc[iterate_df['Device'] == device]
-    name = device.split('\\')[-1]
+    name = device.split('\\')[-1] + "_test"
     header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
     tail_lines = ['Print " </Record> "']
     lines = local_df.apply(func, axis=1)
     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
-    with open(os.path.join(definitions.ROOT, 'bas_functions', 'exploratory', name), 'w') as f:
+    with open(os.path.join(definitions.ROOT, 'bas_functions', 'exploratory', name + ".txt"), 'w') as f:
         f.write(print_txt)
         f.close()
 

@@ -1,0 +1,4 @@
+Print " <Record> "
+Print "<StptUHDatOn> |### </StptUHDatOn>", Hanson\CX1\VAV2.8\StptUHDatOn * 1000
+Print "<HWV_UH1> |### </HWV_UH1>", Hanson\CX1\VAV2.8\HWV_UH1 * 1000
+Print " </Record> "

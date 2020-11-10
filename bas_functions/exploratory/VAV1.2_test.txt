@@ -1,0 +1,5 @@
+Print " <Record> "
+Print "<Fintube> |### </Fintube>", Hanson\CX1\VAV1.2\Fintube * 1000
+Print "<Fintube_B> |### </Fintube_B>", Hanson\CX1\VAV1.2\Fintube_B * 1000
+Print "<ControlFinTube> |### </ControlFinTube>", Hanson\CX1\VAV1.2\ControlFinTube * 1000
+Print " </Record> "
