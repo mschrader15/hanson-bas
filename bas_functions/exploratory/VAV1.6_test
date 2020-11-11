@@ -1,4 +1,0 @@
-Print " <Record> "
-Print "<RMT_UH5> |### </RMT_UH5>", Hanson\CX1\VAV1.6\RMT_UH5 * 1000
-Print "<HWV_UH5> |### </HWV_UH5>", Hanson\CX1\VAV1.6\HWV_UH5 * 1000
-Print " </Record> "

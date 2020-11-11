@@ -1,3 +1,0 @@
-Print " <Record> "
-Print "<CalcRefresh_1> |### </CalcRefresh_1>", Hanson\CX1\VAV2.6\CalcRefresh_1 * 1000
-Print " </Record> "
