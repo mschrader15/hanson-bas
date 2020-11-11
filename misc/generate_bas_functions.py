@@ -82,7 +82,7 @@ for device in unique_devices:
     tail_lines = ['Print " </Record> "']
     lines = local_df.apply(func, axis=1)
     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
-    with open(os.path.join(definitions.ROOT, 'bas_functions', 'exploratory', name), 'w') as f:
+    with open(os.path.join(definitions.ROOT, 'bas_functions', 'exploratory', name + ".txt"), 'w') as f:
         f.write(print_txt)
         f.close()
 
