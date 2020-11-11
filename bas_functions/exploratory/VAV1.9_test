@@ -1,0 +1,4 @@
+Print " <Record> "
+Print "<RMT_UH2> |### </RMT_UH2>", Hanson\CX1\VAV1.9\RMT_UH2 * 1000
+Print "<HWV_UH2> |### </HWV_UH2>", Hanson\CX1\VAV1.9\HWV_UH2 * 1000
+Print " </Record> "
