@@ -45,4 +45,8 @@ Print "<SSHwPmp3Perm> |### </SSHwPmp3Perm>", Hanson\CX1\Boiler\SSHwPmp3Perm * 10
 Print "<SSHwPmp4Perm> |### </SSHwPmp4Perm>", Hanson\CX1\Boiler\SSHwPmp4Perm * 1000
 Print "<SSHwPmp5Pri> |### </SSHwPmp5Pri>", Hanson\CX1\Boiler\SSHwPmp5Pri * 1000
 Print "<SSHwPmp8Pri> |### </SSHwPmp8Pri>", Hanson\CX1\Boiler\SSHwPmp8Pri * 1000
+<<<<<<< Updated upstream
 Print " </Record> "
+=======
+Print " </Record> "
+>>>>>>> Stashed changes
