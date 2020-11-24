@@ -1,4 +1,5 @@
 Print " <Record> "
+Print "<ActCoolStPt> |### </ActCoolStPt>", Hanson\CX1\VAV1.1\ActCoolStPt * 1000
 Print "<ActHeatStPt> |### </ActHeatStPt>", Hanson\CX1\VAV1.1\ActHeatStPt * 1000
 Print "<AvgTmp> |### </AvgTmp>", Hanson\CX1\VAV1.1\AvgTmp * 1000
 Print "<CFM> |### </CFM>", Hanson\CX1\VAV1.1\CFM * 1000
@@ -14,7 +15,9 @@ Print "<HeatOK> |### </HeatOK>", Hanson\CX1\VAV1.1\HeatOK * 1000
 Print "<HeatStpt> |### </HeatStpt>", Hanson\CX1\VAV1.1\HeatStpt * 1000
 Print "<HTPCT> |### </HTPCT>", Hanson\CX1\VAV1.1\HTPCT * 1000
 Print "<KFactor> |### </KFactor>", Hanson\CX1\VAV1.1\KFactor * 1000
+Print "<MaxCFM> |### </MaxCFM>", Hanson\CX1\VAV1.1\MaxCFM * 1000
 Print "<MaxCFMStPt> |### </MaxCFMStPt>", Hanson\CX1\VAV1.1\MaxCFMStPt * 1000
+Print "<MaxHwv> |### </MaxHwv>", Hanson\CX1\VAV1.1\MaxHwv * 1000
 Print "<MeaCalc> |### </MeaCalc>", Hanson\CX1\VAV1.1\MeaCalc * 1000
 Print "<MinCFMCalc> |### </MinCFMCalc>", Hanson\CX1\VAV1.1\MinCFMCalc * 1000
 Print "<MinCFMStPt> |### </MinCFMStPt>", Hanson\CX1\VAV1.1\MinCFMStPt * 1000
@@ -25,9 +28,12 @@ Print "<NSUStPt> |### </NSUStPt>", Hanson\CX1\VAV1.1\NSUStPt * 1000
 Print "<OccupyVAV> |### </OccupyVAV>", Hanson\CX1\VAV1.1\OccupyVAV * 1000
 Print "<OverrideOccupy> |### </OverrideOccupy>", Hanson\CX1\VAV1.1\OverrideOccupy * 1000
 Print "<OverrideTM> |### </OverrideTM>", Hanson\CX1\VAV1.1\OverrideTM * 1000
+Print "<RHAvail> |### </RHAvail>", Hanson\CX1\VAV1.1\RHAvail * 1000
 Print "<SGNL> |### </SGNL>", Hanson\CX1\VAV1.1\SGNL * 1000
 Print "<SGNLHeat> |### </SGNLHeat>", Hanson\CX1\VAV1.1\SGNLHeat * 1000
 Print "<Stpt.AlmHiTmp> |### </Stpt.AlmHiTmp>", Hanson\CX1\VAV1.1\Stpt.AlmHiTmp * 1000
+Print "<Stpt.AlmLoTmp> |### </Stpt.AlmLoTmp>", Hanson\CX1\VAV1.1\Stpt.AlmLoTmp * 1000
+Print "<Summer> |### </Summer>", Hanson\CX1\VAV1.1\Summer * 1000
 Print "<TmpOffset> |### </TmpOffset>", Hanson\CX1\VAV1.1\TmpOffset * 1000
 Print "<UHHeatStpt> |### </UHHeatStpt>", Hanson\CX1\VAV1.1\UHHeatStpt * 1000
 Print "<ZeroVar> |### </ZeroVar>", Hanson\CX1\VAV1.1\ZeroVar * 1000
@@ -39,14 +45,4 @@ Print "<VP> |### </VP>", Hanson\CX1\VAV1.1\VP * 1000
 Print "<Damper> |### </Damper>", Hanson\CX1\VAV1.1\Damper * 1000
 Print "<HWV_UH4> |### </HWV_UH4>", Hanson\CX1\VAV1.1\HWV_UH4 * 1000
 Print "<ReheatVlv> |### </ReheatVlv>", Hanson\CX1\VAV1.1\ReheatVlv * 1000
-Print "<UH> |### </UH>", Hanson\CX1\VAV1.1\UH * 1000
-Print "<VAV> |### </VAV>", Hanson\CX1\VAV1.1\VAV * 1000
-Print "<VAV1.1_TrendExport> |### </VAV1.1_TrendExport>", Hanson\CX1\VAV1.1\VAV1.1_TrendExport * 1000
-Print "<ControlUH> |### </ControlUH>", Hanson\CX1\VAV1.1\ControlUH * 1000
-Print "<CFM.PRO> |### </CFM.PRO>", Hanson\CX1\VAV1.1\CFM.PRO * 1000
-Print "<ControlDamper> |### </ControlDamper>", Hanson\CX1\VAV1.1\ControlDamper * 1000
-Print "<ControlReheat> |### </ControlReheat>", Hanson\CX1\VAV1.1\ControlReheat * 1000
-Print "<ControlOverRide> |### </ControlOverRide>", Hanson\CX1\VAV1.1\ControlOverRide * 1000
-Print "<ControlHeatOK> |### </ControlHeatOK>", Hanson\CX1\VAV1.1\ControlHeatOK * 1000
-Print "<CalcRefresh> |### </CalcRefresh>", Hanson\CX1\VAV1.1\CalcRefresh * 1000
 Print " </Record> "
