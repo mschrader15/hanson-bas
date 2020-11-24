@@ -1,16 +1,4 @@
 Print " <Record> "
-Print "<AllAdjStPt> |### </AllAdjStPt>", Hanson\CX1\AllAdjStPt * 1000
-Print "<AllDampers> |### </AllDampers>", Hanson\CX1\AllDampers * 1000
-Print "<AllDisInputs> |### </AllDisInputs>", Hanson\CX1\AllDisInputs * 1000
-Print "<AllLights> |### </AllLights>", Hanson\CX1\AllLights * 1000
-Print "<AllNumerics> |### </AllNumerics>", Hanson\CX1\AllNumerics * 1000
-Print "<ALLOverrideTM> |### </ALLOverrideTM>", Hanson\CX1\ALLOverrideTM * 1000
-Print "<AllPrograms> |### </AllPrograms>", Hanson\CX1\AllPrograms * 1000
-Print "<AllReheatvlvs> |### </AllReheatvlvs>", Hanson\CX1\AllReheatvlvs * 1000
-Print "<AllStPtNSU> |### </AllStPtNSU>", Hanson\CX1\AllStPtNSU * 1000
-Print "<Balance> |### </Balance>", Hanson\CX1\Balance * 1000
-Print "<MAXCFM> |### </MAXCFM>", Hanson\CX1\MAXCFM * 1000
-Print "<MinCFM> |### </MinCFM>", Hanson\CX1\MinCFM * 1000
 Print "<LightingSched> |### </LightingSched>", Hanson\CX1\LightingSched * 1000
 Print "<LightStart> |### </LightStart>", Hanson\CX1\LightStart * 1000
 Print "<LightStop> |### </LightStop>", Hanson\CX1\LightStop * 1000
