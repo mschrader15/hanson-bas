@@ -1,6 +1,6 @@
 Print " <Record> "
-Print "<LightStart> |### </LightStart>", Hanson\CX1\LightStart * 1000
-Print "<LightStop> |### </LightStop>", Hanson\CX1\LightStop * 1000
+Print "<LightStart> |### </LightStart>", Hanson\CX1\LightStart
+Print "<LightStop> |### </LightStop>", Hanson\CX1\LightStop
 Print "<MasterSend> |### </MasterSend>", Hanson\CX1\MasterSend * 1000
 Print "<Oat> |### </Oat>", Hanson\CX1\Oat * 1000
 Print "<Stpt.LowBuildTmp> |### </Stpt.LowBuildTmp>", Hanson\CX1\Stpt.LowBuildTmp * 1000
