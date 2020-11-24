@@ -1,15 +1,10 @@
 Print " <Record> "
-Print "<RTU1Occupy> |### </RTU1Occupy>", Hanson\CX1\RTU1\RTU1Occupy * 1000
-Print "<AlarmReset> |### </AlarmReset>", Hanson\CX1\RTU1\AlarmReset * 1000
-Print "<EmerShutDn> |### </EmerShutDn>", Hanson\CX1\RTU1\EmerShutDn * 1000
 Print "<Fail.SFan> |### </Fail.SFan>", Hanson\CX1\RTU1\Fail.SFan * 1000
 Print "<FreezeAlarm> |### </FreezeAlarm>", Hanson\CX1\RTU1\FreezeAlarm * 1000
-Print "<MaxCFM> |### </MaxCFM>", Hanson\CX1\RTU1\MaxCFM * 1000
 Print "<MaxHwv> |### </MaxHwv>", Hanson\CX1\RTU1\MaxHwv * 1000
 Print "<MaxSGNL> |### </MaxSGNL>", Hanson\CX1\RTU1\MaxSGNL * 1000
 Print "<NSBCount> |### </NSBCount>", Hanson\CX1\RTU1\NSBCount * 1000
 Print "<NSUCount> |### </NSUCount>", Hanson\CX1\RTU1\NSUCount * 1000
-Print "<Occupy> |### </Occupy>", Hanson\CX1\RTU1\Occupy * 1000
 Print "<OverrideSwitch> |### </OverrideSwitch>", Hanson\CX1\RTU1\OverrideSwitch * 1000
 Print "<SchedOccupy> |### </SchedOccupy>", Hanson\CX1\RTU1\SchedOccupy * 1000
 Print "<StPt.CO2> |### </StPt.CO2>", Hanson\CX1\RTU1\StPt.CO2 * 1000
