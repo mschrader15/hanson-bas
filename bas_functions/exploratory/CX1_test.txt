@@ -1,5 +1,4 @@
 Print " <Record> "
-Print "<ACC> |### </ACC>", Hanson\CX1\ACC * 1000
 Print "<AllAdjStPt> |### </AllAdjStPt>", Hanson\CX1\AllAdjStPt * 1000
 Print "<AllDampers> |### </AllDampers>", Hanson\CX1\AllDampers * 1000
 Print "<AllDisInputs> |### </AllDisInputs>", Hanson\CX1\AllDisInputs * 1000
@@ -22,8 +21,23 @@ Print "<StPt.Oa> |### </StPt.Oa>", Hanson\CX1\StPt.Oa * 1000
 Print "<Summer> |### </Summer>", Hanson\CX1\Summer * 1000
 Print "<Testme> |### </Testme>", Hanson\CX1\Testme * 1000
 Print "<zTotLowTmp> |### </zTotLowTmp>", Hanson\CX1\zTotLowTmp * 1000
-Print "<AvgFl3> |### </AvgFl3>", Hanson\CX1\AvgFl3 * 1000
-Print "<FiringOrder> |### </FiringOrder>", Hanson\CX1\FiringOrder * 1000
+Print "<AccessLog> |### </AccessLog>", Hanson\CX1\AccessLog * 1000
+Print "<ACCFlashWRCount> |### </ACCFlashWRCount>", Hanson\CX1\ACCFlashWRCount * 1000
+Print "<ACCLastBackup> |### </ACCLastBackup>", Hanson\CX1\ACCLastBackup * 1000
+Print "<ACCLCDAnswerStr> |### </ACCLCDAnswerStr>", Hanson\CX1\ACCLCDAnswerStr * 1000
+Print "<ACCLCDBacklight> |### </ACCLCDBacklight>", Hanson\CX1\ACCLCDBacklight * 1000
+Print "<ACCLCDBeeper> |### </ACCLCDBeeper>", Hanson\CX1\ACCLCDBeeper * 1000
+Print "<ACCLCDDispLine1> |### </ACCLCDDispLine1>", Hanson\CX1\ACCLCDDispLine1 * 1000
+Print "<ACCLCDDispLine2> |### </ACCLCDDispLine2>", Hanson\CX1\ACCLCDDispLine2 * 1000
+Print "<ACCLCDDispLine3> |### </ACCLCDDispLine3>", Hanson\CX1\ACCLCDDispLine3 * 1000
+Print "<ACCLCDDispLine4> |### </ACCLCDDispLine4>", Hanson\CX1\ACCLCDDispLine4 * 1000
+Print "<ACCLCDDispMode> |### </ACCLCDDispMode>", Hanson\CX1\ACCLCDDispMode * 1000
+Print "<ACCLCDKeyStroke> |### </ACCLCDKeyStroke>", Hanson\CX1\ACCLCDKeyStroke * 1000
+Print "<ACCLCDTimeFormat> |### </ACCLCDTimeFormat>", Hanson\CX1\ACCLCDTimeFormat * 1000
+Print "<ACCLCDUserPresnt> |### </ACCLCDUserPresnt>", Hanson\CX1\ACCLCDUserPresnt * 1000
+Print "<ACCLCDViewPasswd> |### </ACCLCDViewPasswd>", Hanson\CX1\ACCLCDViewPasswd * 1000
+Print "<ACCStatusBackup> |### </ACCStatusBackup>", Hanson\CX1\ACCStatusBackup * 1000
+Print "<ACCStatusFlash> |### </ACCStatusFlash>", Hanson\CX1\ACCStatusFlash * 1000
 Print "<Alarms> |### </Alarms>", Hanson\CX1\Alarms * 1000
 Print "<Date> |### </Date>", Hanson\CX1\Date * 1000
 Print "<Dayofmonth> |### </Dayofmonth>", Hanson\CX1\Dayofmonth * 1000

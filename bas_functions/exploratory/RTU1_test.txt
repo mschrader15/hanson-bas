@@ -1,10 +1,15 @@
 Print " <Record> "
+Print "<RTU1Occupy> |### </RTU1Occupy>", Hanson\CX1\RTU1\RTU1Occupy * 1000
+Print "<AlarmReset> |### </AlarmReset>", Hanson\CX1\RTU1\AlarmReset * 1000
+Print "<EmerShutDn> |### </EmerShutDn>", Hanson\CX1\RTU1\EmerShutDn * 1000
 Print "<Fail.SFan> |### </Fail.SFan>", Hanson\CX1\RTU1\Fail.SFan * 1000
 Print "<FreezeAlarm> |### </FreezeAlarm>", Hanson\CX1\RTU1\FreezeAlarm * 1000
+Print "<MaxCFM> |### </MaxCFM>", Hanson\CX1\RTU1\MaxCFM * 1000
 Print "<MaxHwv> |### </MaxHwv>", Hanson\CX1\RTU1\MaxHwv * 1000
 Print "<MaxSGNL> |### </MaxSGNL>", Hanson\CX1\RTU1\MaxSGNL * 1000
 Print "<NSBCount> |### </NSBCount>", Hanson\CX1\RTU1\NSBCount * 1000
 Print "<NSUCount> |### </NSUCount>", Hanson\CX1\RTU1\NSUCount * 1000
+Print "<Occupy> |### </Occupy>", Hanson\CX1\RTU1\Occupy * 1000
 Print "<OverrideSwitch> |### </OverrideSwitch>", Hanson\CX1\RTU1\OverrideSwitch * 1000
 Print "<SchedOccupy> |### </SchedOccupy>", Hanson\CX1\RTU1\SchedOccupy * 1000
 Print "<StPt.CO2> |### </StPt.CO2>", Hanson\CX1\RTU1\StPt.CO2 * 1000
@@ -20,13 +25,4 @@ Print "<ResetFreeze> |### </ResetFreeze>", Hanson\CX1\RTU1\ResetFreeze * 1000
 Print "<SSEFan> |### </SSEFan>", Hanson\CX1\RTU1\SSEFan * 1000
 Print "<SSFan> |### </SSFan>", Hanson\CX1\RTU1\SSFan * 1000
 Print "<StPtTmpSupplyAir> |### </StPtTmpSupplyAir>", Hanson\CX1\RTU1\StPtTmpSupplyAir * 1000
-Print "<Test> |### </Test>", Hanson\CX1\RTU1\Test * 1000
-Print "<rtu1> |### </rtu1>", Hanson\CX1\RTU1\rtu1 * 1000
-Print "<ControlFan> |### </ControlFan>", Hanson\CX1\RTU1\ControlFan * 1000
-Print "<ControlEFan> |### </ControlEFan>", Hanson\CX1\RTU1\ControlEFan * 1000
-Print "<ControlMinOA> |### </ControlMinOA>", Hanson\CX1\RTU1\ControlMinOA * 1000
-Print "<CalcOvr> |### </CalcOvr>", Hanson\CX1\RTU1\CalcOvr * 1000
-Print "<CheckSFan> |### </CheckSFan>", Hanson\CX1\RTU1\CheckSFan * 1000
-Print "<ControlResetFrz> |### </ControlResetFrz>", Hanson\CX1\RTU1\ControlResetFrz * 1000
-Print "<ControlFrzAlarm> |### </ControlFrzAlarm>", Hanson\CX1\RTU1\ControlFrzAlarm * 1000
 Print " </Record> "

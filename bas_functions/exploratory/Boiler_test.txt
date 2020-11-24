@@ -30,6 +30,7 @@ Print "<EmerShutDn> |### </EmerShutDn>", Hanson\CX1\Boiler\EmerShutDn * 1000
 Print "<HWRT> |### </HWRT>", Hanson\CX1\Boiler\HWRT * 1000
 Print "<HWST> |### </HWST>", Hanson\CX1\Boiler\HWST * 1000
 Print "<OAH> |### </OAH>", Hanson\CX1\Boiler\OAH * 1000
+Print "<OAT> |### </OAT>", Hanson\CX1\Boiler\OAT * 1000
 Print "<Pmp1Prv> |### </Pmp1Prv>", Hanson\CX1\Boiler\Pmp1Prv * 1000
 Print "<Pmp2Prv> |### </Pmp2Prv>", Hanson\CX1\Boiler\Pmp2Prv * 1000
 Print "<Pmp3Prv> |### </Pmp3Prv>", Hanson\CX1\Boiler\Pmp3Prv * 1000
@@ -45,8 +46,4 @@ Print "<SSHwPmp3Perm> |### </SSHwPmp3Perm>", Hanson\CX1\Boiler\SSHwPmp3Perm * 10
 Print "<SSHwPmp4Perm> |### </SSHwPmp4Perm>", Hanson\CX1\Boiler\SSHwPmp4Perm * 1000
 Print "<SSHwPmp5Pri> |### </SSHwPmp5Pri>", Hanson\CX1\Boiler\SSHwPmp5Pri * 1000
 Print "<SSHwPmp8Pri> |### </SSHwPmp8Pri>", Hanson\CX1\Boiler\SSHwPmp8Pri * 1000
-<<<<<<< Updated upstream
 Print " </Record> "
-=======
-Print " </Record> "
->>>>>>> Stashed changes
