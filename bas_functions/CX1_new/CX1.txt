@@ -1,0 +1,7 @@
+Print " <Record> "
+Print "<Alarms> |### </Alarms>", Hanson\CX1\Alarms * 1000
+Print "<Oat> |### </Oat>", Hanson\CX1\Oat * 1000
+Print "<Stpt.LowBuildTmp> |### </Stpt.LowBuildTmp>", Hanson\CX1\Stpt.LowBuildTmp * 1000
+Print "<StPt.Oa> |### </StPt.Oa>", Hanson\CX1\StPt.Oa * 1000
+Print "<Summer> |### </Summer>", Hanson\CX1\Summer * 1000
+Print " </Record> "

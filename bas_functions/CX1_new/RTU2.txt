@@ -1,0 +1,20 @@
+Print " <Record> "
+Print "<DmpMinOa> |### </DmpMinOa>", Hanson\CX1\RTU2\DmpMinOa * 1000
+Print "<Fail.SFan> |### </Fail.SFan>", Hanson\CX1\RTU2\Fail.SFan * 1000
+Print "<ExFan1Prv> |### </ExFan1Prv>", Hanson\CX1\RTU2\ExFan1Prv * 1000
+Print "<PressBldg> |### </PressBldg>", Hanson\CX1\RTU2\PressBldg * 1000
+Print "<RACO2> |### </RACO2>", Hanson\CX1\RTU2\RACO2 * 1000
+Print "<MaxCFM> |### </MaxCFM>", Hanson\CX1\RTU2\MaxCFM * 1000
+Print "<RAH> |### </RAH>", Hanson\CX1\RTU2\RAH * 1000
+Print "<MaxHwv> |### </MaxHwv>", Hanson\CX1\RTU2\MaxHwv * 1000
+Print "<Occupy> |### </Occupy>", Hanson\CX1\RTU2\Occupy * 1000
+Print "<OverrideSwitch> |### </OverrideSwitch>", Hanson\CX1\RTU2\OverrideSwitch * 1000
+Print "<SchedOccupy> |### </SchedOccupy>", Hanson\CX1\RTU2\SchedOccupy * 1000
+Print "<SFanPrv> |### </SFanPrv>", Hanson\CX1\RTU2\SFanPrv * 1000
+Print "<StPt.CO2> |### </StPt.CO2>", Hanson\CX1\RTU2\StPt.CO2 * 1000
+Print "<StPtBldgPress> |### </StPtBldgPress>", Hanson\CX1\RTU2\StPtBldgPress * 1000
+Print "<ResetFreeze> |### </ResetFreeze>", Hanson\CX1\RTU2\ResetFreeze * 1000
+Print "<SSEFan> |### </SSEFan>", Hanson\CX1\RTU2\SSEFan * 1000
+Print "<SSFan> |### </SSFan>", Hanson\CX1\RTU2\SSFan * 1000
+Print "<StPtTmpSupplyAir> |### </StPtTmpSupplyAir>", Hanson\CX1\RTU2\StPtTmpSupplyAir * 1000
+Print " </Record> "

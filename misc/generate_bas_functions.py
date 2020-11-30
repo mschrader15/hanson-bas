@@ -18,34 +18,34 @@ import urllib3
 
 
 
-def traditional():
-
-    def func(x):
-        path = x.DeviceId + "\\" + x.Name
-        base_string = f'Print "<{x.Name}> |### </{x.Name}>", {path}'
-        if not isinstance(x.Value, str):
-            base_string = base_string + f' * {int(x.Multiplier)}'
-        return base_string
-
-    for ip in uniqueip:
-        for i, val in enumerate(files['ipaddresses'] == ip):
-            if val:
-                break
-        # # This writes the unique ip addresses. Not necessary anymore
-        files.loc[i, 'filter_ip'] = "".join([ip, "_trend.xml"])
-        if 'CX1' in files.loc[i, 'DeviceId']:
-            folder = 'CX1'
-        else:
-            folder = 'CX2'
-        # This is generating the unique xml functions:
-        name = files.loc[i, 'Device Tag'] + '.txt'
-        header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
-        tail_lines = ['Print " </Record> "']
-        lines = files.loc[files['ipaddresses'] == ip, :].apply(func, axis=1)
-        print_txt = "\n".join(header_lines + list(lines) + tail_lines)
-        with open(os.path.join(definitions.ROOT, 'bas_functions', folder, name), 'w') as f:
-            f.write(print_txt)
-            f.close()
+# def traditional():
+#
+#     def func(x):
+#         path = x.DeviceId + "\\" + x.Name
+#         base_string = f'Print "<{x.Name}> |### </{x.Name}>", {path}'
+#         if not isinstance(x.Value, str):
+#             base_string = base_string + f' * {int(x.Multiplier)}'
+#         return base_string
+#
+#     for ip in uniqueip:
+#         for i, val in enumerate(files['ipaddresses'] == ip):
+#             if val:
+#                 break
+#         # # This writes the unique ip addresses. Not necessary anymore
+#         files.loc[i, 'filter_ip'] = "".join([ip, "_trend.xml"])
+#         if 'CX1' in files.loc[i, 'DeviceId']:
+#             folder = 'CX1'
+#         else:
+#             folder = 'CX2'
+#         # This is generating the unique xml functions:
+#         name = files.loc[i, 'Device Tag'] + '.txt'
+#         header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
+#         tail_lines = ['Print " </Record> "']
+#         lines = files.loc[files['ipaddresses'] == ip, :].apply(func, axis=1)
+#         print_txt = "\n".join(header_lines + list(lines) + tail_lines)
+#         with open(os.path.join(definitions.ROOT, 'bas_functions', folder, name), 'w') as f:
+#             f.write(print_txt)
+#             f.close()
 
 
 # excel_file_path = os.path.join(definitions.ROOT, 'assets', 'List_AllInputs_new1.xlsx')
@@ -55,34 +55,31 @@ def traditional():
 # uniqueip = files['ipaddresses'].unique()
 
 
-excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX1_MBC edits.xlsx')
+excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX1.xlsx')
 
 df = pd.read_excel(excel_file_path)
 # files['filter_ip'] = None
 # uniqueip = files['ipaddresses'].unique()
 
-iterate_df = df.loc[df['Write'] >= 1]
+iterate_df = df.loc[df['USE TRUE/FALSE'] >= 1]
 
-unique_devices = iterate_df['Device'].unique()
-
-folder = 'exploratory_functions'
-
+unique_devices = iterate_df['DEVICE'].unique()
 
 def func(x):
-    path = x.Device + "\\" + x.Name
-    base_string = f'Print "<{x.Name}> |### </{x.Name}>", {path}'
+    path = x.DEVICE + "\\" + x.NAME
+    base_string = f'Print "<{x.NAME}> |### </{x.NAME}>", {path}'
     base_string = base_string + f' * {1000}'
     return base_string
 
 
 for device in unique_devices:
-    local_df = iterate_df.loc[iterate_df['Device'] == device]
-    name = device.split('\\')[-1] + "_test"
+    local_df = iterate_df.loc[iterate_df['DEVICE'] == device]
+    name = device.split('\\')[-1]
     header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
     tail_lines = ['Print " </Record> "']
     lines = local_df.apply(func, axis=1)
     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
-    with open(os.path.join(definitions.ROOT, 'bas_functions', 'exploratory', name + ".txt"), 'w') as f:
+    with open(os.path.join(definitions.ROOT, 'bas_functions', 'CX1_new', name + ".txt"), 'w') as f:
         f.write(print_txt)
         f.close()
 
