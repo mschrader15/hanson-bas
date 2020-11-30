@@ -1,0 +1,23 @@
+Print " <Record> "
+Print "<FreezeStat> |### </FreezeStat>", Hanson\CX2\RTU1S\FreezeStat * 1000
+Print "<SFanPrv> |### </SFanPrv>", Hanson\CX2\RTU1S\SFanPrv * 1000
+Print "<SFanVFDTrouble> |### </SFanVFDTrouble>", Hanson\CX2\RTU1S\SFanVFDTrouble * 1000
+Print "<Fail.SFan> |### </Fail.SFan>", Hanson\CX2\RTU1S\Fail.SFan * 1000
+Print "<HolidayFlag> |### </HolidayFlag>", Hanson\CX2\RTU1S\HolidayFlag * 1000
+Print "<MaxCFM> |### </MaxCFM>", Hanson\CX2\RTU1S\MaxCFM * 1000
+Print "<MaxHwv> |### </MaxHwv>", Hanson\CX2\RTU1S\MaxHwv * 1000
+Print "<OptStrOccupy> |### </OptStrOccupy>", Hanson\CX2\RTU1S\OptStrOccupy * 1000
+Print "<Run.Fan> |### </Run.Fan>", Hanson\CX2\RTU1S\Run.Fan * 1000
+Print "<SchedOccupy> |### </SchedOccupy>", Hanson\CX2\RTU1S\SchedOccupy * 1000
+Print "<StPtCool> |### </StPtCool>", Hanson\CX2\RTU1S\StPtCool * 1000
+Print "<StPtHeat> |### </StPtHeat>", Hanson\CX2\RTU1S\StPtHeat * 1000
+Print "<StptOa> |### </StptOa>", Hanson\CX2\RTU1S\StptOa * 1000
+Print "<StPtOptimumTmp> |### </StPtOptimumTmp>", Hanson\CX2\RTU1S\StPtOptimumTmp * 1000
+Print "<Summer> |### </Summer>", Hanson\CX2\RTU1S\Summer * 1000
+Print "<VacationDay> |### </VacationDay>", Hanson\CX2\RTU1S\VacationDay * 1000
+Print "<ResetFreeze> |### </ResetFreeze>", Hanson\CX2\RTU1S\ResetFreeze * 1000
+Print "<SSFan> |### </SSFan>", Hanson\CX2\RTU1S\SSFan * 1000
+Print "<StPtTmpSupplyAir> |### </StPtTmpSupplyAir>", Hanson\CX2\RTU1S\StPtTmpSupplyAir * 1000
+Print "<Alarms> |### </Alarms>", Hanson\CX2\RTU1S\Alarms * 1000
+Print "<PowerFail> |### </PowerFail>", Hanson\CX2\RTU1S\PowerFail * 1000
+Print " </Record> "

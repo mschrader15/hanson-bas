@@ -55,7 +55,7 @@ import urllib3
 # uniqueip = files['ipaddresses'].unique()
 
 
-excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX1.xlsx')
+excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX2.xlsx')
 
 df = pd.read_excel(excel_file_path)
 # files['filter_ip'] = None
@@ -79,7 +79,7 @@ for device in unique_devices:
     tail_lines = ['Print " </Record> "']
     lines = local_df.apply(func, axis=1)
     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
-    with open(os.path.join(definitions.ROOT, 'bas_functions', 'CX1_new', name + ".txt"), 'w') as f:
+    with open(os.path.join(definitions.ROOT, 'bas_functions', 'CX2_new', name + ".txt"), 'w') as f:
         f.write(print_txt)
         f.close()
 
