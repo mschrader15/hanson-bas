@@ -49,6 +49,7 @@ def load_master_dict(file_path, filter_list=None):
         filtered_df = df.loc[df['Device Tag'] == tag, :]
         d = Device(name=tag, ip_address=ip, measurement_names=list(filtered_df['Name']),
                    units=list(filtered_df['Units']), multipliers=list(filtered_df['Multiplier']),
+                   measurement_dataTypes=list(filtered_df['Measurement_Kind'])
                    )
         device_container[d.name] = d
     return device_container
@@ -174,6 +175,7 @@ def handle_multiplier(master_dict):
     for device in master_dict.values():
         for measurement in device.measurements.values():
             if (measurement.multiplier != 1) and measurement.value:
+                # if ('Bool' in measurement.dataType):
                 measurement.value = float(measurement.value) / measurement.multiplier
     return master_dict
 
