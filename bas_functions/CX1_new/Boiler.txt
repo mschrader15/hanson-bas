@@ -1,6 +1,5 @@
 Print " <Record> "
 Print "<ActCoolStPt> |### </ActCoolStPt>", Hanson\CX1\Boiler\ActCoolStPt * 1000
-Print "<Boiler_Trends> |### </Boiler_Trends>", Hanson\CX1\Boiler\Boiler_Trends * 1000
 Print "<BoilerRmExh> |### </BoilerRmExh>", Hanson\CX1\Boiler\BoilerRmExh * 1000
 Print "<Alm.Low.HWS> |### </Alm.Low.HWS>", Hanson\CX1\Boiler\Alm.Low.HWS * 1000
 Print "<BoilerAlrm> |### </BoilerAlrm>", Hanson\CX1\Boiler\BoilerAlrm * 1000
