@@ -1,0 +1,25 @@
+Print " <Record> "
+Print "<AdjStPt> |### </AdjStPt>", Hanson\CX2\VAV203\AdjStPt * 1000
+Print "<DAT> |### </DAT>", Hanson\CX2\VAV203\DAT * 1000
+Print "<RMT> |### </RMT>", Hanson\CX2\VAV203\RMT * 1000
+Print "<VP> |### </VP>", Hanson\CX2\VAV203\VP * 1000
+Print "<ActCoolStPt> |### </ActCoolStPt>", Hanson\CX2\VAV203\ActCoolStPt * 1000
+Print "<ActHeatStPt> |### </ActHeatStPt>", Hanson\CX2\VAV203\ActHeatStPt * 1000
+Print "<AvgTmp> |### </AvgTmp>", Hanson\CX2\VAV203\AvgTmp * 1000
+Print "<CFM> |### </CFM>", Hanson\CX2\VAV203\CFM * 1000
+Print "<CFMStPt> |### </CFMStPt>", Hanson\CX2\VAV203\CFMStPt * 1000
+Print "<CoolStPt> |### </CoolStPt>", Hanson\CX2\VAV203\CoolStPt * 1000
+Print "<DatSp> |### </DatSp>", Hanson\CX2\VAV203\DatSp * 1000
+Print "<HeatOK> |### </HeatOK>", Hanson\CX2\VAV203\HeatOK * 1000
+Print "<HeatStpt> |### </HeatStpt>", Hanson\CX2\VAV203\HeatStpt * 1000
+Print "<MaxCFM> |### </MaxCFM>", Hanson\CX2\VAV203\MaxCFM * 1000
+Print "<MaxCFMStPt> |### </MaxCFMStPt>", Hanson\CX2\VAV203\MaxCFMStPt * 1000
+Print "<MaxHwv> |### </MaxHwv>", Hanson\CX2\VAV203\MaxHwv * 1000
+Print "<MinCFMCalc> |### </MinCFMCalc>", Hanson\CX2\VAV203\MinCFMCalc * 1000
+Print "<MinCFMStPt> |### </MinCFMStPt>", Hanson\CX2\VAV203\MinCFMStPt * 1000
+Print "<TmpOffset> |### </TmpOffset>", Hanson\CX2\VAV203\TmpOffset * 1000
+Print "<Damper> |### </Damper>", Hanson\CX2\VAV203\Damper * 1000
+Print "<ReheatVlv> |### </ReheatVlv>", Hanson\CX2\VAV203\ReheatVlv * 1000
+Print "<Alarms> |### </Alarms>", Hanson\CX2\VAV203\Alarms * 1000
+Print "<PowerFail> |### </PowerFail>", Hanson\CX2\VAV203\PowerFail * 1000
+Print " </Record> "

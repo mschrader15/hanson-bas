@@ -1,0 +1,35 @@
+Print " <Record> "
+Print "<ActCoolStPt> |### </ActCoolStPt>", Hanson\CX1\Boiler\ActCoolStPt * 1000
+Print "<Boiler_Trends> |### </Boiler_Trends>", Hanson\CX1\Boiler\Boiler_Trends * 1000
+Print "<BoilerRmExh> |### </BoilerRmExh>", Hanson\CX1\Boiler\BoilerRmExh * 1000
+Print "<Alm.Low.HWS> |### </Alm.Low.HWS>", Hanson\CX1\Boiler\Alm.Low.HWS * 1000
+Print "<BoilerAlrm> |### </BoilerAlrm>", Hanson\CX1\Boiler\BoilerAlrm * 1000
+Print "<BoilerRmTmp> |### </BoilerRmTmp>", Hanson\CX1\Boiler\BoilerRmTmp * 1000
+Print "<Fail.HwP1> |### </Fail.HwP1>", Hanson\CX1\Boiler\Fail.HwP1 * 1000
+Print "<Fail.HwP2> |### </Fail.HwP2>", Hanson\CX1\Boiler\Fail.HwP2 * 1000
+Print "<Fail.HwP3> |### </Fail.HwP3>", Hanson\CX1\Boiler\Fail.HwP3 * 1000
+Print "<Fail.HwP4> |### </Fail.HwP4>", Hanson\CX1\Boiler\Fail.HwP4 * 1000
+Print "<Fail.HwP5> |### </Fail.HwP5>", Hanson\CX1\Boiler\Fail.HwP5 * 1000
+Print "<Fail.HwP8> |### </Fail.HwP8>", Hanson\CX1\Boiler\Fail.HwP8 * 1000
+Print "<HWRT> |### </HWRT>", Hanson\CX1\Boiler\HWRT * 1000
+Print "<HWST> |### </HWST>", Hanson\CX1\Boiler\HWST * 1000
+Print "<OAH> |### </OAH>", Hanson\CX1\Boiler\OAH * 1000
+Print "<OAT> |### </OAT>", Hanson\CX1\Boiler\OAT * 1000
+Print "<Pmp1Prv> |### </Pmp1Prv>", Hanson\CX1\Boiler\Pmp1Prv * 1000
+Print "<Pmp2Prv> |### </Pmp2Prv>", Hanson\CX1\Boiler\Pmp2Prv * 1000
+Print "<Pmp3Prv> |### </Pmp3Prv>", Hanson\CX1\Boiler\Pmp3Prv * 1000
+Print "<Pmp4Prv> |### </Pmp4Prv>", Hanson\CX1\Boiler\Pmp4Prv * 1000
+Print "<Pmp5Prv> |### </Pmp5Prv>", Hanson\CX1\Boiler\Pmp5Prv * 1000
+Print "<Pmp8Prv> |### </Pmp8Prv>", Hanson\CX1\Boiler\Pmp8Prv * 1000
+Print "<ReheatHWRT> |### </ReheatHWRT>", Hanson\CX1\Boiler\ReheatHWRT * 1000
+Print "<Occupy> |### </Occupy>", Hanson\CX1\Boiler\Occupy * 1000
+Print "<Rtu1Occupy> |### </Rtu1Occupy>", Hanson\CX1\Boiler\Rtu1Occupy * 1000
+Print "<Rtu2Occupy> |### </Rtu2Occupy>", Hanson\CX1\Boiler\Rtu2Occupy * 1000
+Print "<SSDomHwPmp> |### </SSDomHwPmp>", Hanson\CX1\Boiler\SSDomHwPmp * 1000
+Print "<SSHwPmp1ReHt> |### </SSHwPmp1ReHt>", Hanson\CX1\Boiler\SSHwPmp1ReHt * 1000
+Print "<SSHwPmp2ReHt> |### </SSHwPmp2ReHt>", Hanson\CX1\Boiler\SSHwPmp2ReHt * 1000
+Print "<SSHwPmp3Perm> |### </SSHwPmp3Perm>", Hanson\CX1\Boiler\SSHwPmp3Perm * 1000
+Print "<SSHwPmp4Perm> |### </SSHwPmp4Perm>", Hanson\CX1\Boiler\SSHwPmp4Perm * 1000
+Print "<SSHwPmp5Pri> |### </SSHwPmp5Pri>", Hanson\CX1\Boiler\SSHwPmp5Pri * 1000
+Print "<SSHwPmp8Pri> |### </SSHwPmp8Pri>", Hanson\CX1\Boiler\SSHwPmp8Pri * 1000
+Print " </Record> "

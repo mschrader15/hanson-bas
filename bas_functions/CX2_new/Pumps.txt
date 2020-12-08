@@ -1,0 +1,11 @@
+Print " <Record> "
+Print "<Pmp6Prv> |### </Pmp6Prv>", Hanson\CX2\Pumps\Pmp6Prv * 1000
+Print "<Pmp7Prv> |### </Pmp7Prv>", Hanson\CX2\Pumps\Pmp7Prv * 1000
+Print "<Occupy> |### </Occupy>", Hanson\CX2\Pumps\Occupy * 1000
+Print "<Rtu1Occupy> |### </Rtu1Occupy>", Hanson\CX2\Pumps\Rtu1Occupy * 1000
+Print "<Rtu2Occupy> |### </Rtu2Occupy>", Hanson\CX2\Pumps\Rtu2Occupy * 1000
+Print "<HwPmp6> |### </HwPmp6>", Hanson\CX2\Pumps\HwPmp6 * 1000
+Print "<HwPmp7> |### </HwPmp7>", Hanson\CX2\Pumps\HwPmp7 * 1000
+Print "<Alarms> |### </Alarms>", Hanson\CX2\Pumps\Alarms * 1000
+Print "<PowerFail> |### </PowerFail>", Hanson\CX2\Pumps\PowerFail * 1000
+Print " </Record> "

@@ -88,9 +88,16 @@ class SkySpark:
     def _data_type_handler(self, value):
         new_value = None
         if self._point.tags['kind'] == 'Bool':
-            on_off = value.lower() in ['on', 'off']
-            if on_off:
-                new_value = True if value.lower() == 'on' else False
+            try:
+                on_off = value.lower() in ['on', 'off']
+                if on_off:
+                    new_value = True if value.lower() == 'on' else False
+                else:
+                    value = int(value)
+                    new_value = value > 0
+            except AttributeError:
+                if value:
+                    new_value = value > 0
         elif self._point.tags['kind'] == 'Number':
             try:
                 new_value = float(value)
@@ -124,8 +131,11 @@ class SkySpark:
         return num, results
 
     def _add_his_value(self, time, value):
-        self._his_frame.append({'id': self._point.id, 'mod': self._point.tags['mod'],
+        try:
+            self._his_frame.append({'id': self._point.id, 'mod': self._point.tags['mod'],
                                 'ts': self._site.tz.localize(time), 'val': value})
+        except AttributeError:
+            print(self._point.id, time, value)
 
     def _set_equip(self, equip_name):
         """

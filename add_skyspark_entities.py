@@ -51,7 +51,7 @@ def add_equipment(sky_spark, device_container):
 
 if __name__ == "__main__":
 
-    devices = load_master_dict(definitions.MASTER_TABLE, filter_list=['rtu2s'])
+    devices = load_master_dict(definitions.MASTER_TABLE,)  # filter_list=['rtu2s'])
 
     skyspark_creator = SkySparkCreator(definitions.LOGIN_DICT['SkySpark'])
 

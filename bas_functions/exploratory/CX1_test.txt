@@ -1,0 +1,57 @@
+Print " <Record> "
+Print "<LightStart> |### </LightStart>", Hanson\CX1\LightStart
+Print "<LightStop> |### </LightStop>", Hanson\CX1\LightStop
+Print "<MasterSend> |### </MasterSend>", Hanson\CX1\MasterSend * 1000
+Print "<Oat> |### </Oat>", Hanson\CX1\Oat * 1000
+Print "<Stpt.LowBuildTmp> |### </Stpt.LowBuildTmp>", Hanson\CX1\Stpt.LowBuildTmp * 1000
+Print "<StPt.Oa> |### </StPt.Oa>", Hanson\CX1\StPt.Oa * 1000
+Print "<Summer> |### </Summer>", Hanson\CX1\Summer * 1000
+Print "<Testme> |### </Testme>", Hanson\CX1\Testme * 1000
+Print "<zTotLowTmp> |### </zTotLowTmp>", Hanson\CX1\zTotLowTmp * 1000
+Print "<AccessLog> |### </AccessLog>", Hanson\CX1\AccessLog * 1000
+Print "<ACCFlashWRCount> |### </ACCFlashWRCount>", Hanson\CX1\ACCFlashWRCount * 1000
+Print "<ACCLastBackup> |### </ACCLastBackup>", Hanson\CX1\ACCLastBackup * 1000
+Print "<ACCLCDAnswerStr> |### </ACCLCDAnswerStr>", Hanson\CX1\ACCLCDAnswerStr * 1000
+Print "<ACCLCDBacklight> |### </ACCLCDBacklight>", Hanson\CX1\ACCLCDBacklight * 1000
+Print "<ACCLCDBeeper> |### </ACCLCDBeeper>", Hanson\CX1\ACCLCDBeeper * 1000
+Print "<ACCLCDDispLine1> |### </ACCLCDDispLine1>", Hanson\CX1\ACCLCDDispLine1 * 1000
+Print "<ACCLCDDispLine2> |### </ACCLCDDispLine2>", Hanson\CX1\ACCLCDDispLine2 * 1000
+Print "<ACCLCDDispLine3> |### </ACCLCDDispLine3>", Hanson\CX1\ACCLCDDispLine3 * 1000
+Print "<ACCLCDDispLine4> |### </ACCLCDDispLine4>", Hanson\CX1\ACCLCDDispLine4 * 1000
+Print "<ACCLCDDispMode> |### </ACCLCDDispMode>", Hanson\CX1\ACCLCDDispMode * 1000
+Print "<ACCLCDKeyStroke> |### </ACCLCDKeyStroke>", Hanson\CX1\ACCLCDKeyStroke * 1000
+Print "<ACCLCDTimeFormat> |### </ACCLCDTimeFormat>", Hanson\CX1\ACCLCDTimeFormat * 1000
+Print "<ACCLCDUserPresnt> |### </ACCLCDUserPresnt>", Hanson\CX1\ACCLCDUserPresnt * 1000
+Print "<ACCLCDViewPasswd> |### </ACCLCDViewPasswd>", Hanson\CX1\ACCLCDViewPasswd * 1000
+Print "<ACCStatusBackup> |### </ACCStatusBackup>", Hanson\CX1\ACCStatusBackup * 1000
+Print "<ACCStatusFlash> |### </ACCStatusFlash>", Hanson\CX1\ACCStatusFlash * 1000
+Print "<Alarms> |### </Alarms>", Hanson\CX1\Alarms * 1000
+Print "<Date> |### </Date>", Hanson\CX1\Date * 1000
+Print "<Dayofmonth> |### </Dayofmonth>", Hanson\CX1\Dayofmonth * 1000
+Print "<Dayofyear> |### </Dayofyear>", Hanson\CX1\Dayofyear * 1000
+Print "<Errors> |### </Errors>", Hanson\CX1\Errors * 1000
+Print "<EventLogSize> |### </EventLogSize>", Hanson\CX1\EventLogSize * 1000
+Print "<Freemem> |### </Freemem>", Hanson\CX1\Freemem * 1000
+Print "<Hour> |### </Hour>", Hanson\CX1\Hour * 1000
+Print "<Hourofday> |### </Hourofday>", Hanson\CX1\Hourofday * 1000
+Print "<Infinet2Count> |### </Infinet2Count>", Hanson\CX1\Infinet2Count * 1000
+Print "<Minute> |### </Minute>", Hanson\CX1\Minute * 1000
+Print "<Month> |### </Month>", Hanson\CX1\Month * 1000
+Print "<NewAlarmCount> |### </NewAlarmCount>", Hanson\CX1\NewAlarmCount * 1000
+Print "<PowerFail> |### </PowerFail>", Hanson\CX1\PowerFail * 1000
+Print "<PowerUpTime> |### </PowerUpTime>", Hanson\CX1\PowerUpTime * 1000
+Print "<Scan> |### </Scan>", Hanson\CX1\Scan * 1000
+Print "<Second> |### </Second>", Hanson\CX1\Second * 1000
+Print "<Status1> |### </Status1>", Hanson\CX1\Status1 * 1000
+Print "<Status2> |### </Status2>", Hanson\CX1\Status2 * 1000
+Print "<Status3> |### </Status3>", Hanson\CX1\Status3 * 1000
+Print "<Status4> |### </Status4>", Hanson\CX1\Status4 * 1000
+Print "<Status5> |### </Status5>", Hanson\CX1\Status5 * 1000
+Print "<Status6> |### </Status6>", Hanson\CX1\Status6 * 1000
+Print "<Status7> |### </Status7>", Hanson\CX1\Status7 * 1000
+Print "<Status8> |### </Status8>", Hanson\CX1\Status8 * 1000
+Print "<Timeofday> |### </Timeofday>", Hanson\CX1\Timeofday * 1000
+Print "<Version> |### </Version>", Hanson\CX1\Version * 1000
+Print "<Weekday> |### </Weekday>", Hanson\CX1\Weekday * 1000
+Print "<Year> |### </Year>", Hanson\CX1\Year * 1000
+Print " </Record> "

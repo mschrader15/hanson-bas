@@ -11,5 +11,5 @@ def get_login_info(root, login_info_file):
 
 
 LOGIN_DICT = get_login_info(ROOT, 'login.txt')
-MASTER_TABLE = os.path.join(ROOT, 'assets', 'List_AllInputs.xlsx')
+MASTER_TABLE = os.path.join(ROOT, 'assets', 'List_AllInputs_MatEdits.xlsx')
 ERROR_LOGS_DIR = os.path.join(ROOT, 'errors')

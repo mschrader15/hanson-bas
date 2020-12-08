@@ -1,0 +1,5 @@
+Print " <Record> "
+Print "<zTemp.Oa> |### </zTemp.Oa>", Hanson\CX2\zTemp.Oa * 1000
+Print "<Alarms> |### </Alarms>", Hanson\CX2\Alarms * 1000
+Print "<PowerFail> |### </PowerFail>", Hanson\CX2\PowerFail * 1000
+Print " </Record> "

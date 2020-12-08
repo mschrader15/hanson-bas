@@ -1,0 +1,5 @@
+Print " <Record> "
+Print "<Stpt.AlmHiTmp> |### </Stpt.AlmHiTmp>", Hanson\CX1\VAV1.3.2\Stpt.AlmHiTmp * 1000
+Print "<Stpt.AlmLoTmp> |### </Stpt.AlmLoTmp>", Hanson\CX1\VAV1.3.2\Stpt.AlmLoTmp * 1000
+Print "<DAT> |### </DAT>", Hanson\CX1\VAV1.3.2\DAT * 1000
+Print " </Record> "
