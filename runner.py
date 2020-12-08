@@ -159,8 +159,11 @@ def write_to_skyspark_frame(skyspark_obj, master_dict):
     """
     for equipment in master_dict.values():
         for measurement in equipment.measurements.values():
-            skyspark_obj.append_his_frame(equip_name=equipment.name, point_name=measurement.skyspark_name,
-                                          time=measurement.time, value=measurement.value)
+            if measurement.value is not None:
+                skyspark_obj.append_his_frame(equip_name=equipment.name, point_name=measurement.skyspark_name,
+                                              time=measurement.time, value=measurement.value)
+            else:
+                print("No value for: ", equipment.name, measurement.skyspark_name)
     result = skyspark_obj.submit_his_frame()
     return result
 
