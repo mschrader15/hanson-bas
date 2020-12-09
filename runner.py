@@ -45,7 +45,7 @@ def load_master_dict(file_path, filter_list=None):
     unique_ips = df['ipaddresses'].dropna().unique()
     device_container = {}
     for ip in unique_ips:
-        tag = df.loc[df['filter_ip'] == ip, 'Device Tag'].values[0]
+        tag = df.loc[df['ipaddresses'] == ip, 'Device Tag'].values[0]
         filtered_df = df.loc[df['Device Tag'] == tag, :]
         d = Device(name=tag, ip_address=ip, measurement_names=list(filtered_df['Name']),
                    units=list(filtered_df['Units']), multipliers=list(filtered_df['Multiplier']),
