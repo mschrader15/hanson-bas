@@ -53,36 +53,7 @@ import urllib3
 # files = pd.read_excel(excel_file_path)
 # files['filter_ip'] = None
 # uniqueip = files['ipaddresses'].unique()
-
-
-# excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX2.xlsx')
 #
-# df = pd.read_excel(excel_file_path)
-# # files['filter_ip'] = None
-# # uniqueip = files['ipaddresses'].unique()
-#
-# iterate_df = df.loc[df['USE TRUE/FALSE'] >= 1]
-#
-# unique_devices = iterate_df['DEVICE'].unique()
-#
-# def func(x):
-#     path = x.DEVICE + "\\" + x.NAME
-#     base_string = f'Print "<{x.NAME}> |### </{x.NAME}>", {path}'
-#     base_string = base_string + f' * {1000}'
-#     return base_string
-#
-#
-# for device in unique_devices:
-#     local_df = iterate_df.loc[iterate_df['DEVICE'] == device]
-#     name = device.split('\\')[-1]
-#     header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
-#     tail_lines = ['Print " </Record> "']
-#     lines = local_df.apply(func, axis=1)
-#     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
-#     with open(os.path.join(definitions.ROOT, 'bas_functions', 'CX2_new', name + ".txt"), 'w') as f:
-#         f.write(print_txt)
-#         f.close()
-
 
 excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX1.xlsx')
 
@@ -90,9 +61,9 @@ df = pd.read_excel(excel_file_path)
 # files['filter_ip'] = None
 # uniqueip = files['ipaddresses'].unique()
 
-iterate_df = df.loc[df['Measurement_Kind'] == 'test']
+iterate_df = df.loc[df['Device Tag'] == 'vav2.1']
 
-unique_df = iterate_df.groupby('Name').first().reset_index()
+unique_devices = iterate_df['DeviceId2'].unique()
 
 def func(x):
     path = x.DeviceId2 + "\\" + x.Name
@@ -100,18 +71,46 @@ def func(x):
     base_string = base_string + f' * {1000}'
     return base_string
 
+for device in unique_devices:
+    local_df = iterate_df.loc[iterate_df['DeviceId2'] == device]
+    name = device.split('\\')[-1]
+    header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
+    tail_lines = ['Print " </Record> "']
+    lines = local_df.apply(func, axis=1)
+    print_txt = "\n".join(header_lines + list(lines) + tail_lines)
+    with open(os.path.join(definitions.ROOT, 'bas_functions', '12_9_test', name + ".txt"), 'w') as f:
+        f.write(print_txt)
+        f.close()
 
-header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
-tail_lines = ['Print " </Record> "']
 
-lines = []
-lines = unique_df.apply(func, axis=1).to_list()
-
-print_txt = "\n".join(header_lines + lines + tail_lines)
-
-with open(os.path.join(definitions.ROOT, 'bas_functions', '12_9_test', "test" + ".txt"), 'w') as f:
-    f.write(print_txt)
-    f.close()
+# excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX1.xlsx')
+#
+# df = pd.read_excel(excel_file_path)
+# # files['filter_ip'] = None
+# # uniqueip = files['ipaddresses'].unique()
+#
+# iterate_df = df.loc[df['Measurement_Kind'] == 'test']
+#
+# unique_df = iterate_df.groupby('Name').first().reset_index()
+#
+# def func(x):
+#     path = x.DeviceId2 + "\\" + x.Name
+#     base_string = f'Print "<{x.Name}> |### </{x.Name}>", {path}'
+#     base_string = base_string + f' * {1000}'
+#     return base_string
+#
+#
+# header_lines = ['Print " <Record> "']  # 'Print " <?xml version=|"1.0|"?>"',
+# tail_lines = ['Print " </Record> "']
+#
+# lines = []
+# lines = unique_df.apply(func, axis=1).to_list()
+#
+# print_txt = "\n".join(header_lines + lines + tail_lines)
+#
+# with open(os.path.join(definitions.ROOT, 'bas_functions', '12_9_test', "test" + ".txt"), 'w') as f:
+#     f.write(print_txt)
+#     f.close()
 
 
 
