@@ -55,20 +55,20 @@ import urllib3
 # uniqueip = files['ipaddresses'].unique()
 #
 
-excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX1.xlsx')
+excel_file_path = os.path.join(definitions.ROOT, 'assets', 'pointListCX2.xlsx')
 
-df = pd.read_excel(excel_file_path)
+df = pd.read_excel(excel_file_path, sheet_name='CX2')
 # files['filter_ip'] = None
 # uniqueip = files['ipaddresses'].unique()
 
-iterate_df = df.loc[df['Device Tag'] == 'vav2.1']
+iterate_df = df.loc[df['USE TRUE/FALSE'] == True]
 
 unique_devices = iterate_df['DeviceId2'].unique()
 
 def func(x):
     path = x.DeviceId2 + "\\" + x.Name
     base_string = f'Print "<{x.Name}> |### </{x.Name}>", {path}'
-    base_string = base_string + f' * {1000}'
+    base_string = base_string + f' * {x.Multiplier}'
     return base_string
 
 for device in unique_devices:
@@ -78,7 +78,7 @@ for device in unique_devices:
     tail_lines = ['Print " </Record> "']
     lines = local_df.apply(func, axis=1)
     print_txt = "\n".join(header_lines + list(lines) + tail_lines)
-    with open(os.path.join(definitions.ROOT, 'bas_functions', '12_9_test', name + ".txt"), 'w') as f:
+    with open(os.path.join(definitions.ROOT, 'bas_functions', '12_14_update', 'CX2', name + ".txt"), 'w') as f:
         f.write(print_txt)
         f.close()
 

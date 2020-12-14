@@ -1,0 +1,15 @@
+Print " <Record> "
+Print "<Fail.SFan> |### </Fail.SFan>", Hanson\CX1\RTU2\Fail.SFan * 1.0
+Print "<Occupy> |### </Occupy>", Hanson\CX1\RTU2\Occupy * 1.0
+Print "<SchedOccupy> |### </SchedOccupy>", Hanson\CX1\RTU2\SchedOccupy * 1000.0
+Print "<StPt.CO2> |### </StPt.CO2>", Hanson\CX1\RTU2\StPt.CO2 * 1000.0
+Print "<StPtBldgPress> |### </StPtBldgPress>", Hanson\CX1\RTU2\StPtBldgPress * 1000.0
+Print "<ExFan1Prv> |### </ExFan1Prv>", Hanson\CX1\RTU2\ExFan1Prv * 1000.0
+Print "<PressBldg> |### </PressBldg>", Hanson\CX1\RTU2\PressBldg * 1000.0
+Print "<RACO2> |### </RACO2>", Hanson\CX1\RTU2\RACO2 * 1000.0
+Print "<RAH> |### </RAH>", Hanson\CX1\RTU2\RAH * 1000.0
+Print "<SFanPrv> |### </SFanPrv>", Hanson\CX1\RTU2\SFanPrv * 1000.0
+Print "<SSEFan> |### </SSEFan>", Hanson\CX1\RTU2\SSEFan * 1000.0
+Print "<SSFan> |### </SSFan>", Hanson\CX1\RTU2\SSFan * 1000.0
+Print "<StPtTmpSupplyAir> |### </StPtTmpSupplyAir>", Hanson\CX1\RTU2\StPtTmpSupplyAir * 1000.0
+Print " </Record> "

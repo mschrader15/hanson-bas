@@ -1,0 +1,8 @@
+Print " <Record> "
+Print "<Fail.SFan> |### </Fail.SFan>", Hanson\CX2\RTU1S\Fail.SFan * 1.0
+Print "<SchedOccupy> |### </SchedOccupy>", Hanson\CX2\RTU1S\SchedOccupy * 1000.0
+Print "<StptOa> |### </StptOa>", Hanson\CX2\RTU1S\StptOa * 1000.0
+Print "<SFanPrv> |### </SFanPrv>", Hanson\CX2\RTU1S\SFanPrv * 1000.0
+Print "<SSFan> |### </SSFan>", Hanson\CX2\RTU1S\SSFan * 1000.0
+Print "<StPtTmpSupplyAir> |### </StPtTmpSupplyAir>", Hanson\CX2\RTU1S\StPtTmpSupplyAir * 1000.0
+Print " </Record> "

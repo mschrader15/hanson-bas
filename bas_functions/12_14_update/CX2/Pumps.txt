@@ -1,0 +1,5 @@
+Print " <Record> "
+Print "<Occupy> |### </Occupy>", Hanson\CX2\Pumps\Occupy * 1.0
+Print "<Rtu1Occupy> |### </Rtu1Occupy>", Hanson\CX2\Pumps\Rtu1Occupy * 1.0
+Print "<Rtu2Occupy> |### </Rtu2Occupy>", Hanson\CX2\Pumps\Rtu2Occupy * 1.0
+Print " </Record> "

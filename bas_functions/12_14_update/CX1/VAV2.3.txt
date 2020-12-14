@@ -1,0 +1,20 @@
+Print " <Record> "
+Print "<ActCoolStPt> |### </ActCoolStPt>", Hanson\CX1\VAV2.3\ActCoolStPt * 1000.0
+Print "<ActHeatStPt> |### </ActHeatStPt>", Hanson\CX1\VAV2.3\ActHeatStPt * 1000.0
+Print "<AvgTmp> |### </AvgTmp>", Hanson\CX1\VAV2.3\AvgTmp * 1000.0
+Print "<CFM> |### </CFM>", Hanson\CX1\VAV2.3\CFM * 1000.0
+Print "<CFMStPt> |### </CFMStPt>", Hanson\CX1\VAV2.3\CFMStPt * 1000.0
+Print "<CoolStPt> |### </CoolStPt>", Hanson\CX1\VAV2.3\CoolStPt * 1000.0
+Print "<DatSp> |### </DatSp>", Hanson\CX1\VAV2.3\DatSp * 1000.0
+Print "<HeatStpt> |### </HeatStpt>", Hanson\CX1\VAV2.3\HeatStpt * 1000.0
+Print "<SGNL> |### </SGNL>", Hanson\CX1\VAV2.3\SGNL * 1.0
+Print "<SGNLHeat> |### </SGNLHeat>", Hanson\CX1\VAV2.3\SGNLHeat * 1.0
+Print "<TmpOffset> |### </TmpOffset>", Hanson\CX1\VAV2.3\TmpOffset * 1000.0
+Print "<UHHeatStpt> |### </UHHeatStpt>", Hanson\CX1\VAV2.3\UHHeatStpt * 1000.0
+Print "<AdjStPt> |### </AdjStPt>", Hanson\CX1\VAV2.3\AdjStPt * 1000.0
+Print "<DAT> |### </DAT>", Hanson\CX1\VAV2.3\DAT * 1000.0
+Print "<RMT_UH3> |### </RMT_UH3>", Hanson\CX1\VAV2.3\RMT_UH3 * 1000.0
+Print "<Damper> |### </Damper>", Hanson\CX1\VAV2.3\Damper * 1000.0
+Print "<HWV_UH3> |### </HWV_UH3>", Hanson\CX1\VAV2.3\HWV_UH3 * 1000.0
+Print "<ReheatVlv> |### </ReheatVlv>", Hanson\CX1\VAV2.3\ReheatVlv * 1000.0
+Print " </Record> "
