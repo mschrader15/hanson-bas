@@ -3,6 +3,7 @@ import sys
 import definitions
 import urllib3
 import pandas as pd
+import numpy as np
 from functions.logging import logger, logging  # import the logging class (we wrote)
 from functions.timing import timing  # import the function timing class (we wrote)
 from functions.skyspark import SkySpark  # import the SkySpark class (we wrote)
@@ -37,17 +38,18 @@ def load_master_dict(file_path, filter_list=None):
     :param filter_list: A list of equipment names. Comes from the --equipment-list command line option
     :return: a list of Devices
     """
-    df = pd.read_excel(file_path)
+    df = pd.concat([pd.read_excel(file_path, sheet_name='CX1'), pd.read_excel(file_path, sheet_name='CX2')], axis=0)
+    df = df.loc[df['USE TRUE/FALSE'] == True]
+    df['Device Tag'] = df['Device Tag'].str.lower()
     if filter_list:
         filter_list = [item.strip() for item in filter_list]
         df = df.loc[df['Device Tag'].isin(filter_list)]
-
-    unique_ips = df['ipaddresses'].dropna().unique()
+    unique_devices = df['Device Tag'].dropna().unique()
     device_container = {}
-    for ip in unique_ips:
-        tag = df.loc[df['ipaddresses'] == ip, 'Device Tag'].values[0]
-        filtered_df = df.loc[df['Device Tag'] == tag, :]
-        d = Device(name=tag, ip_address=ip, measurement_names=list(filtered_df['Name']),
+    for name in unique_devices:
+        filtered_df = df.loc[df['Device Tag'] == name, :].fillna(np.nan).replace([np.nan], [None])
+        ip = filtered_df['ipaddresses'].values[0]
+        d = Device(name=name, ip_address=ip, measurement_names=list(filtered_df['Name']),
                    units=list(filtered_df['Units']), multipliers=list(filtered_df['Multiplier']),
                    measurement_dataTypes=list(filtered_df['Measurement_Kind'])
                    )

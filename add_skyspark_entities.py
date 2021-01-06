@@ -16,18 +16,18 @@ def load_master_dict(file_path, filter_list=None):
     :param filter_list: A list of equipment names. Comes from the --equipment-list command line option
     :return: a list of Devices
     """
-    df = pd.read_excel(file_path)
+    df = pd.concat([pd.read_excel(file_path, sheet_name='CX1'), pd.read_excel(file_path, sheet_name='CX2')], axis=0)
+    df = df.loc[df['USE TRUE/FALSE'] == True]
+    df['Device Tag'] = df['Device Tag'].str.lower()
     if filter_list:
         filter_list = [item.strip() for item in filter_list]
         df = df.loc[df['Device Tag'].isin(filter_list)]
-
-    unique_ips = df['ipaddresses'].dropna().unique()
+    unique_devices = df['Device Tag'].dropna().unique()
     device_container = {}
-    for ip in unique_ips:
-        name = df.loc[df['filter_ip'] == ip, 'Device Tag'].values[0]
-        filtered_df = df.loc[df['Device Tag'] == name, :]
-        filtered_df = filtered_df.fillna(np.nan).replace([np.nan], [None])
+    for name in unique_devices:
+        filtered_df = df.loc[df['Device Tag'] == name, :].fillna(np.nan).replace([np.nan], [None])
         markers = filtered_df['Equip_Markers'].values[0]
+        ip = filtered_df['ipaddresses'].values[0]
         d = Device(name=name, ip_address=ip, measurement_names=list(filtered_df['Name']),
                    units=list(filtered_df['Measurement_Unit_HayStack']), multipliers=list(filtered_df['Multiplier']),
                    equip_markers=markers, measurement_markers=list(filtered_df['Measurement_Marker']),
