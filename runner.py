@@ -103,10 +103,11 @@ def fetch_data(master_dict):
     for device in master_dict.values():
         try:
             print("GET request to ", device.ip_address)
-            r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=2.0))
+            r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=10.0))
             master_dict = process_xml(master_dict, xml_as_obj=r.data.decode("utf-8"), tag=device.name)
         except Exception as e:
             # catching all exceptions. Should not be the case
+            print(e)
             logging.warning(e)
             continue
     return master_dict
