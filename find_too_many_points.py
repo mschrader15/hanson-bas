@@ -5,7 +5,7 @@ import numpy as np
 import definitions
 from functions.skyspark import SkySparkCreator  # import the SkySpark class (we wrote)
 from functions.entities.haystack_objects import Device
-
+import csv
 
 def load_master_dict(file_path, filter_list=None):
     """
@@ -37,17 +37,22 @@ def load_master_dict(file_path, filter_list=None):
     return device_container
 
 
-def add_equipment(sky_spark, device_container):
+def check_points(sky_spark, device_container):
+    print_list = ["Equipment Name", "Missing Points"]
     for device in device_container.values():
-        sky_spark.add_equipment(device.name, markers=device.get_markers())
-        for measurement in device.measurements.values():
-            sky_spark.add_measurement(equip_name=device.name, measurement_name=measurement.name,
-                                      markers=measurement.get_markers(), unit=measurement.units,
-                                      dataType=measurement.dataType, overwrite=True)
-#
-# def infer_type(device_name):
-#     list_of_types = []
-
+        points = sky_spark.find_too_many_points(device.name)
+        if len(points):
+            desired_names = [measurement.name for measurement in device.measurements.values()]
+            extra_points = [point for point in points if point not in desired_names]
+            if len(extra_points):
+                print_list.append(device.name + ' -- ' + ", ".join(extra_points))
+            # print(f"The extra points for {device.name} are: {extra_points}")
+        else:
+            print(f"device {device} doesn't exist in skyspark")
+    # with open("extra_points.txt", 'w') as f:
+    #     c = csv.writer(f)
+    #     c.writerows(print_list)
+    print("\n".join(print_list))
 
 if __name__ == "__main__":
 
@@ -55,4 +60,4 @@ if __name__ == "__main__":
 
     skyspark_creator = SkySparkCreator(definitions.LOGIN_DICT['SkySpark'])
 
-    add_equipment(skyspark_creator, devices)
+    check_points(skyspark_creator, devices)
