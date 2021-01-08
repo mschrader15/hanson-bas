@@ -270,5 +270,9 @@ class SkySparkCreator(SkySpark):
         r = self.session._post_grid(grid=g, callback=None, uri='commit')
         return r
 
+    def _find_too_many_points(self, equip_name):
+        if self.check_equipment_exists(equip_name):
+            return [point.tags._tags['navName'] for point in self._equip.points]
+
 
 
