@@ -54,7 +54,7 @@ class SkySpark:
                 logging.warning('Error writing point: ', equip_name, point_name)
             return res
         except AttributeError:
-            logging.warning('Point wasnt written: ', equip_name, point_name)
+            print('Point wasnt written: ', equip_name, point_name)
             return 0.
 
     def submit_his_series(self, equip_name, point_name, series):
@@ -76,10 +76,13 @@ class SkySpark:
             return False
 
     def append_his_frame(self, equip_name, point_name, time, value):
-        self._check_equip(equip_name)
-        self._set_point(point_name)
-        self._create_his_frame()
-        self._add_his_value(time, self._data_type_handler(value))
+        try:
+            self._check_equip(equip_name)
+            self._set_point(point_name)
+            self._create_his_frame()
+            self._add_his_value(time, self._data_type_handler(value))
+        except AttributeError:
+            print("Point wasn't written: ", equip_name, point_name, time, value)
 
     def submit_his_frame(self):
         _, r = self._simple_point_write(self._his_frame, 1)
@@ -161,7 +164,7 @@ class SkySpark:
 
         # catches if the point doesn't exist on the point
         elif len(point_list) < 1:
-            logging.warning("the point name doesn't exist on the equipment ", point_name)
+            logging.warning("the point name doesn't exist on the equipment %s", point_name)
             raise AttributeError
         self._point = point_list[0]
 
