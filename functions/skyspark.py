@@ -212,20 +212,23 @@ class SkySparkCreator(SkySpark):
         else:
             return None
 
-    def add_measurement(self, equip_name, measurement_name, markers, unit, dataType, overwrite=False):
+    def add_measurement(self, equip_name, measurement_name, markers, unit, dataType, overwrite=False,
+                        add_new_points=True):
         name = "_".join([equip_name, measurement_name])
         exists = self.check_measurement_exists(name)
         method = 'update' if exists else 'add'
-        if (not exists) or overwrite:
-            self._set_equip(equip_name)
-            g = self._create_measurement_grid(method=method, name=name, markers=markers, unit=unit, kind=dataType,)
-            r = self._post_grid(g)
-            print(f"{name} failed? {r.is_failed}")
-            if r.is_failed:
-                print(r.result)
-            return r
-        else:
-            return None
+        if not exists:
+            print('hey')
+        if (not exists and add_new_points) or exists:
+            if (not exists) or overwrite:
+                self._set_equip(equip_name)
+                g = self._create_measurement_grid(method=method, name=name, markers=markers, unit=unit, kind=dataType,)
+                r = self._post_grid(g)
+                print(f"{name} failed? {r.is_failed}")
+                if r.is_failed:
+                    print(r.result)
+                return r
+        return None
 
     def _create_equipment_grid(self, equip_name, markers):
         grid = hszinc.Grid()
