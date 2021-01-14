@@ -49,7 +49,7 @@ def check_points(sky_spark, device_container):
             # print(f"The extra points for {device.name} are: {extra_points}")
         else:
             print(f"device {device} doesn't exist in skyspark")
-    # with open("extra_points.txt", 'w') as f:
+    # with open("issues.txt", 'w') as f:
     #     c = csv.writer(f)
     #     c.writerows(print_list)
     print("\n".join(print_list))
