@@ -10,12 +10,10 @@ Print "<HeatOK> |### </HeatOK>", Hanson\CX1\VAV2.14\HeatOK * 1000
 Print "<HeatStpt> |### </HeatStpt>", Hanson\CX1\VAV2.14\HeatStpt * 1000
 Print "<MaxCFM> |### </MaxCFM>", Hanson\CX1\VAV2.14\MaxCFM * 1000
 Print "<MaxCFMStPt> |### </MaxCFMStPt>", Hanson\CX1\VAV2.14\MaxCFMStPt * 1000
-Print "<RMT> |### </RMT>", Hanson\CX1\VAV2.14\RMT * 1000
 Print "<MinCFMStPt> |### </MinCFMStPt>", Hanson\CX1\VAV2.14\MinCFMStPt * 1000
 Print "<ReheatVlv> |### </ReheatVlv>", Hanson\CX1\VAV2.14\ReheatVlv * 1000
 Print "<OccupyVAV> |### </OccupyVAV>", Hanson\CX1\VAV2.14\OccupyVAV * 1000
 Print "<SGNL> |### </SGNL>", Hanson\CX1\VAV2.14\SGNL * 1000
 Print "<SGNLHeat> |### </SGNLHeat>", Hanson\CX1\VAV2.14\SGNLHeat * 1000
 Print "<TmpOffset> |### </TmpOffset>", Hanson\CX1\VAV2.14\TmpOffset * 1000
-Print "<TmpStPt> |### </TmpStPt>", Hanson\CX1\VAV2.14\TmpStPt * 1000
 Print " </Record> "
