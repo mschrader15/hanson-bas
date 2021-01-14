@@ -50,7 +50,7 @@ def load_master_dict(file_path, filter_list=None):
         filtered_df = df.loc[df['Device Tag'] == name, :].fillna(np.nan).replace([np.nan], [None])
         ip = filtered_df['ipaddresses'].values[0]
         d = Device(name=name, ip_address=ip, measurement_names=list(filtered_df['Name']),
-                   units=list(filtered_df['Units']), multipliers=list(filtered_df['Multiplier']),
+                   units=list(filtered_df['Units']), multipliers=list(filtered_df['Divisor']),
                    measurement_dataTypes=list(filtered_df['Measurement_Kind'])
                    )
         device_container[d.name] = d
