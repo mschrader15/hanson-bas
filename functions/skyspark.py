@@ -54,7 +54,7 @@ class SkySpark:
                 logging.warning('Error writing point: ', equip_name, point_name)
             return res
         except AttributeError:
-            logging.warning('Point wasnt written: ', equip_name, point_name)
+            print('Point wasnt written: ', equip_name, point_name)
             return 0.
 
     def submit_his_series(self, equip_name, point_name, series):
@@ -76,10 +76,13 @@ class SkySpark:
             return False
 
     def append_his_frame(self, equip_name, point_name, time, value):
-        self._check_equip(equip_name)
-        self._set_point(point_name)
-        self._create_his_frame()
-        self._add_his_value(time, self._data_type_handler(value))
+        try:
+            self._check_equip(equip_name)
+            self._set_point(point_name)
+            self._create_his_frame()
+            self._add_his_value(time, self._data_type_handler(value))
+        except AttributeError:
+            print("Point wasn't written: ", equip_name, point_name, time, value)
 
     def submit_his_frame(self):
         _, r = self._simple_point_write(self._his_frame, 1)
@@ -161,7 +164,7 @@ class SkySpark:
 
         # catches if the point doesn't exist on the point
         elif len(point_list) < 1:
-            logging.warning("the point name doesn't exist on the equipment ", point_name)
+            logging.warning("the point name doesn't exist on the equipment %s", point_name)
             raise AttributeError
         self._point = point_list[0]
 
@@ -209,20 +212,23 @@ class SkySparkCreator(SkySpark):
         else:
             return None
 
-    def add_measurement(self, equip_name, measurement_name, markers, unit, dataType, overwrite=False):
+    def add_measurement(self, equip_name, measurement_name, markers, unit, dataType, overwrite=False,
+                        add_new_points=True):
         name = "_".join([equip_name, measurement_name])
         exists = self.check_measurement_exists(name)
         method = 'update' if exists else 'add'
-        if (not exists) or overwrite:
-            self._set_equip(equip_name)
-            g = self._create_measurement_grid(method=method, name=name, markers=markers, unit=unit, kind=dataType,)
-            r = self._post_grid(g)
-            print(f"{name} failed? {r.is_failed}")
-            if r.is_failed:
-                print(r.result)
-            return r
-        else:
-            return None
+        if not exists:
+            print('hey')
+        if (not exists and add_new_points) or exists:
+            if (not exists) or overwrite:
+                self._set_equip(equip_name)
+                g = self._create_measurement_grid(method=method, name=name, markers=markers, unit=unit, kind=dataType,)
+                r = self._post_grid(g)
+                print(f"{name} failed? {r.is_failed}")
+                if r.is_failed:
+                    print(r.result)
+                return r
+        return None
 
     def _create_equipment_grid(self, equip_name, markers):
         grid = hszinc.Grid()

@@ -43,7 +43,7 @@ def add_equipment(sky_spark, device_container):
         for measurement in device.measurements.values():
             sky_spark.add_measurement(equip_name=device.name, measurement_name=measurement.name,
                                       markers=measurement.get_markers(), unit=measurement.units,
-                                      dataType=measurement.dataType, overwrite=True)
+                                      dataType=measurement.dataType, overwrite=True, add_new_points=False)
 #
 # def infer_type(device_name):
 #     list_of_types = []
