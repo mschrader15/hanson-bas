@@ -196,7 +196,6 @@ class SkySpark:
 #     return results
 
 
-
 class SkySparkCreator(SkySpark):
 
     def __init__(self, login_info):        super().__init__(login_info)
