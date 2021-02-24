@@ -107,7 +107,7 @@ class SkySpark:
             except (TypeError, ValueError):
                 new_value = 0
                 logging.warning(f"{self._point.id} has a data type mismatch. "
-                               f"Kind is {self._point.tags['kind']}, value is {value}")
+                                f"Kind is {self._point.tags['kind']}, value is {value}")
         return new_value if new_value is not None else value
 
     def _check_equip(self, equip_name):
@@ -136,7 +136,8 @@ class SkySpark:
     def _add_his_value(self, time, value):
         try:
             self._his_frame.append({'id': self._point.id, 'mod': self._point.tags['mod'],
-                                'ts': self._site.tz.localize(time), 'val': value})
+                                    # 'ts': self._site.tz.localize(time), 'val': value})
+                                    'ts': time, 'val': value})
         except AttributeError:
             print(self._point.id, time, value)
 
@@ -182,7 +183,6 @@ class SkySpark:
         return res
         # do something with res write
 
-
     # def _threaded_submit(self):
     #     import numpy as np
     #     from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -193,12 +193,15 @@ class SkySpark:
     #         for num, args in enumerate(split_args):
     #             threads.append(executor.submit(self._simple_point_write, args, num))
     #         results = sorted([res for res in [task.result() for task in as_completed(threads)]], key=lambda x: x[0])
+
+
 #     return results
 
 
 class SkySparkCreator(SkySpark):
 
-    def __init__(self, login_info):        super().__init__(login_info)
+    def __init__(self, login_info):
+        super().__init__(login_info)
 
     def add_equipment(self, name, markers):
         if not self.check_equipment_exists(name):
@@ -221,7 +224,7 @@ class SkySparkCreator(SkySpark):
         if (not exists and add_new_points) or exists:
             if (not exists) or overwrite:
                 self._set_equip(equip_name)
-                g = self._create_measurement_grid(method=method, name=name, markers=markers, unit=unit, kind=dataType,)
+                g = self._create_measurement_grid(method=method, name=name, markers=markers, unit=unit, kind=dataType, )
                 r = self._post_grid(g)
                 print(f"{name} failed? {r.is_failed}")
                 if r.is_failed:
@@ -237,7 +240,7 @@ class SkySparkCreator(SkySpark):
         grid.column["equip"] = {}
         grid.column["siteRef"] = {}
         grid.column["navName"] = {}
-        #grid.column['disMacro'] = {}
+        # grid.column['disMacro'] = {}
         g = {'dis': equip_name, 'navName': equip_name, 'equip': hszinc.MARKER, "siteRef": self._site.id}
         for marker in markers:
             grid.column[marker] = {}
@@ -245,7 +248,7 @@ class SkySparkCreator(SkySpark):
         grid.append(g)
         return grid
 
-    def _create_measurement_grid(self, method, name, markers, unit, kind,):
+    def _create_measurement_grid(self, method, name, markers, unit, kind, ):
         grid = hszinc.Grid()
         grid.metadata['commit'] = method
         # grid.column['dis'] = {}
@@ -279,6 +282,3 @@ class SkySparkCreator(SkySpark):
         if self.check_equipment_exists(equip_name):
             return [point.tags._tags['navName'].split(f"{equip_name}_")[-1] for point in self._equip.points]
         return []
-
-
-
