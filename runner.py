@@ -81,10 +81,12 @@ def process_xml(device_obj, xml_as_obj, tag=None):
     root = ElementTree.fromstring(xml_as_obj)
     if tag:
         local_device = device_obj[tag]
-    else:
+    else:   
         local_device = device_obj
     for child in root:
         if child.tag in local_device.measurement_names:
+            if (child.tag in 'Damper') and (float(child.text.strip()) < 0):
+                print("hey")
             local_device.measurements[child.tag].value = child.text.strip()
             local_device.measurements[child.tag].time = datetime.now()
         child.clear()
@@ -104,6 +106,10 @@ def fetch_data(master_dict):
         try:
             print("GET request to ", device.ip_address)
             r = http.request('GET', device.ip_address, timeout=urllib3.Timeout(connect=10.0))
+
+            # if device.ip_address in '10.1.13.71/pe/vav2.15.xml':
+            #     print("Max")
+
             master_dict = process_xml(master_dict, xml_as_obj=r.data.decode("utf-8"), tag=device.name)
         except Exception as e:
             # catching all exceptions. Should not be the case
@@ -180,7 +186,11 @@ def handle_multiplier(master_dict):
     """
     for device in master_dict.values():
         for measurement in device.measurements.values():
+            if (measurement.name in 'Lights') and ( 0 < float(measurement.value) < 1):
+                print("Max")
             if (measurement.multiplier != 1) and measurement.value:
+                if (measurement.name in 'Damper') and (float(measurement.value) < 0):
+                    print("Max")
                 # if ('Bool' in measurement.dataType):
                 measurement.value = float(measurement.value) / measurement.multiplier
     return master_dict
